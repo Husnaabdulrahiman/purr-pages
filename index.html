@@ -1,0 +1,1899 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Purr &amp; Pages &mdash; Your cosy bookstore caf&eacute;. Sip artisan coffee, browse curated books, enjoy sweet treats, and spend peaceful afternoons with our 10 resident cats. READ &bull; SIP &bull; PURR.">
+  <meta name="theme-color" content="#FAF5EC">
+  <title>Purr &amp; Pages &mdash; Cosy Bookstore Caf&eacute; | READ &bull; SIP &bull; PURR</title>
+
+  <!-- Brand Favicon -->
+  <link rel="icon" type="image/png" href="images/favicon.png">
+  <link rel="apple-touch-icon" href="images/favicon.png">
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Cpath fill='%236F4E37' d='M16 2a14 14 0 1 0 14 14A14 14 0 0 0 16 2zm-4.5 7.5a2.5 2.5 0 1 1-2.5 2.5 2.5 2.5 0 0 1 2.5-2.5zm9 0a2.5 2.5 0 1 1-2.5 2.5 2.5 2.5 0 0 1 2.5-2.5zm-8 6a2 2 0 1 1-2 2 2 2 0 0 1 2-2zm7 0a2 2 0 1 1-2 2 2 2 0 0 1 2-2zm-3.5 1.5c2.5 0 4.5 1.8 4.5 4a3 3 0 0 1-3 3h-3a3 3 0 0 1-3-3c0-2.2 2-4 4.5-4z'/%3E%3C/svg%3E">
+
+  <!-- Google Fonts: Fredoka (Playful Rounded Headings) & Nunito (Warm Readable Body) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@400;500;600;700&family=Nunito:ital,wght@0,300;0,400;0,600;0,700;0,800;1,400&display=swap" rel="stylesheet">
+
+  <!-- Purr & Pages External Stylesheet -->
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- Accessible Skip Link -->
+  <a href="#hero" class="skip-link">Skip to main content</a>
+
+  <!-- Custom Cat Paw Pointer Follower (Desktop only) -->
+  <div class="custom-cursor-follower" id="customCursor" aria-hidden="true">
+    <svg viewBox="0 0 32 32">
+      <ellipse cx="16" cy="21" rx="6.5" ry="5.5" />
+      <circle cx="9" cy="13" r="2.8" />
+      <circle cx="13.5" cy="9.5" r="3" />
+      <circle cx="18.5" cy="9.5" r="3" />
+      <circle cx="23" cy="13" r="2.8" />
+    </svg>
+  </div>
+
+  <!-- ==========================================================================
+       SECTION A: NAVIGATION BAR
+       ========================================================================== -->
+  <header class="site-header" id="siteHeader">
+    <div class="container nav-container">
+      <!-- Wordmark & Official Brand Logo -->
+      <a href="#hero" class="brand-logo" aria-label="Purr &amp; Pages Bookstore Café Home">
+        <img src="images/logo.png" alt="Purr &amp; Pages &mdash; READ &bull; SIP &bull; PURR" class="site-logo-img">
+      </a>
+
+      <!-- Navigation Menu -->
+      <nav aria-label="Main Navigation">
+        <ul class="nav-menu" id="navMenu">
+          <li><a href="#hero" class="nav-link active">Home</a></li>
+          <li><a href="#about" class="nav-link">About</a></li>
+          <li><a href="#menu" class="nav-link">Menu</a></li>
+          <li><a href="#cats" class="nav-link">Our Cats</a></li>
+          <li><a href="#bookstore" class="nav-link">Bookstore</a></li>
+          <li><a href="#gallery" class="nav-link">Gallery</a></li>
+          <li><a href="#contact" class="nav-link">Contact</a></li>
+        </ul>
+      </nav>
+
+      <!-- Navigation Actions -->
+      <div class="nav-actions">
+        <!-- Demo Cart Button -->
+        <button class="cart-btn" id="openCartBtn" aria-label="View Shopping Bag (Demo Cart)">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-2z"/>
+            <line x1="3" y1="6" x2="21" y2="6"/>
+            <path d="M16 10a4 4 0 0 1-8 0"/>
+          </svg>
+          <span class="cart-count" id="cartCountBadge">0</span>
+        </button>
+
+        <!-- Primary CTA -->
+        <a href="#contact" class="btn btn-primary btn-sm nav-cta-btn">Visit Us</a>
+
+        <!-- Mobile Menu Toggle Button -->
+        <button class="nav-toggle" id="navToggle" aria-expanded="false" aria-controls="navMenu" aria-label="Toggle navigation menu">
+          <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+            <line x1="3" y1="12" x2="21" y2="12"/>
+            <line x1="3" y1="6" x2="21" y2="6"/>
+            <line x1="3" y1="18" x2="21" y2="18"/>
+          </svg>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main id="main-content">
+    <!-- ==========================================================================
+         SECTION B: HOMEPAGE HERO
+         ========================================================================== -->
+    <section class="hero-section" id="hero">
+      <div class="container hero-grid">
+        <div class="hero-content">
+          <div class="hero-badge">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
+              <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
+            </svg>
+            <span>Books, brews &amp; furry company.</span>
+          </div>
+
+          <h1 class="hero-headline">
+            A Little More Purr,<br>
+            A Little More <span class="accent">Peace.</span>
+          </h1>
+
+          <p class="hero-text">
+            Your cosy corner for good books, great coffee, sweet treats, and a little feline company.
+          </p>
+
+          <div class="hero-actions">
+            <a href="#menu" class="btn btn-primary">
+              <span>Explore Our Caf&eacute;</span>
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                <line x1="5" y1="12" x2="19" y2="12"></line>
+                <polyline points="12 5 19 12 12 19"></polyline>
+              </svg>
+            </a>
+            <a href="#cats" class="btn btn-secondary">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
+                <circle cx="12" cy="14" r="5"/>
+                <circle cx="6" cy="8" r="2.5"/>
+                <circle cx="18" cy="8" r="2.5"/>
+              </svg>
+              <span>Meet the Cats</span>
+            </a>
+          </div>
+
+          <div class="hero-note">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="var(--color-coffee)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="flex-shrink:0;">
+              <path d="M18 8h1a4 4 0 0 1 0 8h-1"/>
+              <path d="M2 8h16v9a4 4 0 0 1-4 4H6a4 4 0 0 1-4-4V8z"/>
+              <line x1="6" y1="1" x2="6" y2="4"/>
+              <line x1="10" y1="1" x2="10" y2="4"/>
+              <line x1="14" y1="1" x2="14" y2="4"/>
+            </svg>
+            <div>
+              <strong>Staff Recommendation:</strong> Chapter 3 goes best with a warm Cat-puccino and a window seat beside Mochi!
+            </div>
+          </div>
+        </div>
+
+        <div class="hero-visual-wrapper">
+          <!-- Main Hero Photo Frame -->
+          <!-- NOTE: Replace the Unsplash URL below with your local hero photograph if desired -->
+          <div class="hero-main-frame">
+            <img src="https://images.unsplash.com/photo-1521587760476-6c12a4b040da?auto=format&fit=crop&w=1000&q=80" 
+                 alt="Warm sunlit bookstore cafe with wooden shelves, coffee tables, and peaceful reading nook" 
+                 loading="eager"
+                 onerror="this.src='data:image/svg+xml,%3Csvg xmlns=\'http://www.w3.org/2000/svg\' width=\'600\' height=\'700\' viewBox=\'0 0 600 700\'%3E%3Crect fill=\'%23FAF5EC\' width=\'100%25\' height=\'100%25\'/%3E%3Ctext fill=\'%236F4E37\' font-family=\'sans-serif\' font-size=\'28\' x=\'50%25\' y=\'50%25\' text-anchor=\'middle\'%3EPurr %26 Pages Hero%3C/text%3E%3C/svg%3E'">
+          </div>
+
+          <!-- Floating Badge 1: Quality Stamp -->
+          <div class="floating-card-stamp" aria-hidden="true">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="var(--color-coffee)">
+              <path d="M12 2l2.4 4.8 5.3.8-3.8 3.7.9 5.3-4.8-2.5-4.8 2.5.9-5.3-3.8-3.7 5.3-.8z"/>
+            </svg>
+            <div>
+              <div style="font-size: 0.72rem; font-weight:800; color:var(--color-caramel); text-transform:uppercase;">Cosy Certified</div>
+              <div style="font-size: 0.9rem; font-weight:700; color:var(--color-dark-choco);">100% Cat Approved</div>
+            </div>
+          </div>
+
+          <!-- Floating Badge 2: Cat Greeter Avatar -->
+          <div class="floating-card-rating" aria-hidden="true">
+            <div class="floating-cat-avatar">
+              <img src="https://images.unsplash.com/photo-1573865526739-10659fec78a5?auto=format&fit=crop&w=150&q=80" alt="Mochi the cat">
+            </div>
+            <div>
+              <div style="font-size: 0.95rem; font-weight:700; color:var(--color-dark-choco);">Mochi is currently:</div>
+              <div style="font-size: 0.82rem; color:var(--color-coffee); font-weight:600;">Napping on cushion 4 💤</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================================================
+       SECTION C: ABOUT PURR & PAGES
+       ========================================================================== -->
+    <section class="about-section" id="about">
+      <div class="container about-grid">
+        <!-- Collage of photographs -->
+        <div class="about-images-collage">
+          <!-- Primary lifestyle about photo -->
+          <div class="about-img-primary">
+            <img src="https://images.unsplash.com/photo-1495474472287-4d71bcdd2085?auto=format&fit=crop&w=800&q=80" 
+                 alt="Warm coffee mug beside an open book and comfortable reading nook"
+                 loading="lazy">
+          </div>
+          <!-- Secondary cat cafe lifestyle photo -->
+          <div class="about-img-secondary">
+            <img src="https://images.unsplash.com/photo-1554118811-1e0d58224f24?auto=format&fit=crop&w=600&q=80" 
+                 alt="Warm interior of Purr &amp; Pages cafe with comfortable seating"
+                 loading="lazy">
+          </div>
+        </div>
+
+        <!-- About Storytelling Content -->
+        <div class="about-content-block">
+          <div class="section-tag">Our Little Story</div>
+          <h2>A Place Where Stories Feel Like Home.</h2>
+
+          <p class="about-story-p">
+            Some places are made for rushing through the day. Ours is made for slowing down. At Purr &amp; Pages, stories live beside steaming cups of coffee, sweet treats make every afternoon better, and our curious feline friends remind you to take life one cosy moment at a time.
+          </p>
+
+          <p class="about-story-p">
+            Whether you are diving into a vintage classic, discovering your next favourite indie author, or simply sharing a quiet moment with a purring companion on your lap, this space was hand-crafted for you.
+          </p>
+
+          <div class="about-quote-line">
+            &ldquo;Come for the coffee. Stay for the chapters. Fall in love with the cats.&rdquo;
+          </div>
+
+          <!-- 3 Highlights -->
+          <div class="about-highlights-grid">
+            <div class="highlight-card">
+              <div class="highlight-icon">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"/>
+                  <path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"/>
+                </svg>
+              </div>
+              <h3>A Book Lover&rsquo;s Corner</h3>
+              <p>Hand-curated shelves and tranquil reading nooks designed for hours of uninterrupted peace.</p>
+            </div>
+
+            <div class="highlight-card">
+              <div class="highlight-icon">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M18 8h1a4 4 0 0 1 0 8h-1"/>
+                  <path d="M2 8h16v9a4 4 0 0 1-4 4H6a4 4 0 0 1-4-4V8z"/>
+                  <line x1="6" y1="1" x2="6" y2="4"/>
+                  <line x1="10" y1="1" x2="10" y2="4"/>
+                </svg>
+              </div>
+              <h3>Coffee Made with Care</h3>
+              <p>Freshly roasted specialty beans, velvety milk foam, and handcrafted signature blends.</p>
+            </div>
+
+            <div class="highlight-card">
+              <div class="highlight-icon">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+                  <circle cx="12" cy="14" r="5"/>
+                  <circle cx="6" cy="8" r="2.5"/>
+                  <circle cx="18" cy="8" r="2.5"/>
+                </svg>
+              </div>
+              <h3>A Little Cat Magic</h3>
+              <p>Ten gentle resident felines free to lounge, explore, and share peaceful afternoons with you.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================================================
+         SECTION D: THE PURR-FECT MENU
+         ========================================================================== -->
+    <section class="menu-section" id="menu">
+      <div class="container">
+        <div class="section-header">
+          <div class="section-tag">Freshly Brewed &amp; Baked</div>
+          <h2 class="section-title">A Menu Worth Staying Up For</h2>
+          <p class="section-subtitle">Sip a little, snack a little, lose yourself in a good chapter.</p>
+          <div class="story-divider" aria-hidden="true">
+            <span class="line"></span>
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+              <ellipse cx="12" cy="16" rx="5" ry="4" />
+              <circle cx="7" cy="10" r="2" />
+              <circle cx="17" cy="10" r="2" />
+              <circle cx="10" cy="7" r="2" />
+              <circle cx="14" cy="7" r="2" />
+            </svg>
+            <span class="line"></span>
+          </div>
+        </div>
+
+        <!-- Interactive Category Filters -->
+        <div class="menu-tabs-wrapper" role="tablist" aria-label="Caf&eacute; Menu Categories">
+          <button class="menu-tab-btn active" data-category="all" role="tab" aria-selected="true">
+            <span>All Items</span>
+          </button>
+          <button class="menu-tab-btn" data-category="coffee" role="tab" aria-selected="false">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M18 8h1a4 4 0 0 1 0 8h-1"/>
+              <path d="M2 8h16v9a4 4 0 0 1-4 4H6a4 4 0 0 1-4-4V8z"/>
+            </svg>
+            <span>The Daily Grind &mdash; Coffee</span>
+          </button>
+          <button class="menu-tab-btn" data-category="tea" role="tab" aria-selected="false">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M12 2a5 5 0 0 0-5 5v14a1 1 0 0 0 1 1h8a1 1 0 0 0 1-1V7a5 5 0 0 0-5-5z"/>
+            </svg>
+            <span>Steeped in Stories &mdash; Tea &amp; Matcha</span>
+          </button>
+          <button class="menu-tab-btn" data-category="desserts" role="tab" aria-selected="false">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <circle cx="12" cy="12" r="10"/>
+              <path d="M12 2a14.5 14.5 0 0 0 0 20 14.5 14.5 0 0 0 0-20"/>
+            </svg>
+            <span>Once Upon a Bite &mdash; Desserts &amp; Snacks</span>
+          </button>
+          <button class="menu-tab-btn tab-cats" data-category="cat-treats" role="tab" aria-selected="false">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
+              <circle cx="12" cy="14" r="5"/>
+              <circle cx="6" cy="8" r="2.5"/>
+              <circle cx="18" cy="8" r="2.5"/>
+            </svg>
+            <span>The Cat Caf&eacute; Corner &mdash; Cat Treats</span>
+          </button>
+        </div>
+
+        <!-- Menu Cards Grid -->
+        <div class="menu-items-grid" id="menuItemsGrid">
+
+          <!-- ================= CATEGORY 1: COFFEE ================= -->
+          <!-- ITEM 1 -->
+          <div class="menu-card" data-category="coffee">
+            <div>
+              <div class="menu-card-top">
+                <h3 class="menu-item-name">The Purr-over</h3>
+                <span class="menu-item-price">&#8377;160</span>
+              </div>
+              <p class="menu-item-desc">Smooth, freshly brewed filter coffee for your next chapter.</p>
+            </div>
+            <div class="menu-item-tag">☕ Hand-Poured Single Origin</div>
+          </div>
+
+          <!-- ITEM 2 -->
+          <div class="menu-card" data-category="coffee">
+            <div>
+              <div class="menu-card-top">
+                <h3 class="menu-item-name">Cat-puccino</h3>
+                <span class="menu-item-price">&#8377;150</span>
+              </div>
+              <p class="menu-item-desc">A creamy cappuccino with a cloud of milk foam.</p>
+            </div>
+            <div class="menu-item-tag">🐾 Foam Cat Silhouette Art</div>
+          </div>
+
+          <!-- ITEM 3 -->
+          <div class="menu-card" data-category="coffee">
+            <div>
+              <div class="menu-card-top">
+                <h3 class="menu-item-name">The Meow-cha</h3>
+                <span class="menu-item-price">&#8377;190</span>
+              </div>
+              <p class="menu-item-desc">Chocolate, espresso, and a little indulgence in one cup.</p>
+            </div>
+            <div class="menu-item-tag">🍫 Dark Cocoa &amp; Espresso</div>
+          </div>
+
+          <!-- ITEM 4 -->
+          <div class="menu-card" data-category="coffee">
+            <div>
+              <div class="menu-card-top">
+                <h3 class="menu-item-name">Whisker White</h3>
+                <span class="menu-item-price">&#8377;180</span>
+              </div>
+              <p class="menu-item-desc">A silky flat white for serious book lovers.</p>
+            </div>
+            <div class="menu-item-tag">✨ Velvety Microfoam</div>
+          </div>
+
+          <!-- ITEM 5 -->
+          <div class="menu-card" data-category="coffee">
+            <div>
+              <div class="menu-card-top">
+                <h3 class="menu-item-name">The Cat-alatte</h3>
+                <span class="menu-item-price">&#8377;180</span>
+              </div>
+              <p class="menu-item-desc">A comforting latte for slow mornings and long reads.</p>
+            </div>
+            <div class="menu-item-tag">📖 Reader's Morning Staple</div>
+          </div>
+
+          <!-- ITEM 6 -->
+          <div class="menu-card" data-category="coffee">
+            <div>
+              <div class="menu-card-top">
+                <h3 class="menu-item-name">The Midnight Reader</h3>
+                <span class="menu-item-price">&#8377;190</span>
+              </div>
+              <p class="menu-item-desc">A rich mocha for those who always say, &ldquo;Just one more chapter.&rdquo;</p>
+            </div>
+            <div class="menu-item-tag">🌙 Extra Shot Available</div>
+          </div>
+
+          <!-- ITEM 7 -->
+          <div class="menu-card" data-category="coffee">
+            <div>
+              <div class="menu-card-top">
+                <h3 class="menu-item-name">Paw-some Iced Latte</h3>
+                <span class="menu-item-price">&#8377;170</span>
+              </div>
+              <p class="menu-item-desc">Chilled coffee for sunny afternoons and window-seat reading.</p>
+            </div>
+            <div class="menu-item-tag">🧊 Chilled Over Hand-Carved Ice</div>
+          </div>
+
+          <!-- ================= CATEGORY 2: TEA & MATCHA ================= -->
+          <!-- ITEM 8 -->
+          <div class="menu-card" data-category="tea">
+            <div>
+              <div class="menu-card-top">
+                <h3 class="menu-item-name">Purr Earl Grey</h3>
+                <span class="menu-item-price">&#8377;140</span>
+              </div>
+              <p class="menu-item-desc">Fragrant Earl Grey tea for a quiet reading break.</p>
+            </div>
+            <div class="menu-item-tag">🌿 Italian Bergamot Notes</div>
+          </div>
+
+          <!-- ITEM 9 -->
+          <div class="menu-card" data-category="tea">
+            <div>
+              <div class="menu-card-top">
+                <h3 class="menu-item-name">The Cheshire Chai</h3>
+                <span class="menu-item-price">&#8377;100</span>
+              </div>
+              <p class="menu-item-desc">Spiced chai with a little mischievous charm.</p>
+            </div>
+            <div class="menu-item-tag">Cardamom &amp; Ginger Infusion</div>
+          </div>
+
+          <!-- ITEM 10 -->
+          <div class="menu-card" data-category="tea">
+            <div>
+              <div class="menu-card-top">
+                <h3 class="menu-item-name">Matcha Made in Heaven</h3>
+                <span class="menu-item-price">&#8377;200</span>
+              </div>
+              <p class="menu-item-desc">Smooth matcha with milk for a refreshing pause.</p>
+            </div>
+            <div class="menu-item-tag">🍵 Ceremonial Grade Uji Matcha</div>
+          </div>
+
+          <!-- ITEM 11 -->
+          <div class="menu-card" data-category="tea">
+            <div>
+              <div class="menu-card-top">
+                <h3 class="menu-item-name">A Tale of Two Teas</h3>
+                <span class="menu-item-price">&#8377;150</span>
+              </div>
+              <p class="menu-item-desc">A comforting tea selection for two moods and two chapters.</p>
+            </div>
+            <div class="menu-item-tag">🫖 Served with Mini Sand Timer</div>
+          </div>
+
+          <!-- ITEM 12 -->
+          <div class="menu-card" data-category="tea">
+            <div>
+              <div class="menu-card-top">
+                <h3 class="menu-item-name">The Sleepy Kitten</h3>
+                <span class="menu-item-price">&#8377;130</span>
+              </div>
+              <p class="menu-item-desc">A soothing caffeine-free herbal infusion.</p>
+            </div>
+            <div class="menu-item-tag">🌼 Chamomile, Lavender &amp; Mint</div>
+          </div>
+
+          <!-- ================= CATEGORY 3: DESSERTS & SNACKS ================= -->
+          <!-- ITEM 13 -->
+          <div class="menu-card" data-category="desserts">
+            <div>
+              <div class="menu-card-top">
+                <h3 class="menu-item-name">The Brownie Chapter</h3>
+                <span class="menu-item-price">&#8377;140</span>
+              </div>
+              <p class="menu-item-desc">A rich chocolate brownie worth bookmarking.</p>
+            </div>
+            <div class="menu-item-tag">🍫 Fudgy Dark Chocolate</div>
+          </div>
+
+          <!-- ITEM 14 -->
+          <div class="menu-card" data-category="desserts">
+            <div>
+              <div class="menu-card-top">
+                <h3 class="menu-item-name">Paw-sitively Cheesecake</h3>
+                <span class="menu-item-price">&#8377;220</span>
+              </div>
+              <p class="menu-item-desc">Creamy cheesecake with a buttery biscuit base.</p>
+            </div>
+            <div class="menu-item-tag">🍓 House Berry Compote</div>
+          </div>
+
+          <!-- ITEM 15 -->
+          <div class="menu-card" data-category="desserts">
+            <div>
+              <div class="menu-card-top">
+                <h3 class="menu-item-name">The Cinnamon Purr-roll</h3>
+                <span class="menu-item-price">&#8377;160</span>
+              </div>
+              <p class="menu-item-desc">A soft cinnamon roll with a sweet swirl.</p>
+            </div>
+            <div class="menu-item-tag">Warm Cream Cheese Glaze</div>
+          </div>
+
+          <!-- ITEM 16 -->
+          <div class="menu-card" data-category="desserts">
+            <div>
+              <div class="menu-card-top">
+                <h3 class="menu-item-name">The Cookie Bookie</h3>
+                <span class="menu-item-price">&#8377;90</span>
+              </div>
+              <p class="menu-item-desc">A chocolate chip cookie made for dunking and daydreaming.</p>
+            </div>
+            <div class="menu-item-tag">🍪 Warm &amp; Chewy</div>
+          </div>
+
+          <!-- ITEM 17 -->
+          <div class="menu-card" data-category="desserts">
+            <div>
+              <div class="menu-card-top">
+                <h3 class="menu-item-name">The Hungry Cater-pillar</h3>
+                <span class="menu-item-price">&#8377;180</span>
+              </div>
+              <p class="menu-item-desc">A colourful fruit-and-yoghurt bowl inspired by storybook adventures.</p>
+            </div>
+            <div class="menu-item-tag">🥣 Fresh Seasonal Fruit &amp; Honey</div>
+          </div>
+
+          <!-- ITEM 18 -->
+          <div class="menu-card" data-category="desserts">
+            <div>
+              <div class="menu-card-top">
+                <h3 class="menu-item-name">The Little Bookworm Toastie</h3>
+                <span class="menu-item-price">&#8377;190</span>
+              </div>
+              <p class="menu-item-desc">A golden grilled cheese sandwich for hungry readers.</p>
+            </div>
+            <div class="menu-item-tag">🧀 Sourdough &amp; Aged Cheddar</div>
+          </div>
+
+          <!-- ITEM 19 -->
+          <div class="menu-card" data-category="desserts">
+            <div>
+              <div class="menu-card-top">
+                <h3 class="menu-item-name">The Plot Twist Panini</h3>
+                <span class="menu-item-price">&#8377;210</span>
+              </div>
+              <p class="menu-item-desc">A toasted veggie panini with a delicious surprise in every bite.</p>
+            </div>
+            <div class="menu-item-tag">🥪 Herb Pesto &amp; Roasted Veg</div>
+          </div>
+
+          <!-- ITEM 20 -->
+          <div class="menu-card" data-category="desserts">
+            <div>
+              <div class="menu-card-top">
+                <h3 class="menu-item-name">The Final Chapter Cake</h3>
+                <span class="menu-item-price">&#8377;200</span>
+              </div>
+              <p class="menu-item-desc">A slice of cake for the perfect ending to your caf&eacute; visit.</p>
+            </div>
+            <div class="menu-item-tag">🍰 Daily Baker’s Special</div>
+          </div>
+
+        </div>
+
+        <!-- ================= CATEGORY 4: THE CAT CAFÉ CORNER ================= -->
+        <div class="cat-treats-container" id="catTreatsBox">
+          <div class="cat-treats-header">
+            <div class="badge">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
+                <circle cx="12" cy="14" r="5"/>
+                <circle cx="6" cy="8" r="2.5"/>
+                <circle cx="18" cy="8" r="2.5"/>
+              </svg>
+              <span>For Our Feline Friends</span>
+            </div>
+            <h3>A Little Something for Our Furry Readers</h3>
+            <p>Because even the tiniest paws deserve a treat.</p>
+          </div>
+
+          <div class="treats-grid">
+            <!-- TREAT 1 -->
+            <div class="treat-card">
+              <div>
+                <div class="name">The Purr-otein Bites</div>
+                <div class="price">&#8377;80</div>
+                <p class="desc">Small cat treats made with cat-appropriate ingredients.</p>
+              </div>
+            </div>
+
+            <!-- TREAT 2 -->
+            <div class="treat-card">
+              <div>
+                <div class="name">The Whisker Morsels</div>
+                <div class="price">&#8377;100</div>
+                <p class="desc">Bite-sized treats for a little feline indulgence.</p>
+              </div>
+            </div>
+
+            <!-- TREAT 3 -->
+            <div class="treat-card">
+              <div>
+                <div class="name">The Kitten's Chapter</div>
+                <div class="price">&#8377;120</div>
+                <p class="desc">A small, cat-appropriate treat portion for younger cats, subject to age suitability.</p>
+              </div>
+            </div>
+
+            <!-- TREAT 4 -->
+            <div class="treat-card">
+              <div>
+                <div class="name">The Tuna Tale</div>
+                <div class="price">&#8377;120</div>
+                <p class="desc">A small portion of cat-safe tuna prepared without seasoning, salt, or added sauces.</p>
+              </div>
+            </div>
+
+            <!-- TREAT 5 -->
+            <div class="treat-card">
+              <div>
+                <div class="name">The Catnip Chronicles</div>
+                <div class="price">&#8377;70</div>
+                <p class="desc">A small catnip enrichment treat, where appropriate for the individual cat.</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Clear Cat Treat Safety Note Banner -->
+          <div class="treat-safety-banner" id="catSafetyNote">
+            <div class="safety-text-group">
+              <div class="safety-icon">
+                <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
+                </svg>
+              </div>
+              <div>
+                <h4>Treat Time, The Safe Way</h4>
+                <p>
+                  Please ask our team before feeding any cat. Only caf&eacute;-approved treats may be given, in small portions and with staff supervision. Some cats have dietary restrictions or may not want treats, and that's perfectly okay. <strong>Never feed cats food or drinks from the human menu</strong> (no coffee, tea, dairy, chocolate, or pastries).
+                </p>
+              </div>
+            </div>
+
+            <button class="btn btn-secondary btn-sm" id="askTreatBtn">Ask Before You Treat</button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================================================
+         SECTION E: MEET THE BOOKSHOP CATS &mdash; THE PURR-FECT RESIDENTS
+         ========================================================================== -->
+    <section class="cats-section" id="cats">
+      <div class="container">
+        <div class="section-header">
+          <div class="section-tag">THE RESIDENTS’ CLUB</div>
+          <h2 class="section-title">The Real Owners of This Place.</h2>
+          <p class="section-subtitle">Every good bookstore has its characters. Ours just happen to have whiskers.</p>
+          <p style="font-size:1.02rem; color:#5D4436; margin-top:10px; max-width:620px; margin-left:auto; margin-right:auto;">
+            Every good story has unforgettable characters. At Purr &amp; Pages, ours have whiskers, tiny paws, and a habit of stealing the best reading spots. Meet the little personalities who make our caf&eacute; feel like home.
+          </p>
+
+          <div class="story-divider" aria-hidden="true">
+            <span class="line"></span>
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor">
+              <path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"/>
+              <path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"/>
+            </svg>
+            <span class="line"></span>
+          </div>
+        </div>
+
+        <!-- Filter Row for 10 Cats -->
+        <div class="cat-filter-wrapper" role="tablist" aria-label="Filter resident cats">
+          <button class="cat-filter-btn active" data-filter="all" role="tab" aria-selected="true">All Cats (10)</button>
+          <button class="cat-filter-btn" data-filter="sleepy" role="tab" aria-selected="false">Sleepy Sweethearts</button>
+          <button class="cat-filter-btn" data-filter="curious" role="tab" aria-selected="false">Curious Explorers</button>
+          <button class="cat-filter-btn" data-filter="playful" role="tab" aria-selected="false">Playful Personalities</button>
+          <button class="cat-filter-btn" data-filter="quiet" role="tab" aria-selected="false">Quiet Companions</button>
+        </div>
+
+        <!-- 10 Unique Cat Profile Cards Grid -->
+        <div class="cats-grid" id="catsGrid">
+
+          <!-- ================= CAT 01: MOCHI ================= -->
+          <article class="cat-card" data-cat-id="1" data-cat-category="sleepy">
+            <div class="cat-portrait-box">
+              <span class="cat-library-tag">Sleepy Sweetheart</span>
+              <!-- NOTE: Replace with Mochi portrait: fluffy cream-and-white cat -->
+              <img src="https://images.unsplash.com/photo-1573865526739-10659fec78a5?auto=format&fit=crop&w=700&q=80" 
+                   alt="Mochi &mdash; A fluffy cream-and-white cat with soft fur and round cheeks relaxing" 
+                   loading="lazy">
+            </div>
+            <div class="cat-card-body">
+              <div class="cat-card-header">
+                <div class="cat-name">
+                  <span>Mochi</span>
+                  <span style="font-size:0.9rem;" title="Resident Cat">🐾</span>
+                </div>
+                <div class="cat-role">The Professional Napper</div>
+              </div>
+              <div class="cat-quote-snip">&ldquo;One more chapter? Make it one more nap.&rdquo;</div>
+              <p class="cat-bio-preview">
+                Mochi believes that every good book deserves a comfortable reading companion and every afternoon deserves at least three naps...
+              </p>
+              <button class="btn-meet-cat" data-cat-id="1" aria-haspopup="dialog">
+                <span>Meet Mochi</span>
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2">
+                  <path d="M5 12h14M12 5l7 7-7 7"/>
+                </svg>
+              </button>
+            </div>
+          </article>
+
+          <!-- ================= CAT 02: BISCUIT ================= -->
+          <article class="cat-card" data-cat-id="2" data-cat-category="playful">
+            <div class="cat-portrait-box">
+              <span class="cat-library-tag">Social Butterfly</span>
+              <!-- NOTE: Replace with Biscuit portrait: warm ginger-and-white cat -->
+              <img src="https://images.unsplash.com/photo-1533738363-b7f9aef128ce?auto=format&fit=crop&w=700&q=80" 
+                   alt="Biscuit &mdash; A warm ginger-and-white cat with an expressive welcoming face" 
+                   loading="lazy">
+            </div>
+            <div class="cat-card-body">
+              <div class="cat-card-header">
+                <div class="cat-name">
+                  <span>Biscuit</span>
+                  <span style="font-size:0.9rem;">⭐</span>
+                </div>
+                <div class="cat-role">The Friendly Little Greeter</div>
+              </div>
+              <div class="cat-quote-snip">&ldquo;You came for coffee. You stayed for me.&rdquo;</div>
+              <p class="cat-bio-preview">
+                Biscuit considers every visitor a potential best friend. This cheerful little greeter loves inspecting shopping bags and supervising caf&eacute; arrivals...
+              </p>
+              <button class="btn-meet-cat" data-cat-id="2" aria-haspopup="dialog">
+                <span>Meet Biscuit</span>
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2">
+                  <path d="M5 12h14M12 5l7 7-7 7"/>
+                </svg>
+              </button>
+            </div>
+          </article>
+
+          <!-- ================= CAT 03: PEPPER ================= -->
+          <article class="cat-card" data-cat-id="3" data-cat-category="curious">
+            <div class="cat-portrait-box">
+              <span class="cat-library-tag">Curious Chaos</span>
+              <!-- NOTE: Replace with Pepper portrait: sleek black-and-white tuxedo cat -->
+              <img src="https://images.unsplash.com/photo-1548802673-380ab8ebc7b7?auto=format&fit=crop&w=700&q=80" 
+                   alt="Pepper &mdash; A sleek black-and-white cat with alert eyes and a playful expression" 
+                   loading="lazy">
+            </div>
+            <div class="cat-card-body">
+              <div class="cat-card-header">
+                <div class="cat-name">
+                  <span>Pepper</span>
+                  <span style="font-size:0.9rem;">📚</span>
+                </div>
+                <div class="cat-role">The Tiny Mischief-Maker</div>
+              </div>
+              <div class="cat-quote-snip">&ldquo;I didn't knock it over. The book wanted to explore.&rdquo;</div>
+              <p class="cat-bio-preview">
+                Pepper is convinced that bookmarks are toys, paper bags are secret hideouts, and every unattended book needs a thorough inspection...
+              </p>
+              <button class="btn-meet-cat" data-cat-id="3" aria-haspopup="dialog">
+                <span>Meet Pepper</span>
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2">
+                  <path d="M5 12h14M12 5l7 7-7 7"/>
+                </svg>
+              </button>
+            </div>
+          </article>
+
+          <!-- ================= CAT 04: CHAI ================= -->
+          <article class="cat-card" data-cat-id="4" data-cat-category="quiet">
+            <div class="cat-portrait-box">
+              <span class="cat-library-tag">Comfort Seeker</span>
+              <!-- NOTE: Replace with Chai portrait: soft brown tabby cat -->
+              <img src="https://images.unsplash.com/photo-1518791841217-8f162f1e1131?auto=format&fit=crop&w=700&q=80" 
+                   alt="Chai &mdash; A soft brown tabby cat with warm markings and a calm presence" 
+                   loading="lazy">
+            </div>
+            <div class="cat-card-body">
+              <div class="cat-card-header">
+                <div class="cat-name">
+                  <span>Chai</span>
+                  <span style="font-size:0.9rem;">☕</span>
+                </div>
+                <div class="cat-role">The Cosy Companion</div>
+              </div>
+              <div class="cat-quote-snip">&ldquo;Slow sips. Soft paws. Good stories.&rdquo;</div>
+              <p class="cat-bio-preview">
+                Chai is the living definition of a slow afternoon. This gentle companion enjoys peaceful corners, quiet company, and the sound of pages turning...
+              </p>
+              <button class="btn-meet-cat" data-cat-id="4" aria-haspopup="dialog">
+                <span>Meet Chai</span>
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2">
+                  <path d="M5 12h14M12 5l7 7-7 7"/>
+                </svg>
+              </button>
+            </div>
+          </article>
+
+          <!-- ================= CAT 05: WAFFLES ================= -->
+          <article class="cat-card" data-cat-id="5" data-cat-category="sleepy">
+            <div class="cat-portrait-box">
+              <span class="cat-library-tag">Dreamy Reader</span>
+              <!-- NOTE: Replace with Waffles portrait: fluffy white cat with bright blue eyes -->
+              <img src="https://images.unsplash.com/photo-1513245543132-31f507417b26?auto=format&fit=crop&w=700&q=80" 
+                   alt="Waffles &mdash; A fluffy white cat with bright blue eyes and soft cloud coat" 
+                   loading="lazy">
+            </div>
+            <div class="cat-card-body">
+              <div class="cat-card-header">
+                <div class="cat-name">
+                  <span>Waffles</span>
+                  <span style="font-size:0.9rem;">☁️</span>
+                </div>
+                <div class="cat-role">The Sleepy Bookworm</div>
+              </div>
+              <div class="cat-quote-snip">&ldquo;I'll finish this chapter after my nap.&rdquo;</div>
+              <p class="cat-bio-preview">
+                Waffles starts every day with excellent intentions: explore the caf&eacute; and inspect a few books. Somehow, these plans always end with a nap in the sun...
+              </p>
+              <button class="btn-meet-cat" data-cat-id="5" aria-haspopup="dialog">
+                <span>Meet Waffles</span>
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2">
+                  <path d="M5 12h14M12 5l7 7-7 7"/>
+                </svg>
+              </button>
+            </div>
+          </article>
+
+          <!-- ================= CAT 06: FIG ================= -->
+          <article class="cat-card" data-cat-id="6" data-cat-category="curious">
+            <div class="cat-portrait-box">
+              <span class="cat-library-tag">Little Adventurer</span>
+              <!-- NOTE: Replace with Fig portrait: orange ginger tabby cat -->
+              <img src="https://images.unsplash.com/photo-1561948955-570b270e7c36?auto=format&fit=crop&w=700&q=80" 
+                   alt="Fig &mdash; An orange ginger tabby with alert stripes and adventurous face" 
+                   loading="lazy">
+            </div>
+            <div class="cat-card-body">
+              <div class="cat-card-header">
+                <div class="cat-name">
+                  <span>Fig</span>
+                  <span style="font-size:0.9rem;">🧭</span>
+                </div>
+                <div class="cat-role">The Curious Explorer</div>
+              </div>
+              <div class="cat-quote-snip">&ldquo;Every corner hides a new chapter.&rdquo;</div>
+              <p class="cat-bio-preview">
+                Fig is the caf&eacute;'s self-appointed explorer. New deliveries, mysterious corners, and freshly arranged bookshelves all demand immediate investigation...
+              </p>
+              <button class="btn-meet-cat" data-cat-id="6" aria-haspopup="dialog">
+                <span>Meet Fig</span>
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2">
+                  <path d="M5 12h14M12 5l7 7-7 7"/>
+                </svg>
+              </button>
+            </div>
+          </article>
+
+          <!-- ================= CAT 07: PICKLES ================= -->
+          <article class="cat-card" data-cat-id="7" data-cat-category="playful">
+            <div class="cat-portrait-box">
+              <span class="cat-library-tag">Playful Menace</span>
+              <!-- NOTE: Replace with Pickles portrait: grey tabby cat with round face and green eyes -->
+              <img src="https://images.unsplash.com/photo-1514888286974-6c03e2ca1dba?auto=format&fit=crop&w=700&q=80" 
+                   alt="Pickles &mdash; A grey tabby cat with a round face and bright green eyes" 
+                   loading="lazy">
+            </div>
+            <div class="cat-card-body">
+              <div class="cat-card-header">
+                <div class="cat-name">
+                  <span>Pickles</span>
+                  <span style="font-size:0.9rem;">🧶</span>
+                </div>
+                <div class="cat-role">The Tiny Trouble-Maker</div>
+              </div>
+              <div class="cat-quote-snip">&ldquo;Trouble? I prefer the term plot development.&rdquo;</div>
+              <p class="cat-bio-preview">
+                Pickles has two hobbies: making unexpected appearances and acting completely innocent afterward. A rustle of paper sparks instant excitement...
+              </p>
+              <button class="btn-meet-cat" data-cat-id="7" aria-haspopup="dialog">
+                <span>Meet Pickles</span>
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2">
+                  <path d="M5 12h14M12 5l7 7-7 7"/>
+                </svg>
+              </button>
+            </div>
+          </article>
+
+          <!-- ================= CAT 08: INK ================= -->
+          <article class="cat-card" data-cat-id="8" data-cat-category="quiet">
+            <div class="cat-portrait-box">
+              <span class="cat-library-tag">Quiet Observer</span>
+              <!-- Ink portrait: elegant black cat with golden eyes -->
+              <img src="images/ink.jpg" 
+                   alt="Ink &mdash; An elegant black cat with glossy fur and golden eyes" 
+                   loading="lazy">
+            </div>
+            <div class="cat-card-body">
+              <div class="cat-card-header">
+                <div class="cat-name">
+                  <span>Ink</span>
+                  <span style="font-size:0.9rem;">✒️</span>
+                </div>
+                <div class="cat-role">The Midnight Poet</div>
+              </div>
+              <div class="cat-quote-snip">&ldquo;Some stories are better told in silence.&rdquo;</div>
+              <p class="cat-bio-preview">
+                Ink is a quiet soul with a talent for finding the most peaceful corner in the room. Ink prefers to observe from a comfortable distance...
+              </p>
+              <button class="btn-meet-cat" data-cat-id="8" aria-haspopup="dialog">
+                <span>Meet Ink</span>
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2">
+                  <path d="M5 12h14M12 5l7 7-7 7"/>
+                </svg>
+              </button>
+            </div>
+          </article>
+
+          <!-- ================= CAT 09: PUDDING ================= -->
+          <article class="cat-card" data-cat-id="9" data-cat-category="quiet">
+            <div class="cat-portrait-box">
+              <span class="cat-library-tag">Queen of Comfort</span>
+              <!-- NOTE: Replace with Pudding portrait: calico cat with orange, black & white patches -->
+              <img src="https://images.unsplash.com/photo-1574158622682-e40e69881006?auto=format&fit=crop&w=700&q=80" 
+                   alt="Pudding &mdash; A beautiful calico cat with distinctive orange, black, and white patches" 
+                   loading="lazy">
+            </div>
+            <div class="cat-card-body">
+              <div class="cat-card-header">
+                <div class="cat-name">
+                  <span>Pudding</span>
+                  <span style="font-size:0.9rem;">👑</span>
+                </div>
+                <div class="cat-role">The Royal Reviewer</div>
+              </div>
+              <div class="cat-quote-snip">&ldquo;The cushion is mine. The book may stay.&rdquo;</div>
+              <p class="cat-bio-preview">
+                Pudding takes comfort very seriously. Every cushion must meet her standards, and she is the caf&eacute;'s unofficial quality-control expert...
+              </p>
+              <button class="btn-meet-cat" data-cat-id="9" aria-haspopup="dialog">
+                <span>Meet Pudding</span>
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2">
+                  <path d="M5 12h14M12 5l7 7-7 7"/>
+                </svg>
+              </button>
+            </div>
+          </article>
+
+          <!-- ================= CAT 10: NOODLE ================= -->
+          <article class="cat-card" data-cat-id="10" data-cat-category="curious">
+            <div class="cat-portrait-box">
+              <span class="cat-library-tag">Curious Kitten</span>
+              <!-- NOTE: Replace with Noodle portrait: small fluffy cream-coloured kitten -->
+              <img src="https://images.unsplash.com/photo-1592194996308-7b43878e84a6?auto=format&fit=crop&w=700&q=80" 
+                   alt="Noodle &mdash; A small fluffy cream-coloured kitten with a sweet face and bright curious eyes" 
+                   loading="lazy">
+            </div>
+            <div class="cat-card-body">
+              <div class="cat-card-header">
+                <div class="cat-name">
+                  <span>Noodle</span>
+                  <span style="font-size:0.9rem;">✨</span>
+                </div>
+                <div class="cat-role">The Little Daydreamer</div>
+              </div>
+              <div class="cat-quote-snip">&ldquo;Life is one big story. Let's explore it.&rdquo;</div>
+              <p class="cat-bio-preview">
+                Noodle sees magic in the smallest things: a sunbeam on the floor, a ribbon on a gift, or the gentle movement of a page. Curious and full of wonder...
+              </p>
+              <button class="btn-meet-cat" data-cat-id="10" aria-haspopup="dialog">
+                <span>Meet Noodle</span>
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2">
+                  <path d="M5 12h14M12 5l7 7-7 7"/>
+                </svg>
+              </button>
+            </div>
+          </article>
+
+        </div>
+
+        <!-- Cat Welfare and Visitor Etiquette Panel -->
+        <div class="cat-etiquette-panel">
+          <div class="icon-wrap" aria-hidden="true">
+            <svg width="30" height="30" viewBox="0 0 24 24" fill="currentColor">
+              <circle cx="12" cy="14" r="5"/>
+              <circle cx="6" cy="8" r="2.5"/>
+              <circle cx="18" cy="8" r="2.5"/>
+            </svg>
+          </div>
+          <div>
+            <h4>A Little Note About Our Little Residents</h4>
+            <p>
+              Our cats are family, not attractions. They are free to rest, wander, or take a break whenever they need. Please let sleeping cats sleep, approach them gently, and follow our team's guidance when interacting with them. Not every cat wants to be petted, and that's perfectly okay.
+            </p>
+          </div>
+        </div>
+
+        <!-- Closing Storyteller Stamp -->
+        <div class="cat-club-footer">
+          <div class="cat-club-stamp">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
+              <circle cx="12" cy="12" r="10"/>
+            </svg>
+            <span>Purr &amp; Pages Cat Club</span>
+          </div>
+          <p style="font-family:var(--font-heading); font-size:1.35rem; font-weight:700; color:var(--color-dark-choco);">
+            &ldquo;Every visit has a different story. These ten little characters are part of ours.&rdquo;
+          </p>
+          <p style="font-size:1.02rem; color:#5D4436; max-width:600px;">
+            Stop by, settle into your favourite reading nook, and let the caf&eacute;'s resident personalities make your day a little cosier.
+          </p>
+          <a href="#menu" class="btn btn-primary" style="margin-top: 8px;">Explore the Caf&eacute;</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================================================
+         SECTION F: BOOKSTORE AND MERCHANDISE
+         ========================================================================== -->
+    <section class="shop-section" id="bookstore">
+      <div class="container">
+        <!-- ==========================================================================
+             PART 1: THE BOOK NOOK — GENRE SHOWCASE
+             Eyebrow: "FIND YOUR NEXT CHAPTER"
+             Heading: "The Book Nook"
+             Supporting text: "From mysterious midnight reads to dreamy romances, find a little world of your own among our shelves."
+             ========================================================================== -->
+        <div class="book-nook-showcase" id="book-nook">
+          <div class="section-header" style="margin-bottom: 24px;">
+            <div class="section-tag">&#128062; FIND YOUR NEXT CHAPTER &#128214;</div>
+            <h2 class="section-title">The Book Nook</h2>
+            <p class="section-subtitle">From mysterious midnight reads to dreamy romances, find a little world of your own among our shelves.</p>
+          </div>
+
+          <!-- Genre Cards Grid (3 cards per row on desktop, 2 on tablet, 1 on mobile) -->
+          <div class="bn-grid" id="bookNookGrid" role="region" aria-label="Reading Genres Collection">
+            
+            <!-- ==========================================================
+                 CARD 1 — FICTION
+                 REPLACE PHOTO: Set src below to your custom Fiction photograph.
+                 (Aspect ratio: 4:3, e.g. genre-fiction.jpg)
+                 ========================================================== -->
+            <article class="bn-card" tabindex="0" role="button" data-genre="Fiction" data-genre-id="fiction" data-genre-id="fiction" data-genre-id="fiction" aria-label="Explore Fiction genre">
+              <div class="bn-image-wrap">
+                <img src="images/genre-fiction.jpg" 
+                     alt="Warm bedside table with an artfully arranged collection of literary fiction novels, soft linen bedding, reading glasses, and a steaming mug" 
+                     class="bn-image" 
+                     loading="lazy"
+                     onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+                <div class="bn-placeholder-fallback" style="display: none;">
+                  <div class="bn-fallback-icon" aria-hidden="true">
+                    <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"/><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"/></svg>
+                  </div>
+                  <span class="bn-fallback-title">Fiction</span>
+                  <span class="bn-fallback-brand">Purr &amp; Pages Shelves</span>
+                </div>
+                <div class="bn-badge" aria-hidden="true">
+                  <span class="bn-badge-dot"></span>
+                  <span>Explore</span>
+                </div>
+              </div>
+              <div class="bn-info">
+                <h3 class="bn-genre-name">Fiction</h3>
+                <div class="bn-genre-arrow" aria-hidden="true">
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+                </div>
+              </div>
+            </article>
+
+            <!-- ==========================================================
+                 CARD 2 — ROMANCE
+                 REPLACE PHOTO: Set src below to your custom Romance photograph.
+                 (Aspect ratio: 4:3, e.g. genre-romance.jpg)
+                 ========================================================== -->
+            <article class="bn-card" tabindex="0" role="button" data-genre="Romance" data-genre-id="romance" data-genre-id="romance" data-genre-id="romance" aria-label="Explore Romance genre">
+              <div class="bn-image-wrap">
+                <img src="images/genre-romance.jpg" 
+                     alt="Romantic soft-focus books with delicate blush and dusty rose covers, fresh pastel blossoms, and a handwritten love note in golden light" 
+                     class="bn-image" 
+                     loading="lazy"
+                     onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+                <div class="bn-placeholder-fallback" style="display: none;">
+                  <div class="bn-fallback-icon" aria-hidden="true">
+                    <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"/><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"/></svg>
+                  </div>
+                  <span class="bn-fallback-title">Romance</span>
+                  <span class="bn-fallback-brand">Purr &amp; Pages Shelves</span>
+                </div>
+                <div class="bn-badge" aria-hidden="true">
+                  <span class="bn-badge-dot"></span>
+                  <span>Explore</span>
+                </div>
+              </div>
+              <div class="bn-info">
+                <h3 class="bn-genre-name">Romance</h3>
+                <div class="bn-genre-arrow" aria-hidden="true">
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+                </div>
+              </div>
+            </article>
+
+            <!-- ==========================================================
+                 CARD 3 — MYSTERY & THRILLER
+                 REPLACE PHOTO: Set src below to your custom Mystery & Thriller photograph.
+                 (Aspect ratio: 4:3, e.g. genre-mystery.jpg)
+                 ========================================================== -->
+            <article class="bn-card" tabindex="0" role="button" data-genre="Mystery &amp; Thriller" data-genre-id="mystery" data-genre-id="mystery" data-genre-id="mystery" aria-label="Explore Mystery and Thriller genre">
+              <div class="bn-image-wrap">
+                <img src="images/genre-mystery.jpg" 
+                     alt="Moody dark-covered mystery novels stacked on a rustic oak desk with vintage banker lamp, magnifying glass, and investigator notebook" 
+                     class="bn-image" 
+                     loading="lazy"
+                     onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+                <div class="bn-placeholder-fallback" style="display: none;">
+                  <div class="bn-fallback-icon" aria-hidden="true">
+                    <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"/><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"/></svg>
+                  </div>
+                  <span class="bn-fallback-title">Mystery &amp; Thriller</span>
+                  <span class="bn-fallback-brand">Purr &amp; Pages Shelves</span>
+                </div>
+                <div class="bn-badge" aria-hidden="true">
+                  <span class="bn-badge-dot"></span>
+                  <span>Explore</span>
+                </div>
+              </div>
+              <div class="bn-info">
+                <h3 class="bn-genre-name">Mystery &amp; Thriller</h3>
+                <div class="bn-genre-arrow" aria-hidden="true">
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+                </div>
+              </div>
+            </article>
+
+            <!-- ==========================================================
+                 CARD 4 — FANTASY
+                 REPLACE PHOTO: Set src below to your custom Fantasy photograph.
+                 (Aspect ratio: 4:3, e.g. genre-fantasy.jpg)
+                 ========================================================== -->
+            <article class="bn-card" tabindex="0" role="button" data-genre="Fantasy" data-genre-id="fantasy" data-genre-id="fantasy" data-genre-id="fantasy" aria-label="Explore Fantasy genre">
+              <div class="bn-image-wrap">
+                <img src="images/genre-fantasy.jpg" 
+                     alt="Magical stack of deep green and jewel-toned grimoires with ornate gold clasps beside an antique glowing candlestick, astrolabe, and library shelves" 
+                     class="bn-image" 
+                     loading="lazy"
+                     onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+                <div class="bn-placeholder-fallback" style="display: none;">
+                  <div class="bn-fallback-icon" aria-hidden="true">
+                    <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"/><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"/></svg>
+                  </div>
+                  <span class="bn-fallback-title">Fantasy</span>
+                  <span class="bn-fallback-brand">Purr &amp; Pages Shelves</span>
+                </div>
+                <div class="bn-badge" aria-hidden="true">
+                  <span class="bn-badge-dot"></span>
+                  <span>Explore</span>
+                </div>
+              </div>
+              <div class="bn-info">
+                <h3 class="bn-genre-name">Fantasy</h3>
+                <div class="bn-genre-arrow" aria-hidden="true">
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+                </div>
+              </div>
+            </article>
+
+            <!-- ==========================================================
+                 CARD 5 — PERSONAL GROWTH
+                 REPLACE PHOTO: Set src below to your custom Personal Growth photograph.
+                 (Aspect ratio: 4:3, e.g. genre-personal-growth.jpg)
+                 ========================================================== -->
+            <article class="bn-card" tabindex="0" role="button" data-genre="Personal Growth" data-genre-id="personal-growth" data-genre-id="personal-growth" data-genre-id="personal-growth" aria-label="Explore Personal Growth genre">
+              <div class="bn-image-wrap">
+                <img src="images/genre-personal-growth.jpg" 
+                     alt="Uplifting pastel personal development books arranged on a tidy sunny desk with minimalist journal, gold pen, coffee, and succulent" 
+                     class="bn-image" 
+                     loading="lazy"
+                     onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+                <div class="bn-placeholder-fallback" style="display: none;">
+                  <div class="bn-fallback-icon" aria-hidden="true">
+                    <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"/><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"/></svg>
+                  </div>
+                  <span class="bn-fallback-title">Personal Growth</span>
+                  <span class="bn-fallback-brand">Purr &amp; Pages Shelves</span>
+                </div>
+                <div class="bn-badge" aria-hidden="true">
+                  <span class="bn-badge-dot"></span>
+                  <span>Explore</span>
+                </div>
+              </div>
+              <div class="bn-info">
+                <h3 class="bn-genre-name">Personal Growth</h3>
+                <div class="bn-genre-arrow" aria-hidden="true">
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+                </div>
+              </div>
+            </article>
+
+            <!-- ==========================================================
+                 CARD 6 — POETRY & CLASSICS
+                 REPLACE PHOTO: Set src below to your custom Poetry & Classics photograph.
+                 (Aspect ratio: 4:3, e.g. genre-poetry-classics.jpg)
+                 ========================================================== -->
+            <article class="bn-card" tabindex="0" role="button" data-genre="Poetry &amp; Classics" data-genre-id="poetry-classics" data-genre-id="poetry-classics" data-genre-id="poetry-classics" aria-label="Explore Poetry and Classics genre">
+              <div class="bn-image-wrap">
+                <img src="images/genre-poetry-classics.jpg" 
+                     alt="Vintage clothbound classic poetry collections open on an oak table in a cosy reading nook with soft window light, tea, and spectacles" 
+                     class="bn-image" 
+                     loading="lazy"
+                     onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+                <div class="bn-placeholder-fallback" style="display: none;">
+                  <div class="bn-fallback-icon" aria-hidden="true">
+                    <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"/><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"/></svg>
+                  </div>
+                  <span class="bn-fallback-title">Poetry &amp; Classics</span>
+                  <span class="bn-fallback-brand">Purr &amp; Pages Shelves</span>
+                </div>
+                <div class="bn-badge" aria-hidden="true">
+                  <span class="bn-badge-dot"></span>
+                  <span>Explore</span>
+                </div>
+              </div>
+              <div class="bn-info">
+                <h3 class="bn-genre-name">Poetry &amp; Classics</h3>
+                <div class="bn-genre-arrow" aria-hidden="true">
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+                </div>
+              </div>
+            </article>
+
+          </div>
+        
+          <!-- ==========================================================================
+               PART 1B: BOOK NOOK CATALOGUE & SEARCH SECTION
+               Displays 12 books for the selected genre or all 72 books across all genres
+               ========================================================================== -->
+          <div class="book-catalogue-section" id="bookCatalogueSection" aria-label="Book Catalogue and Search">
+            
+            <!-- Catalogue Header with Genre Title, Subtitle, and "Back to Genres" Button -->
+            <div class="catalogue-header-wrap">
+              <div class="catalogue-title-group">
+                <div class="section-tag catalogue-genre-tag" id="catalogueGenreTag">NOVELS &amp; STORIES</div>
+                <h3 class="catalogue-title" id="catalogueTitle">Find Your Next Read</h3>
+                <p class="catalogue-subtitle" id="catalogueSubtitle">A little collection of stories waiting to be discovered.</p>
+              </div>
+              <button type="button" class="catalogue-back-btn" id="backToGenresBtn" aria-label="Back to genre cards">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                  <path d="M19 12H5M12 19l-7-7 7-7"/>
+                </svg>
+                <span>Back to Genres</span>
+              </button>
+            </div>
+
+            <!-- Functional Search Bar & Scope Selector -->
+            <div class="catalogue-search-bar-wrap">
+              <div class="catalogue-search-box">
+                <span class="catalogue-search-icon" aria-hidden="true">
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+                    <circle cx="11" cy="11" r="8"></circle>
+                    <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+                  </svg>
+                </span>
+                <input type="text" 
+                       id="bookSearchInput" 
+                       class="catalogue-search-input" 
+                       placeholder="Search by book title or authorâ€¦" 
+                       aria-label="Search by book title or author">
+                <button type="button" 
+                        id="bookSearchClearBtn" 
+                        class="catalogue-search-clear" 
+                        aria-label="Clear search query" 
+                        title="Clear search"
+                        style="display: none;">
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+                    <line x1="18" y1="6" x2="6" y2="18"></line>
+                    <line x1="6" y1="6" x2="18" y2="18"></line>
+                  </svg>
+                </button>
+              </div>
+
+              <!-- Visible Search Scope Selector -->
+              <div class="catalogue-scope-wrap">
+                <label for="bookSearchScope" class="catalogue-scope-label">Search in:</label>
+                <select id="bookSearchScope" class="catalogue-scope-select" aria-label="Select search scope">
+                  <option value="selected" selected>Selected genre</option>
+                  <option value="all">All genres</option>
+                </select>
+              </div>
+            </div>
+
+            <!-- Search Feedback Bar (Results Count & Active Filters) -->
+            <div class="catalogue-feedback-bar">
+              <span class="catalogue-results-count" id="catalogueResultsCount">12 books found</span>
+              <div class="catalogue-active-badge-wrap" id="catalogueActiveBadgeWrap">
+                <span class="catalogue-active-pill" id="catalogueActivePill">Genre: Fiction</span>
+              </div>
+            </div>
+
+            <!-- Empty State (No Books Found) -->
+            <div class="catalogue-empty-state" id="catalogueEmptyState" style="display: none;">
+              <div class="catalogue-empty-icon" aria-hidden="true">ðŸ“–</div>
+              <h4 class="catalogue-empty-title">No books found. Try another title or author.</h4>
+              <p class="catalogue-empty-text">We couldn't find any matches in the current selection. Try searching in â€œAll genresâ€ or clear your query.</p>
+              <button type="button" class="btn btn-secondary btn-sm" id="emptyStateClearBtn">Clear search</button>
+            </div>
+
+            <!-- Book Cards Responsive Grid -->
+            <div class="book-cards-grid" id="bookCardsGrid" role="region" aria-label="Books in selected collection">
+              <!-- Dynamically populated via JavaScript -->
+            </div>
+
+            <!-- Demo Catalogue Notice -->
+            <div class="catalogue-demo-notice">
+              <span class="demo-notice-icon">â„¹ï¸</span>
+              <span>* Demonstration catalogue: These sample titles represent our curated reading collection. Physical availability is not confirmed until verified by cafÃ© staff.</span>
+            </div>
+
+          </div>
+        </div>
+
+        <!-- ==========================================================================
+             PART 2: LITTLE THINGS TO TAKE HOME (MERCHANDISE)
+             4 Products: Bookmarks (₹240), Ceramic Mug (₹550), Tote Bag (₹480), Gift Bundle (₹1,150)
+             ========================================================================== -->
+        <div class="shop-part-divider" style="margin-top: 75px;">
+          <div class="section-tag" style="margin-bottom: 8px;">CAF&Eacute; SOUVENIRS</div>
+          <h3>Little Things to Take Home</h3>
+          <p>Handcrafted souvenirs and book-lover essentials.</p>
+        </div>
+
+        <div class="merch-grid" role="region" aria-label="Café Merchandise">
+          <!-- ==========================================================
+               PRODUCT 1: ILLUSTRATED BOOKMARKS — ₹240
+               REPLACE PHOTO: Set src below to your custom bookmarks photograph.
+               (1:1 aspect ratio, e.g. merch-bookmarks.jpg)
+               ========================================================== -->
+          <article class="merch-card">
+            <div class="merch-image-box">
+              <img src="images/merch-bookmarks.jpg" 
+                   alt="Set of four illustrated cat bookmarks with silky tassels fanned out on a warm wooden tabletop" 
+                   loading="lazy"
+                   onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+              <div class="merch-placeholder-fallback" style="display: none;">
+                <div class="merch-fallback-icon" aria-hidden="true">
+                  <svg width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M19 21l-7-5-7 5V5a2 2 0 0 1 2-2h10a2 2 0 0 1 2 2z"/></svg>
+                </div>
+                <span class="merch-fallback-title">Illustrated Bookmarks</span>
+                <span class="merch-fallback-badge">Set of 4 &bull; &#8377;240</span>
+              </div>
+            </div>
+            <div class="merch-body">
+              <h4 class="merch-name">Illustrated Bookmarks</h4>
+              <p class="merch-desc">Set of 4 heavy cardstock bookmarks featuring whimsical illustrations of our resident cats nestled in bookshelves.</p>
+              <div class="merch-footer">
+                <span class="merch-price">&#8377;240</span>
+                <button class="btn btn-primary btn-sm add-to-cart-btn"
+                        data-id="merch-1" data-name="Illustrated Bookmarks (Set of 4)" data-price="240" data-type="merch">
+                  Add to Bag
+                </button>
+              </div>
+            </div>
+          </article>
+
+          <!-- ==========================================================
+               PRODUCT 2: PURR & PAGES CERAMIC MUG — ₹550
+               REPLACE PHOTO: Set src below to your custom ceramic mug photograph.
+               (1:1 aspect ratio, e.g. merch-mug.jpg)
+               ========================================================== -->
+          <article class="merch-card">
+            <div class="merch-image-box">
+              <img src="images/merch-mug.jpg" 
+                   alt="Purr &amp; Pages handmade cream stoneware ceramic mug with handle, stamped with the official Purr &amp; Pages logo, sweet cat illustrations, and paw prints" 
+                   loading="lazy"
+                   onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+              <div class="merch-placeholder-fallback" style="display: none;">
+                <div class="merch-fallback-icon" aria-hidden="true">
+                  <svg width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M18 8h1a4 4 0 0 1 0 8h-1"/><path d="M2 8h16v9a4 4 0 0 1-4 4H6a4 4 0 0 1-4-4V8z"/><line x1="6" y1="6" x2="6" y2="4"/><line x1="10" y1="1" x2="10" y2="4"/><line x1="14" y1="1" x2="14" y2="4"/></svg>
+                </div>
+                <span class="merch-fallback-title">Ceramic Mug</span>
+                <span class="merch-fallback-badge">Stoneware &bull; &#8377;550</span>
+              </div>
+            </div>
+            <div class="merch-body">
+              <h4 class="merch-name">Purr &amp; Pages Ceramic Mug</h4>
+              <p class="merch-desc">Hand-glazed cosy stoneware mug featuring our official brand logo, sweet cat illustrations, and embossed paw prints. Dishwasher and microwave safe.</p>
+              <div class="merch-footer">
+                <span class="merch-price">&#8377;550</span>
+                <button class="btn btn-primary btn-sm add-to-cart-btn"
+                        data-id="merch-2" data-name="Purr &amp; Pages Ceramic Mug" data-price="550" data-type="merch">
+                  Add to Bag
+                </button>
+              </div>
+            </div>
+          </article>
+
+          <!-- ==========================================================
+               PRODUCT 3: CAT-THEMED TOTE BAG — ₹480
+               REPLACE PHOTO: Set src below to your custom canvas tote bag photograph.
+               (1:1 aspect ratio, e.g. merch-tote.jpg)
+               ========================================================== -->
+          <article class="merch-card">
+            <div class="merch-image-box">
+              <img src="images/merch-tote.jpg" 
+                   alt="Natural cream cotton canvas tote bag with shoulder handles, screen-printed with the official Purr &amp; Pages logo, sleeping cat on books, and playful cat illustrations" 
+                   loading="lazy"
+                   onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+              <div class="merch-placeholder-fallback" style="display: none;">
+                <div class="merch-fallback-icon" aria-hidden="true">
+                  <svg width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-2z"/><line x1="3" y1="6" x2="21" y2="6"/><path d="M16 10a4 4 0 0 1-8 0"/></svg>
+                </div>
+                <span class="merch-fallback-title">Cat-Themed Tote Bag</span>
+                <span class="merch-fallback-badge">Organic Canvas &bull; &#8377;480</span>
+              </div>
+            </div>
+            <div class="merch-body">
+              <h4 class="merch-name">Cat-Themed Tote Bag</h4>
+              <p class="merch-desc">Heavyweight 100% organic cotton canvas tote featuring our official brand logo, whimsical cat illustrations, and signature &ldquo;READ &bull; SIP &bull; PURR&rdquo; artwork.</p>
+              <div class="merch-footer">
+                <span class="merch-price">&#8377;480</span>
+                <button class="btn btn-primary btn-sm add-to-cart-btn"
+                        data-id="merch-3" data-name="Cat-Themed Tote Bag" data-price="480" data-type="merch">
+                  Add to Bag
+                </button>
+              </div>
+            </div>
+          </article>
+
+          <!-- ==========================================================
+               PRODUCT 4: BOOK-LOVER GIFT BUNDLE — ₹1,150
+               REPLACE PHOTO: Set src below to your custom gift bundle photograph.
+               (1:1 aspect ratio, e.g. merch-gift-bundle.jpg)
+               ========================================================== -->
+          <article class="merch-card">
+            <div class="merch-image-box">
+              <img src="images/merch-gift-bundle.jpg" 
+                   alt="Book-Lover Gift Bundle containing ceramic mug, canvas tote bag, bookmark set, and artisan drip coffee sachets in a kraft gift box" 
+                   loading="lazy"
+                   onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+              <div class="merch-placeholder-fallback" style="display: none;">
+                <div class="merch-fallback-icon" aria-hidden="true">
+                  <svg width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><polyline points="20 12 20 22 4 22 4 12"/><rect x="2" y="7" width="20" height="5"/><line x1="12" y1="22" x2="12" y2="7"/><path d="M12 7H7.5a2.5 2.5 0 0 1 0-5C11 2 12 7 12 7z"/><path d="M12 7h4.5a2.5 2.5 0 0 0 0-5C13 2 12 7 12 7z"/></svg>
+                </div>
+                <span class="merch-fallback-title">Book-Lover Gift Bundle</span>
+                <span class="merch-fallback-badge">Complete Set &bull; &#8377;1,150</span>
+              </div>
+            </div>
+            <div class="merch-body">
+              <h4 class="merch-name">Book-Lover Gift Bundle</h4>
+              <p class="merch-desc">Our flagship gift box: includes the signature ceramic mug, canvas tote bag, bookmark set, and artisan coffee drip sachets.</p>
+              <div class="merch-footer">
+                <span class="merch-price">&#8377;1,150</span>
+                <button class="btn btn-primary btn-sm add-to-cart-btn"
+                        data-id="merch-4" data-name="Book-Lover Gift Bundle" data-price="1150" data-type="merch">
+                  Add to Bag
+                </button>
+              </div>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================================================
+         SECTION G: GALLERY & LIGHTBOX
+         ========================================================================== -->
+    <section class="gallery-section" id="gallery">
+      <div class="container">
+        <div class="section-header">
+          <div class="section-tag">Caf&eacute; Moments</div>
+          <h2 class="section-title">A Peek Into Our Little World.</h2>
+          <p class="section-subtitle">Photographs from quiet mornings, steaming mugs, and curious whiskers.</p>
+        </div>
+
+        <div class="gallery-grid" id="galleryGrid">
+          <!-- Image 1: Our Bookish Haven (Large 2x2 showcase on the left) -->
+          <div class="gallery-item" data-index="0" data-gallery-id="1" data-title="Our Bookish Haven" tabindex="0" role="button" aria-label="View photo: Our Bookish Haven">
+            <img src="images/gallery-1-haven.jpg" 
+                 alt="Beautiful independent bookstore cafÃ© interior with tall floor-to-ceiling bookshelves, cosy leather reading armchair, warm natural morning light, and welcoming coffee counter" 
+                 loading="lazy"
+                 onerror="this.onerror=null; if(this.src.indexOf('images/')!==-1) this.src='gallery-1-haven.jpg';">
+            <div class="gallery-overlay">
+              <span class="gallery-caption">Our Bookish Haven</span>
+            </div>
+          </div>
+
+          <!-- Image 2: Coffee Corner (Upper-right area) -->
+          <div class="gallery-item" data-index="1" data-gallery-id="2" data-title="Coffee Corner" tabindex="0" role="button" aria-label="View photo: Coffee Corner">
+            <img src="images/gallery-2-coffee-corner.jpg" 
+                 alt="Warm cafÃ© interior with rustic coffee counter, professional stainless steel espresso machine, hanging Edison pendant lights, and ceramic cups" 
+                 loading="lazy"
+                 onerror="this.onerror=null; if(this.src.indexOf('images/')!==-1) this.src='gallery-2-coffee-corner.jpg';">
+            <div class="gallery-overlay">
+              <span class="gallery-caption">Coffee Corner</span>
+            </div>
+          </div>
+
+          <!-- Image 3: Our Curious Residents (Upper-right area) -->
+          <div class="gallery-item" data-index="2" data-gallery-id="3" data-title="Our Curious Residents" tabindex="0" role="button" aria-label="View photo: Our Curious Residents">
+            <img src="images/gallery-3-cat-resident.jpg" 
+                 alt="Real domestic black cat with bright golden eyes resting cosily on a knitted beige cushion beside stacks of hardcover books in the cafÃ©" 
+                 loading="lazy"
+                 onerror="this.onerror=null; if(this.src.indexOf('images/')!==-1) this.src='gallery-3-cat-resident.jpg';">
+            <div class="gallery-overlay">
+              <span class="gallery-caption">Our Curious Residents</span>
+            </div>
+          </div>
+
+          <!-- Image 4: Stories on Every Shelf (Wide horizontal in middle-right area) -->
+          <div class="gallery-item" data-index="3" data-gallery-id="4" data-title="Stories on Every Shelf" tabindex="0" role="button" aria-label="View photo: Stories on Every Shelf">
+            <img src="images/gallery-4-shelves.jpg" 
+                 alt="Close-up of beautifully arranged wooden bookshelves with visible spines of diverse novels, antique brass bookend, and soft ambient library lighting" 
+                 loading="lazy"
+                 onerror="this.onerror=null; if(this.src.indexOf('images/')!==-1) this.src='gallery-4-shelves.jpg';">
+            <div class="gallery-overlay">
+              <span class="gallery-caption">Stories on Every Shelf</span>
+            </div>
+          </div>
+
+          <!-- Image 5: The Art of Brewing (Lower-left area) -->
+          <div class="gallery-item" data-index="4" data-gallery-id="5" data-title="The Art of Brewing" tabindex="0" role="button" aria-label="View photo: The Art of Brewing">
+            <img src="images/gallery-5-barista.jpg" 
+                 alt="Skilled barista in canvas apron carefully pouring water from a gooseneck kettle into a glass V60 pour-over coffee dripper in an authentic cafÃ© environment" 
+                 loading="lazy"
+                 onerror="this.onerror=null; if(this.src.indexOf('images/')!==-1) this.src='gallery-5-barista.jpg';">
+            <div class="gallery-overlay">
+              <span class="gallery-caption">The Art of Brewing</span>
+            </div>
+          </div>
+
+          <!-- Image 6: A Little Sip of Happiness (Lower-left area) -->
+          <div class="gallery-item" data-index="5" data-gallery-id="6" data-title="A Little Sip of Happiness" tabindex="0" role="button" aria-label="View photo: A Little Sip of Happiness">
+            <img src="images/gallery-6-sip-happiness.jpg" 
+                 alt="Stoneware ceramic coffee mug with latte art on a rustic wooden cafÃ© table beside an open hardcover novel, reading glasses, and a fresh cinnamon pastry" 
+                 loading="lazy"
+                 onerror="this.onerror=null; if(this.src.indexOf('images/')!==-1) this.src='gallery-6-sip-happiness.jpg';">
+            <div class="gallery-overlay">
+              <span class="gallery-caption">A Little Sip of Happiness</span>
+            </div>
+          </div>
+
+          <!-- Image 7: Paws Among the Pages (Wide atmospheric in lower-right area) -->
+          <div class="gallery-item" data-index="6" data-gallery-id="7" data-title="Paws Among the Pages" tabindex="0" role="button" aria-label="View photo: Paws Among the Pages">
+            <img src="images/gallery-7-paws-pages.jpg" 
+                 alt="Domestic fluffy ginger tabby cat sleeping peacefully curled up on a plaid blanket beside vintage books and coffee on a sunlit bookstore windowsill" 
+                 loading="lazy"
+                 onerror="this.onerror=null; if(this.src.indexOf('images/')!==-1) this.src='gallery-7-paws-pages.jpg';">
+            <div class="gallery-overlay">
+              <span class="gallery-caption">Paws Among the Pages</span>
+            </div>
+          </div>
+        </div></div>
+    </section>
+
+    <!-- ==========================================================================
+         SECTION H: CONTACT AND ENQUIRY FORM
+         ========================================================================== -->
+    <section class="contact-section" id="contact">
+      <div class="container">
+        <div class="section-header">
+          <div class="section-tag">Say Hello</div>
+          <h2 class="section-title">Your Next Cosy Afternoon Starts Here.</h2>
+          <p class="section-subtitle">Have a question, a book recommendation, or an idea for our next little gathering? We'd love to hear from you.</p>
+        </div>
+
+        <div class="contact-grid">
+          <!-- Contact Information & Placeholders -->
+          <div class="contact-info-card">
+            <div>
+              <h3 style="font-family:var(--font-heading); font-size:1.6rem; color:var(--color-dark-choco); margin-bottom: 24px;">
+                Caf&eacute; Information
+              </h3>
+
+              <!-- Address Placeholder -->
+              <div class="info-item">
+                <div class="info-icon" aria-hidden="true">
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/>
+                    <circle cx="12" cy="10" r="3"/>
+                  </svg>
+                </div>
+                <div class="info-text">
+                  <h4>Find Us</h4>
+                  <p>14 Whisker Lane, Near Old Town Library<br>Bengaluru, Karnataka 560001<br><em>[Replace with your caf&eacute; address]</em></p>
+                </div>
+              </div>
+
+              <!-- Opening Hours Placeholder -->
+              <div class="info-item">
+                <div class="info-icon" aria-hidden="true">
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <circle cx="12" cy="12" r="10"/>
+                    <polyline points="12 6 12 12 16 14"/>
+                  </svg>
+                </div>
+                <div class="info-text">
+                  <h4>Opening Hours</h4>
+                  <p>Tuesday &ndash; Sunday: 9:00 AM &ndash; 9:00 PM<br>Monday: Closed for Cat Pampering &amp; Rest<br><em>[Replace with your caf&eacute; hours]</em></p>
+                </div>
+              </div>
+
+              <!-- Email Placeholder -->
+              <div class="info-item">
+                <div class="info-icon" aria-hidden="true">
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/>
+                    <polyline points="22,6 12,13 2,6"/>
+                  </svg>
+                </div>
+                <div class="info-text">
+                  <h4>Email Us</h4>
+                  <p><a href="mailto:hello@purrandpagescafe.demo">hello@purrandpagescafe.demo</a><br><em>[Replace with your contact email]</em></p>
+                </div>
+              </div>
+
+              <!-- Phone Placeholder -->
+              <div class="info-item">
+                <div class="info-icon" aria-hidden="true">
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/>
+                  </svg>
+                </div>
+                <div class="info-text">
+                  <h4>Call Us</h4>
+                  <p>+91 98765 43210<br><em>[Replace with your telephone number]</em></p>
+                </div>
+              </div>
+            </div>
+
+            <!-- Social Media Placeholder Links -->
+            <div>
+              <div style="font-family:var(--font-heading); font-size:0.95rem; font-weight:700; color:var(--color-dark-choco); margin-bottom:10px;">
+                Follow Our Cat Shenanigans
+              </div>
+              <div class="social-links-row">
+                <a href="#contact" class="social-link-btn" title="Instagram [Placeholder]">
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <rect x="2" y="2" width="20" height="20" rx="5" ry="5"/>
+                    <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/>
+                    <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/>
+                  </svg>
+                </a>
+                <a href="#contact" class="social-link-btn" title="Pinterest [Placeholder]">
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
+                    <path d="M12 0a12 12 0 0 0-4.37 23.18c-.06-.98-.12-2.48.02-3.55l1.02-4.32s-.26-.52-.26-1.3c0-1.22.7-2.13 1.58-2.13.75 0 1.11.56 1.11 1.23 0 .75-.48 1.88-.73 2.92-.2.87.43 1.58 1.29 1.58 1.54 0 2.73-1.63 2.73-3.98 0-2.08-1.5-3.54-3.64-3.54-2.48 0-3.93 1.86-3.93 3.78 0 .75.29 1.55.65 1.99a.3.3 0 0 1 .07.29c-.08.33-.26 1.05-.3 1.2-.05.21-.17.26-.38.16-1.42-.66-2.31-2.73-2.31-4.4 0-3.58 2.6-6.87 7.5-6.87 3.94 0 7 2.8 7 6.55 0 3.91-2.46 7.06-5.88 7.06-1.15 0-2.23-.6-2.6-1.3l-.71 2.71c-.26 1-.95 2.25-1.42 3.01A12 12 0 1 0 12 0z"/>
+                  </svg>
+                </a>
+                <a href="#contact" class="social-link-btn" title="Goodreads [Placeholder]">
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"/>
+                    <path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"/>
+                  </svg>
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Interactive Enquiry Form -->
+          <div class="contact-form-card">
+            <h3 style="font-family:var(--font-heading); font-size:1.6rem; color:var(--color-dark-choco); margin-bottom: 6px;">
+              Send an Enquiry
+            </h3>
+            <p style="font-size:0.95rem; color:#675143; margin-bottom: 24px;">
+              Drop us a note and we will reply as soon as the cat lets us reach the keyboard.
+            </p>
+
+            <form id="enquiryForm" novalidate>
+              <!-- Name Field -->
+              <div class="form-group">
+                <label for="userName" class="form-label">Your Name *</label>
+                <input type="text" id="userName" name="name" class="form-control" placeholder="e.g. Maya Sharma" required autocomplete="name">
+                <div class="form-error-msg">Please enter your name.</div>
+              </div>
+
+              <!-- Email Field -->
+              <div class="form-group">
+                <label for="userEmail" class="form-label">Email Address *</label>
+                <input type="email" id="userEmail" name="email" class="form-control" placeholder="e.g. maya@example.com" required autocomplete="email">
+                <div class="form-error-msg">Please enter a valid email address.</div>
+              </div>
+
+              <!-- Enquiry Type Dropdown -->
+              <div class="form-group">
+                <label for="enquiryType" class="form-label">Enquiry Type</label>
+                <select id="enquiryType" name="enquiryType" class="form-control">
+                  <option value="general">General enquiry</option>
+                  <option value="menu">Caf&eacute; menu</option>
+                  <option value="books">Book recommendations</option>
+                  <option value="events">Book club or events</option>
+                  <option value="merch">Merchandise</option>
+                  <option value="other">Other</option>
+                </select>
+              </div>
+
+              <!-- Message Field -->
+              <div class="form-group">
+                <label for="userMessage" class="form-label">Your Message *</label>
+                <textarea id="userMessage" name="message" class="form-control" rows="4" placeholder="Tell us your questions, favourite books, or coffee cravings..." required></textarea>
+                <div class="form-error-msg">Please share your message (at least 10 characters).</div>
+              </div>
+
+              <!-- Submit Button -->
+              <button type="submit" class="btn btn-primary" style="width:100%;">
+                <span>Send Warm Thoughts</span>
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2">
+                  <line x1="22" y1="2" x2="11" y2="13"/>
+                  <polygon points="22 2 15 22 11 13 2 9 22 2"/>
+                </svg>
+              </button>
+
+              <!-- Form Demo Disclaimer -->
+              <div class="form-demo-note">
+                <em>* Note: This contact form is a front-end demonstration. No messages are stored or transmitted until hooked up to your email service.</em>
+              </div>
+
+              <!-- Success Alert Box -->
+              <div class="form-success-box" id="formSuccessAlert" role="alert">
+                <h4>Message Received with Purrs!</h4>
+                <p>Thank you for writing to Purr &amp; Pages. In a live environment, our team would receive your note and get back to you promptly.</p>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ==========================================================================
+       SECTION I: FOOTER
+       ========================================================================== -->
+  <footer class="site-footer" id="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <!-- Brand Info -->
+        <div class="footer-brand">
+          <a href="#hero" class="footer-logo-link" aria-label="Purr &amp; Pages Bookstore Café Home">
+            <img src="images/logo-light.png" alt="Purr &amp; Pages &mdash; READ &bull; SIP &bull; PURR" class="footer-logo-img" onerror="this.src='images/logo.png'; this.style.filter='brightness(0) invert(0.96)';">
+          </a>
+          <p class="footer-desc">
+            A cosy independent bookstore caf&eacute; where literature, specialty coffee, and curious cats create the quiet afternoons you've been longing for.
+          </p>
+        </div>
+
+        <!-- Quick Links -->
+        <div>
+          <h4 class="footer-title">Navigation</h4>
+          <ul class="footer-links">
+            <li><a href="#hero">Home</a></li>
+            <li><a href="#about">About Purr &amp; Pages</a></li>
+            <li><a href="#menu">The Purr-fect Menu</a></li>
+            <li><a href="#cats">Meet Our 10 Cats</a></li>
+            <li><a href="#bookstore">Bookstore &amp; Goods</a></li>
+            <li><a href="#gallery">Photo Gallery</a></li>
+          </ul>
+        </div>
+
+        <!-- Operating Hours -->
+        <div>
+          <h4 class="footer-title">Caf&eacute; Hours</h4>
+          <p class="footer-hours-p"><strong>Tuesday &ndash; Sunday:</strong><br>9:00 AM &ndash; 9:00 PM</p>
+          <p class="footer-hours-p"><strong>Monday:</strong><br>Closed for Cat Care</p>
+          <p class="footer-hours-p" style="font-size:0.82rem; color:var(--color-caramel);">Quiet Reading Hours: 2 PM &ndash; 5 PM</p>
+        </div>
+
+        <!-- Contact & Placeholders -->
+        <div>
+          <h4 class="footer-title">Visit Our Nook</h4>
+          <p class="footer-hours-p">14 Whisker Lane, Bengaluru 560001</p>
+          <p class="footer-hours-p"><a href="mailto:hello@purrandpagescafe.demo" style="color:var(--color-caramel-light);">hello@purrandpagescafe.demo</a></p>
+          <p class="footer-hours-p">+91 98765 43210</p>
+          <p class="footer-hours-p" style="font-size:0.8rem; opacity:0.75;"><em>[Editable contact placeholders]</em></p>
+        </div>
+      </div>
+
+      <!-- Footer Bottom -->
+      <div class="footer-bottom">
+        <div>
+          &copy; <span id="currentYear"></span> Purr &amp; Pages Bookstore Caf&eacute;. A fictional concept brand designed with love.
+        </div>
+        <div>
+          <button class="btn-top" id="backToTopBtn" aria-label="Back to top of page">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+              <line x1="12" y1="19" x2="12" y2="5"/>
+              <polyline points="5 12 12 5 19 12"/>
+            </svg>
+          </button>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ==========================================================================
+       MODALS, LIGHTBOX & DRAWERS
+       ========================================================================== -->
+
+  <!-- 1. Cat Bio Modal Dialog -->
+  <div class="modal-backdrop" id="catModalBackdrop" role="dialog" aria-modal="true" aria-labelledby="catModalName">
+    <div class="cat-modal-card">
+      <button class="modal-close-btn" id="closeCatModalBtn" aria-label="Close cat profile">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+          <line x1="18" y1="6" x2="6" y2="18"/>
+          <line x1="6" y1="6" x2="18" y2="18"/>
+        </svg>
+      </button>
+
+      <div class="cat-modal-header">
+        <img id="catModalImage" src="" alt="">
+      </div>
+
+      <div class="cat-modal-content">
+        <div class="cat-modal-tags">
+          <span class="modal-tag" id="catModalTag">Tag</span>
+        </div>
+        <h3 class="cat-modal-name" id="catModalName">Cat Name</h3>
+        <div class="cat-modal-role" id="catModalRole">Role Title</div>
+        <div class="cat-modal-quote" id="catModalQuote">&ldquo;Signature quote&rdquo;</div>
+        <p class="cat-modal-bio" id="catModalBio">Full cat biography text will be loaded here.</p>
+
+        <div class="cat-details-grid">
+          <div class="cat-detail-item">
+            <h5>Favourite Spot</h5>
+            <p id="catModalSpot">The window seat</p>
+          </div>
+          <div class="cat-detail-item">
+            <h5>Favourite Activity</h5>
+            <p id="catModalActivity">Napping beside books</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- 2. Gallery Lightbox Modal -->
+  <div class="lightbox-modal" id="galleryLightbox" role="dialog" aria-modal="true" aria-label="Photo Lightbox">
+    <button class="modal-close-btn" id="closeLightboxBtn" aria-label="Close lightbox">
+      <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+        <line x1="18" y1="6" x2="6" y2="18"/>
+        <line x1="6" y1="6" x2="18" y2="18"/>
+      </svg>
+    </button>
+
+    <button class="lightbox-nav-btn lightbox-prev" id="lightboxPrevBtn" aria-label="Previous photograph">
+      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+        <polyline points="15 18 9 12 15 6"/>
+      </svg>
+    </button>
+
+    <div class="lightbox-container" id="lightboxContainer">
+      <img id="lightboxImg" src="" alt="">
+      <div class="lightbox-caption" id="lightboxCaption">Caption</div>
+    </div>
+
+    <button class="lightbox-nav-btn lightbox-next" id="lightboxNextBtn" aria-label="Next photograph">
+      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+        <polyline points="9 18 15 12 9 6"/>
+      </svg>
+    </button>
+  </div>
+
+  <!-- 3. Demo Shopping Cart Drawer -->
+  <aside class="cart-drawer" id="cartDrawer" aria-label="Shopping Bag Demo Drawer">
+    <div class="cart-drawer-header">
+      <h3>Your Bag <span id="cartDrawerCount">(0)</span></h3>
+      <button class="cart-remove-btn" id="closeCartBtn" aria-label="Close Shopping Bag" style="font-size:1.4rem;">✕</button>
+    </div>
+
+    <div class="cart-items-list" id="cartItemsList">
+      <!-- Items dynamically rendered by JavaScript -->
+      <div style="text-align:center; padding:40px 10px; color:#8C6D5B;">
+        <svg width="44" height="44" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" style="margin-bottom:12px;">
+          <path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-2z"/>
+          <line x1="3" y1="6" x2="21" y2="6"/>
+        </svg>
+        <p>Your bag is currently empty.</p>
+        <p style="font-size:0.88rem; margin-top:4px;">Add books or merchandise to see them here!</p>
+      </div>
+    </div>
+
+    <div class="cart-drawer-footer">
+      <div class="cart-subtotal-row">
+        <span>Subtotal:</span>
+        <span id="cartSubtotal">&#8377;0</span>
+      </div>
+      <button class="btn btn-primary" style="width:100%;" id="checkoutDemoBtn">Proceed to Checkout (Demo)</button>
+      <p class="cart-demo-alert">
+        * Demonstration cart only. Purr &amp; Pages is a concept portfolio website; no payments or orders are processed.
+      </p>
+    </div>
+  </aside>
+
+  <!-- ==========================================================================
+       JAVASCRIPT LOGIC & INTERACTIONS
+       ========================================================================== -->
+  <!-- Purr & Pages External JavaScript Functionality -->
+  <script src="script.js"></script>
+</body>
+</html>
