@@ -1,0 +1,5422 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Purr & Pages — A cosy fictional bookstore café combining hand-curated books, artisanal coffee, resident rescue cats, and a peaceful reading atmosphere. READ • SIP • PURR.">
+  <meta name="theme-color" content="#6F4E37">
+  
+  <title>Purr &amp; Pages | Bookstore Café — READ • SIP • PURR</title>
+  
+  <!-- Favicon -->
+  <link rel="icon" type="image/svg+xml" href="assets/icons/favicon.svg">
+  
+  <!-- Google Fonts: Fredoka (Headings), Nunito Sans (Body & Controls) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@600;700&family=Nunito+Sans:ital,opsz,wght@0,6..12,400;0,6..12,500;0,6..12,600;0,6..12,700;1,6..12,400&display=swap" rel="stylesheet">
+  
+  <!-- Main Stylesheet -->
+  <style>
+/* ==========================================================================
+   PURR & PAGES — STYLESHEET
+   Brand: Purr & Pages | Tagline: READ • SIP • PURR
+   Palette: Warm Cream, Soft Beige, Coffee Brown, Deep Espresso, Caramel, Muted Sage
+   ========================================================================== */
+
+/* --------------------------------------------------------------------------
+   1. CSS CUSTOM PROPERTIES (VARIABLES)
+   -------------------------------------------------------------------------- */
+:root {
+  /* Brand Colour Palette */
+  --color-warm-cream: #FFF8ED;
+  --color-soft-beige: #EADBC8;
+  --color-coffee-brown: #6F4E37;
+  --color-deep-espresso: #3E2B24;
+  --color-caramel: #C99A6B;
+  --color-muted-sage: #A8B5A0;
+  --color-warm-white: #FFFFFF;
+
+  /* Semantic UI Colors */
+  --color-bg-primary: #FFF8ED;
+  --color-bg-surface: #FFFFFF;
+  --color-bg-card: #FFFFFF;
+  --color-bg-secondary: #F7EFE3;
+  --color-text-main: #3E2B24;
+  --color-text-muted: #6E5A51;
+  --color-text-light: #FFF8ED;
+  --color-border: #E8DACB;
+  --color-border-subtle: rgba(111, 78, 55, 0.12);
+  --color-border-focus: #C99A6B;
+  
+  /* Status / Accents */
+  --color-accent-amber: #E29B42;
+  --color-success-bg: #EDF4EA;
+  --color-success-text: #375E33;
+  --color-error-bg: #FBEBE8;
+  --color-error-text: #A63A29;
+
+  /* Typography */
+  --font-display: 'Fredoka', cursive, system-ui, sans-serif;
+  --font-heading: 'Fredoka', cursive, system-ui, sans-serif;
+  --font-body: 'Nunito Sans', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+
+  /* Layout & Sizing */
+  --header-height: 80px;
+  --container-max: 1200px;
+  --container-pad: 1.5rem;
+  
+  /* Radii */
+  --radius-sm: 8px;
+  --radius-md: 14px;
+  --radius-lg: 22px;
+  --radius-xl: 32px;
+  --radius-pill: 9999px;
+
+  /* Shadows */
+  --shadow-sm: 0 2px 6px rgba(62, 43, 36, 0.05);
+  --shadow-md: 0 6px 18px rgba(62, 43, 36, 0.08);
+  --shadow-lg: 0 14px 34px rgba(62, 43, 36, 0.12);
+  --shadow-hover: 0 16px 36px rgba(111, 78, 55, 0.16);
+
+  /* Transitions */
+  --transition-fast: 0.15s ease;
+  --transition-normal: 0.28s cubic-bezier(0.4, 0, 0.2, 1);
+  --transition-slow: 0.45s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* --------------------------------------------------------------------------
+   2. RESET & BASE ELEMENTS
+   -------------------------------------------------------------------------- */
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  font-size: 16px;
+  scroll-behavior: smooth;
+  scroll-padding-top: var(--header-height);
+  -webkit-text-size-adjust: 100%;
+}
+
+body {
+  font-family: var(--font-body);
+  background-color: var(--color-bg-primary);
+  color: var(--color-text-main);
+  line-height: 1.65;
+  font-weight: 400;
+  overflow-x: hidden;
+  position: relative;
+  min-height: 100vh;
+}
+
+/* Accessible Skip Link */
+.skip-link {
+  position: absolute;
+  top: -100px;
+  left: 1rem;
+  background: var(--color-coffee-brown);
+  color: var(--color-warm-white);
+  padding: 0.8rem 1.4rem;
+  border-radius: var(--radius-sm);
+  z-index: 999999;
+  font-weight: 700;
+  text-decoration: none;
+  transition: top var(--transition-fast);
+}
+.skip-link:focus {
+  top: 1rem;
+  outline: 3px solid var(--color-caramel);
+}
+
+/* Heading Defaults */
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-heading);
+  color: var(--color-deep-espresso);
+  font-weight: 700;
+  line-height: 1.25;
+}
+
+p {
+  margin-bottom: 1rem;
+}
+p:last-child {
+  margin-bottom: 0;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+a {
+  color: var(--color-coffee-brown);
+  text-decoration: none;
+  transition: color var(--transition-fast);
+}
+a:hover {
+  color: var(--color-caramel);
+}
+
+button {
+  font-family: inherit;
+  border: none;
+  background: none;
+  cursor: pointer;
+  color: inherit;
+}
+
+/* Focus Visibility */
+:focus-visible {
+  outline: 3px solid var(--color-caramel);
+  outline-offset: 3px;
+  border-radius: var(--radius-sm);
+}
+
+/* Selection */
+::selection {
+  background-color: var(--color-soft-beige);
+  color: var(--color-deep-espresso);
+}
+
+/* --------------------------------------------------------------------------
+   3. SHARED LAYOUT & UTILITIES
+   -------------------------------------------------------------------------- */
+.container {
+  width: 100%;
+  max-width: var(--container-max);
+  margin-inline: auto;
+  padding-inline: var(--container-pad);
+}
+
+.section-padding {
+  padding-block: 5.5rem;
+}
+
+.text-center {
+  text-align: center;
+}
+
+/* Section Header Structure */
+.section-header {
+  max-width: 720px;
+  margin-inline: auto;
+  margin-bottom: 3.5rem;
+}
+
+.section-tag {
+  display: inline-block;
+  font-family: var(--font-display);
+  font-size: 0.85rem;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--color-caramel);
+  background: rgba(201, 154, 107, 0.12);
+  padding: 0.35rem 1rem;
+  border-radius: var(--radius-pill);
+  margin-bottom: 0.85rem;
+}
+
+.section-title {
+  font-size: clamp(2rem, 3.5vw, 2.75rem);
+  font-weight: 700;
+  color: var(--color-deep-espresso);
+  margin-bottom: 0.75rem;
+}
+
+.section-subtitle {
+  font-size: 1.1rem;
+  color: var(--color-text-muted);
+  line-height: 1.6;
+}
+
+.header-flourish {
+  margin-top: 1rem;
+  display: flex;
+  justify-content: center;
+}
+
+/* Buttons */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.6rem;
+  font-family: var(--font-body);
+  font-size: 1rem;
+  font-weight: 600;
+  padding: 0.85rem 1.75rem;
+  border-radius: var(--radius-pill);
+  transition: all var(--transition-normal);
+  text-align: center;
+  cursor: pointer;
+}
+
+.btn--primary {
+  background-color: var(--color-coffee-brown);
+  color: var(--color-warm-white);
+  box-shadow: 0 4px 14px rgba(111, 78, 55, 0.25);
+}
+.btn--primary:hover {
+  background-color: var(--color-deep-espresso);
+  color: var(--color-warm-white);
+  transform: translateY(-2px);
+  box-shadow: 0 6px 18px rgba(62, 43, 36, 0.3);
+}
+
+.btn--secondary {
+  background-color: var(--color-soft-beige);
+  color: var(--color-deep-espresso);
+  border: 1px solid rgba(111, 78, 55, 0.15);
+}
+.btn--secondary:hover {
+  background-color: var(--color-caramel);
+  color: var(--color-warm-white);
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-md);
+}
+
+.btn--full {
+  width: 100%;
+}
+
+/* --------------------------------------------------------------------------
+   4. CUSTOM PAW CURSOR (DESKTOP ONLY)
+   -------------------------------------------------------------------------- */
+.custom-paw-cursor {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 28px;
+  height: 28px;
+  pointer-events: none;
+  z-index: 999999;
+  opacity: 0;
+  transform: translate(-50%, -50%);
+  transition: transform 0.08s ease-out, opacity 0.2s ease, filter 0.2s ease;
+  will-change: transform;
+}
+
+.custom-paw-cursor.is-active {
+  opacity: 1;
+}
+
+.custom-paw-cursor.is-hovering {
+  transform: translate(-50%, -50%) scale(1.35) rotate(-10deg);
+  filter: drop-shadow(0 3px 6px rgba(111, 78, 55, 0.35));
+}
+
+/* Disable Custom Cursor on Touch Screens & Reduced Motion */
+@media (hover: none) and (pointer: coarse) {
+  .custom-paw-cursor {
+    display: none !important;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .custom-paw-cursor {
+    display: none !important;
+  }
+  * {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+/* --------------------------------------------------------------------------
+   5. HEADER & NAVIGATION BAR
+   -------------------------------------------------------------------------- */
+.site-header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: var(--header-height);
+  background: rgba(255, 248, 237, 0.94);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border-bottom: 1px solid rgba(201, 154, 107, 0.22);
+  z-index: 1000;
+  transition: all var(--transition-normal);
+}
+
+.site-header.scrolled {
+  box-shadow: 0 4px 20px rgba(62, 43, 36, 0.08);
+  background: rgba(255, 248, 237, 0.98);
+}
+
+.header-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 100%;
+  max-width: var(--container-max);
+  margin-inline: auto;
+  padding-inline: var(--container-pad);
+}
+
+/* Brand Logo Area */
+.brand-logo-link {
+  display: inline-flex;
+  align-items: center;
+  text-decoration: none;
+  color: inherit;
+  flex-shrink: 0;
+}
+
+.brand-logo-wrap {
+  display: flex;
+  align-items: center;
+}
+
+.brand-logo-img {
+  height: 48px;
+  max-width: 240px;
+  width: auto;
+  object-fit: contain;
+  display: block;
+  transition: transform var(--transition-fast);
+}
+.brand-logo-link:hover .brand-logo-img {
+  transform: scale(1.02);
+}
+
+/* Logo Fallback Badge (only if image fails) */
+.brand-logo-fallback {
+  display: none;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.brand-logo-fallback .fallback-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.brand-logo-fallback .fallback-text {
+  display: flex;
+  flex-direction: column;
+}
+
+.brand-logo-fallback .brand-name {
+  font-family: var(--font-display);
+  font-size: 1.35rem;
+  font-weight: 700;
+  color: var(--color-deep-espresso);
+  line-height: 1.1;
+  letter-spacing: -0.01em;
+}
+
+.brand-logo-fallback .brand-tagline {
+  font-family: var(--font-heading);
+  font-size: 0.65rem;
+  font-weight: 700;
+  letter-spacing: 0.15em;
+  color: var(--color-caramel);
+}
+
+/* Primary Navigation */
+.primary-nav {
+  display: flex;
+  align-items: center;
+}
+
+.nav-list {
+  display: flex;
+  align-items: center;
+  gap: 1.25rem;
+  list-style: none;
+}
+
+.nav-item {
+  position: relative;
+}
+
+.nav-link {
+  font-family: var(--font-body);
+  font-size: 0.95rem;
+  font-weight: 500;
+  color: var(--color-text-main);
+  padding: 0.45rem 0.6rem;
+  border-radius: var(--radius-sm);
+  position: relative;
+  transition: color var(--transition-fast);
+}
+
+.nav-link:hover {
+  color: var(--color-coffee-brown);
+}
+
+.nav-link.active {
+  color: var(--color-coffee-brown);
+  font-weight: 600;
+}
+
+.nav-link.active::after {
+  content: '';
+  position: absolute;
+  bottom: -2px;
+  left: 0.6rem;
+  right: 0.6rem;
+  height: 2.5px;
+  background-color: var(--color-caramel);
+  border-radius: var(--radius-pill);
+}
+
+.nav-link--cta {
+  background-color: var(--color-coffee-brown);
+  color: var(--color-warm-white) !important;
+  padding: 0.5rem 1.1rem;
+  border-radius: var(--radius-pill);
+  transition: all var(--transition-fast);
+}
+.nav-link--cta:hover {
+  background-color: var(--color-deep-espresso);
+  transform: translateY(-1px);
+}
+.nav-link--cta.active::after {
+  display: none;
+}
+
+/* Mobile Toggle Hamburger */
+.nav-toggle-btn {
+  display: none;
+  flex-direction: column;
+  justify-content: center;
+  gap: 5px;
+  width: 40px;
+  height: 40px;
+  padding: 8px;
+  border-radius: var(--radius-sm);
+  background: transparent;
+  cursor: pointer;
+  z-index: 1001;
+}
+
+.hamburger-bar {
+  display: block;
+  width: 100%;
+  height: 2.5px;
+  background-color: var(--color-deep-espresso);
+  border-radius: var(--radius-pill);
+  transition: transform var(--transition-normal), opacity var(--transition-normal);
+}
+
+.nav-toggle-btn[aria-expanded="true"] .hamburger-bar:nth-child(1) {
+  transform: translateY(7.5px) rotate(45deg);
+}
+.nav-toggle-btn[aria-expanded="true"] .hamburger-bar:nth-child(2) {
+  opacity: 0;
+}
+.nav-toggle-btn[aria-expanded="true"] .hamburger-bar:nth-child(3) {
+  transform: translateY(-7.5px) rotate(-45deg);
+}
+
+/* --------------------------------------------------------------------------
+   6. HERO SECTION
+   -------------------------------------------------------------------------- */
+.hero-section {
+  padding-top: calc(var(--header-height) + 3.5rem);
+  padding-bottom: 5rem;
+  position: relative;
+  overflow: hidden;
+  background: radial-gradient(circle at top right, rgba(234, 219, 200, 0.45) 0%, rgba(255, 248, 237, 1) 70%);
+}
+
+.hero-container {
+  display: grid;
+  grid-template-columns: 1.15fr 0.85fr;
+  align-items: center;
+  gap: 3.5rem;
+}
+
+.hero-brand-emblem {
+  margin-bottom: 1.25rem;
+}
+
+.hero-brand-logo-img {
+  max-width: 290px;
+  width: 100%;
+  height: auto;
+  object-fit: contain;
+  display: block;
+}
+
+.hero-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  background-color: var(--color-soft-beige);
+  color: var(--color-deep-espresso);
+  font-family: var(--font-display);
+  font-size: 0.82rem;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  padding: 0.4rem 1.1rem;
+  border-radius: var(--radius-pill);
+  margin-bottom: 1.5rem;
+  border: 1px solid rgba(111, 78, 55, 0.15);
+}
+
+.hero-headline {
+  font-family: var(--font-display);
+  font-size: clamp(2.35rem, 4.2vw, 3.5rem);
+  font-weight: 700;
+  color: var(--color-deep-espresso);
+  line-height: 1.15;
+  margin-bottom: 1.25rem;
+  letter-spacing: -0.015em;
+}
+
+.highlight-purr {
+  color: var(--color-caramel);
+  position: relative;
+  display: inline-block;
+}
+
+.highlight-purr::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 2px;
+  height: 4px;
+  background-color: var(--color-caramel);
+  border-radius: var(--radius-pill);
+  opacity: 0.55;
+}
+
+.hero-description {
+  font-size: clamp(1.05rem, 1.25vw, 1.2rem);
+  color: var(--color-text-muted);
+  line-height: 1.7;
+  margin-bottom: 2.25rem;
+  max-width: 560px;
+}
+
+.hero-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  margin-bottom: 2.75rem;
+}
+
+.hero-stats {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 1.25rem;
+  padding-top: 1.75rem;
+  border-top: 1px solid rgba(111, 78, 55, 0.14);
+}
+
+.stat-pill {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  background: rgba(255, 255, 255, 0.85);
+  padding: 0.45rem 1.1rem 0.45rem 0.55rem;
+  border-radius: var(--radius-pill);
+  border: 1px solid rgba(234, 219, 200, 0.9);
+  box-shadow: var(--shadow-sm);
+  transition: transform var(--transition-fast);
+}
+
+.stat-pill:hover {
+  transform: translateY(-2px);
+  background: #FFFFFF;
+}
+
+.stat-icon-circle {
+  width: 38px;
+  height: 38px;
+  border-radius: 50%;
+  background: var(--color-soft-beige);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.15rem;
+  flex-shrink: 0;
+  box-shadow: 0 2px 5px rgba(62, 43, 36, 0.08);
+}
+
+.stat-info {
+  display: flex;
+  flex-direction: column;
+  line-height: 1.15;
+}
+
+.stat-text-bold {
+  font-family: var(--font-display);
+  font-size: 1rem;
+  font-weight: 700;
+  color: var(--color-coffee-brown);
+}
+
+.stat-text-label {
+  font-size: 0.8rem;
+  color: var(--color-text-muted);
+  font-weight: 600;
+}
+
+/* Hero Visual & Framing */
+.hero-visual {
+  position: relative;
+  display: flex;
+  justify-content: center;
+}
+
+.hero-image-frame {
+  position: relative;
+  width: 100%;
+  max-width: 480px;
+}
+
+.hero-blob {
+  position: absolute;
+  inset: -15px -15px 15px 15px;
+  background: var(--color-soft-beige);
+  border-radius: 40% 60% 70% 30% / 40% 50% 60% 50%;
+  z-index: 1;
+  transition: border-radius 6s ease-in-out infinite alternate;
+}
+
+.hero-img {
+  position: relative;
+  z-index: 2;
+  width: 100%;
+  height: 480px;
+  object-fit: cover;
+  border-radius: var(--radius-xl);
+  box-shadow: var(--shadow-lg);
+  border: 4px solid var(--color-warm-white);
+}
+
+/* Floating Badges */
+.hero-floating-card {
+  position: absolute;
+  z-index: 3;
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  background: rgba(255, 255, 255, 0.95);
+  backdrop-filter: blur(8px);
+  padding: 0.75rem 1.1rem;
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-md);
+  border: 1px solid rgba(234, 219, 200, 0.8);
+}
+
+.hero-floating-card--top {
+  top: 25px;
+  left: -25px;
+  animation: floatCard 4s ease-in-out infinite alternate;
+}
+
+.hero-floating-card--bottom {
+  bottom: 25px;
+  right: -20px;
+  animation: floatCard 4s ease-in-out 2s infinite alternate;
+}
+
+.floating-emoji {
+  font-size: 1.5rem;
+}
+
+.floating-text strong {
+  display: block;
+  font-size: 0.85rem;
+  color: var(--color-deep-espresso);
+}
+
+.floating-text small {
+  font-size: 0.75rem;
+  color: var(--color-text-muted);
+}
+
+@keyframes floatCard {
+  0% { transform: translateY(0); }
+  100% { transform: translateY(-8px); }
+}
+
+/* --------------------------------------------------------------------------
+   7. ABOUT US SECTION
+   -------------------------------------------------------------------------- */
+.about-section {
+  background-color: var(--color-bg-surface);
+  position: relative;
+}
+
+.about-grid {
+  display: grid;
+  grid-template-columns: 1.15fr 0.85fr;
+  gap: 4rem;
+  align-items: center;
+}
+
+.about-lead {
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: var(--color-coffee-brown);
+  line-height: 1.7;
+  margin-bottom: 1.25rem;
+}
+
+.brand-values {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1.25rem;
+  margin-top: 2rem;
+  margin-bottom: 2.25rem;
+}
+
+.value-card {
+  display: flex;
+  align-items: flex-start;
+  gap: 1rem;
+  padding: 1.25rem;
+  background: var(--color-bg-primary);
+  border-radius: var(--radius-md);
+  border: 1px solid var(--color-border);
+  transition: transform var(--transition-fast), box-shadow var(--transition-fast);
+}
+.value-card:hover {
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-sm);
+}
+
+.value-icon-box {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 42px;
+  height: 42px;
+  border-radius: var(--radius-sm);
+  background-color: var(--color-soft-beige);
+  color: var(--color-coffee-brown);
+  flex-shrink: 0;
+}
+
+.value-title {
+  font-size: 1rem;
+  color: var(--color-deep-espresso);
+  margin-bottom: 0.25rem;
+}
+
+.value-desc {
+  font-size: 0.85rem;
+  color: var(--color-text-muted);
+  line-height: 1.45;
+  margin: 0;
+}
+
+.portfolio-disclaimer {
+  display: flex;
+  align-items: center;
+  gap: 0.85rem;
+  background: rgba(168, 181, 160, 0.15);
+  border-left: 3px solid var(--color-muted-sage);
+  padding: 0.85rem 1.1rem;
+  border-radius: 0 var(--radius-sm) var(--radius-sm) 0;
+}
+
+.disclaimer-badge {
+  font-family: var(--font-display);
+  font-size: 0.75rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  background: var(--color-muted-sage);
+  color: #fff;
+  padding: 0.2rem 0.55rem;
+  border-radius: var(--radius-sm);
+  flex-shrink: 0;
+}
+
+.portfolio-disclaimer p {
+  font-size: 0.82rem;
+  color: var(--color-text-muted);
+  margin: 0;
+  line-height: 1.4;
+}
+
+/* About Collage */
+.about-gallery {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 240px 220px;
+  gap: 1.25rem;
+}
+
+.collage-item {
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  box-shadow: var(--shadow-md);
+  border: 3px solid var(--color-warm-white);
+}
+
+.collage-item img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform var(--transition-slow);
+}
+.collage-item:hover img {
+  transform: scale(1.05);
+}
+
+.collage-item--large {
+  grid-column: 1 / 2;
+  grid-row: 1 / 3;
+}
+
+.collage-item--small {
+  grid-column: 2 / 3;
+  grid-row: 1 / 2;
+}
+
+.collage-item--medium {
+  grid-column: 2 / 3;
+  grid-row: 2 / 3;
+}
+
+/* --------------------------------------------------------------------------
+   8. MENU SECTION
+   -------------------------------------------------------------------------- */
+.menu-section {
+  background-color: var(--color-bg-primary);
+}
+
+.menu-filter-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 0.6rem;
+  margin-bottom: 2.75rem;
+}
+
+.menu-tab-btn {
+  font-family: var(--font-body);
+  font-size: 0.95rem;
+  font-weight: 600;
+  color: var(--color-deep-espresso);
+  background: var(--color-warm-white);
+  border: 1px solid var(--color-border);
+  padding: 0.65rem 1.4rem;
+  border-radius: var(--radius-pill);
+  transition: all var(--transition-fast);
+  cursor: pointer;
+}
+
+.menu-tab-btn:hover {
+  background: var(--color-soft-beige);
+  border-color: var(--color-caramel);
+}
+
+.menu-tab-btn.active {
+  background: var(--color-coffee-brown);
+  color: var(--color-warm-white);
+  border-color: var(--color-coffee-brown);
+  box-shadow: 0 4px 12px rgba(111, 78, 55, 0.2);
+}
+
+/* Playful Text-Only Menu Layout */
+.menu-list-wrap {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1.25rem 2.25rem;
+  max-width: 1060px;
+  margin-inline: auto;
+  margin-bottom: 2rem;
+}
+
+@media (max-width: 820px) {
+  .menu-list-wrap {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+}
+
+.menu-item-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  padding: 1.15rem 1.35rem;
+  background: var(--color-warm-white);
+  border-radius: var(--radius-md);
+  border: 1px solid var(--color-border);
+  box-shadow: 0 2px 6px rgba(62, 43, 36, 0.04);
+  transition: transform var(--transition-fast), box-shadow var(--transition-fast), border-color var(--transition-fast);
+  gap: 1.25rem;
+}
+
+.menu-item-row:hover {
+  transform: translateY(-2px);
+  border-color: var(--color-caramel);
+  box-shadow: 0 4px 14px rgba(111, 78, 55, 0.09);
+}
+
+.menu-item-info {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+  flex-grow: 1;
+}
+
+.menu-item-name {
+  font-family: var(--font-display);
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: var(--color-deep-espresso);
+  line-height: 1.25;
+}
+
+.menu-item-desc {
+  font-family: var(--font-body);
+  font-size: 0.88rem;
+  color: var(--color-text-muted);
+  line-height: 1.45;
+}
+
+.menu-item-price {
+  font-family: var(--font-display);
+  font-size: 1.15rem;
+  font-weight: 700;
+  color: var(--color-coffee-brown);
+  flex-shrink: 0;
+  letter-spacing: -0.01em;
+}
+
+.menu-cat-notice-banner {
+  grid-column: 1 / -1;
+  background: rgba(234, 219, 200, 0.55);
+  border: 1px solid var(--color-caramel);
+  border-radius: var(--radius-md);
+  padding: 0.85rem 1.25rem;
+  text-align: center;
+  font-size: 0.9rem;
+  color: var(--color-coffee-brown);
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+}
+
+/* --------------------------------------------------------------------------
+   9. CATS SECTION
+   -------------------------------------------------------------------------- */
+.cats-section {
+  background-color: var(--color-bg-surface);
+  position: relative;
+}
+
+.section-supporting-headline {
+  font-family: var(--font-heading);
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: var(--color-coffee-brown);
+  margin-top: -0.25rem;
+  margin-bottom: 0.85rem;
+}
+
+.cat-storybook-divider {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 1.5rem;
+  margin-bottom: 1rem;
+}
+
+.cat-storybook-divider svg {
+  max-width: 100%;
+  height: auto;
+}
+
+/* Interactive Filter Row */
+.cats-filter-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 0.75rem;
+  margin-bottom: 3.25rem;
+}
+
+.cat-filter-btn {
+  font-family: var(--font-heading);
+  font-size: 0.92rem;
+  font-weight: 700;
+  color: var(--color-deep-espresso);
+  background: var(--color-warm-white);
+  border: 1.5px solid var(--color-border);
+  padding: 0.6rem 1.35rem;
+  border-radius: var(--radius-pill);
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  cursor: pointer;
+  transition: all var(--transition-fast);
+}
+
+.cat-filter-btn:hover {
+  background: var(--color-soft-beige);
+  border-color: var(--color-caramel);
+}
+
+.cat-filter-btn.active {
+  background: var(--color-coffee-brown);
+  color: var(--color-warm-white);
+  border-color: var(--color-coffee-brown);
+  box-shadow: 0 4px 14px rgba(111, 78, 55, 0.22);
+}
+
+.cat-filter-btn.active .filter-badge {
+  background: rgba(255, 255, 255, 0.25);
+  color: var(--color-warm-white);
+}
+
+.filter-badge {
+  background: var(--color-soft-beige);
+  color: var(--color-deep-espresso);
+  padding: 0.15rem 0.55rem;
+  border-radius: var(--radius-pill);
+  font-size: 0.75rem;
+  font-weight: 700;
+  transition: all var(--transition-fast);
+}
+
+/* 10 Cat Profile Cards Grid */
+.bookshop-cats-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 2rem;
+  margin-bottom: 3.5rem;
+}
+
+.cat-profile-card {
+  background: var(--color-bg-primary);
+  border-radius: var(--radius-xl);
+  overflow: hidden;
+  border: 1px solid var(--color-border);
+  box-shadow: var(--shadow-sm);
+  display: flex;
+  flex-direction: column;
+  transition: transform var(--transition-normal), box-shadow var(--transition-normal);
+  position: relative;
+}
+
+.cat-profile-card:hover {
+  transform: translateY(-5px);
+  box-shadow: var(--shadow-hover);
+}
+
+.cat-portrait-wrap {
+  position: relative;
+  height: 270px;
+  overflow: hidden;
+  background-color: var(--color-soft-beige);
+}
+
+.cat-portrait-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform var(--transition-slow);
+}
+
+.cat-profile-card:hover .cat-portrait-img {
+  transform: scale(1.06);
+}
+
+.cat-library-tag {
+  position: absolute;
+  top: 12px;
+  left: 12px;
+  background: rgba(255, 248, 237, 0.96);
+  backdrop-filter: blur(6px);
+  padding: 0.35rem 0.85rem;
+  border-radius: var(--radius-pill);
+  font-family: var(--font-display);
+  font-size: 0.72rem;
+  font-weight: 700;
+  color: var(--color-coffee-brown);
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.12);
+  border: 1px solid rgba(201, 154, 107, 0.25);
+  display: inline-flex;
+  align-items: center;
+  gap: 0.3rem;
+}
+
+.cat-card-content {
+  padding: 1.4rem 1.25rem;
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+}
+
+.cat-card-title-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  margin-bottom: 0.25rem;
+}
+
+.cat-name-heading {
+  font-size: 1.4rem;
+  font-family: var(--font-display);
+  color: var(--color-deep-espresso);
+  display: flex;
+  align-items: center;
+  gap: 0.35rem;
+}
+
+.cat-name-deco {
+  font-size: 1rem;
+}
+
+.cat-id-number {
+  font-family: var(--font-display);
+  font-size: 0.75rem;
+  font-weight: 700;
+  color: var(--color-caramel);
+}
+
+.cat-personality-title {
+  font-size: 0.85rem;
+  font-weight: 700;
+  color: var(--color-coffee-brown);
+  margin-bottom: 0.75rem;
+  letter-spacing: 0.02em;
+}
+
+.cat-bio-preview {
+  font-size: 0.88rem;
+  color: var(--color-text-muted);
+  line-height: 1.55;
+  margin-bottom: 0.85rem;
+  flex-grow: 1;
+}
+
+.cat-quote-snip {
+  font-style: italic;
+  font-size: 0.82rem;
+  color: var(--color-deep-espresso);
+  background: rgba(201, 154, 107, 0.12);
+  border-left: 3px solid var(--color-caramel);
+  padding: 0.5rem 0.75rem;
+  border-radius: 0 var(--radius-sm) var(--radius-sm) 0;
+  margin-bottom: 1.15rem;
+  line-height: 1.45;
+}
+
+.btn-meet-cat {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  font-family: var(--font-heading);
+  font-size: 0.88rem;
+  font-weight: 700;
+  background-color: var(--color-soft-beige);
+  color: var(--color-deep-espresso);
+  padding: 0.65rem 1rem;
+  border-radius: var(--radius-pill);
+  cursor: pointer;
+  border: 1px solid rgba(111, 78, 55, 0.15);
+  transition: all var(--transition-fast);
+  width: 100%;
+}
+
+.btn-meet-cat:hover {
+  background-color: var(--color-coffee-brown);
+  color: var(--color-warm-white);
+  transform: translateY(-2px);
+  box-shadow: 0 4px 10px rgba(111, 78, 55, 0.25);
+}
+
+/* Section Closing Storytelling Banner */
+.cats-closing-banner {
+  background: linear-gradient(135deg, #FFF8ED 0%, #F5EAE0 100%);
+  border: 1.5px solid var(--color-border);
+  border-radius: var(--radius-xl);
+  padding: 2.75rem 2.25rem;
+  margin-bottom: 3rem;
+  display: flex;
+  align-items: center;
+  gap: 2.5rem;
+  box-shadow: var(--shadow-sm);
+}
+
+.closing-stamp {
+  flex-shrink: 0;
+}
+
+.stamp-circle {
+  animation: stampRotate 30s linear infinite;
+  display: block;
+}
+
+@keyframes stampRotate {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+.stamp-text {
+  font-family: var(--font-display);
+  font-size: 10.5px;
+  font-weight: 700;
+  fill: var(--color-coffee-brown);
+  letter-spacing: 2px;
+}
+
+.closing-heading {
+  font-size: 1.4rem;
+  font-family: var(--font-heading);
+  color: var(--color-deep-espresso);
+  margin-bottom: 0.5rem;
+  line-height: 1.3;
+}
+
+.closing-text {
+  font-size: 0.95rem;
+  color: var(--color-text-muted);
+  margin-bottom: 1.25rem;
+  max-width: 650px;
+}
+
+/* Cat Welfare and Visitor Etiquette Panel */
+.cat-welfare-panel {
+  background: rgba(168, 181, 160, 0.18);
+  border: 1.5px solid rgba(168, 181, 160, 0.55);
+  border-radius: var(--radius-xl);
+  padding: 2.25rem 2.5rem;
+  margin-bottom: 1.5rem;
+}
+
+.welfare-header {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  margin-bottom: 0.75rem;
+}
+
+.welfare-icon {
+  font-size: 1.6rem;
+}
+
+.welfare-title {
+  font-size: 1.35rem;
+  color: var(--color-deep-espresso);
+}
+
+.welfare-primary-text {
+  font-size: 0.95rem;
+  color: var(--color-deep-espresso);
+  line-height: 1.65;
+  margin-bottom: 1.25rem;
+}
+
+.welfare-treats-alert {
+  background: var(--color-warm-white);
+  border: 1px solid rgba(201, 154, 107, 0.35);
+  border-radius: var(--radius-md);
+  padding: 1.25rem 1.5rem;
+  display: flex;
+  align-items: flex-start;
+  gap: 1.15rem;
+  box-shadow: var(--shadow-sm);
+}
+
+.alert-icon {
+  font-size: 1.5rem;
+  flex-shrink: 0;
+}
+
+.alert-text strong {
+  display: block;
+  font-family: var(--font-heading);
+  font-size: 0.95rem;
+  color: var(--color-deep-espresso);
+  margin-bottom: 0.25rem;
+}
+
+.alert-text p {
+  font-size: 0.88rem;
+  color: var(--color-text-muted);
+  line-height: 1.5;
+  margin-bottom: 0.6rem;
+}
+
+.etiquette-treats-link {
+  font-family: var(--font-heading);
+  font-size: 0.88rem;
+  font-weight: 700;
+  color: var(--color-coffee-brown);
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  text-decoration: underline;
+  transition: color var(--transition-fast);
+}
+
+.etiquette-treats-link:hover {
+  color: var(--color-caramel);
+}
+
+/* Accessible Interactive Cat Profile Modal */
+.cat-profile-modal {
+  position: fixed;
+  inset: 0;
+  z-index: 99999;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1.5rem;
+}
+
+.cat-modal-backdrop {
+  position: absolute;
+  inset: 0;
+  background: rgba(30, 20, 16, 0.85);
+  backdrop-filter: blur(8px);
+}
+
+.cat-modal-dialog {
+  position: relative;
+  z-index: 2;
+  background: var(--color-bg-surface);
+  border-radius: var(--radius-xl);
+  max-width: 780px;
+  width: 100%;
+  max-height: 90vh;
+  box-shadow: 0 25px 60px rgba(0, 0, 0, 0.45);
+  border: 1px solid var(--color-border);
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+}
+
+.cat-modal-scrollable {
+  padding: 2.5rem;
+  overflow-y: auto;
+}
+
+.cat-modal-close {
+  position: absolute;
+  top: 1rem;
+  right: 1.25rem;
+  font-size: 1.8rem;
+  color: var(--color-text-muted);
+  cursor: pointer;
+  line-height: 1;
+  width: 36px;
+  height: 36px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: var(--radius-pill);
+  transition: all var(--transition-fast);
+  z-index: 5;
+}
+
+.cat-modal-close:hover {
+  color: var(--color-deep-espresso);
+  background-color: var(--color-soft-beige);
+}
+
+.cat-modal-grid {
+  display: grid;
+  grid-template-columns: 240px 1fr;
+  gap: 2rem;
+  align-items: start;
+}
+
+.cat-modal-media {
+  position: relative;
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  box-shadow: var(--shadow-md);
+  border: 3px solid var(--color-warm-white);
+}
+
+.cat-modal-img {
+  width: 100%;
+  height: 280px;
+  object-fit: cover;
+  display: block;
+}
+
+.cat-modal-tag {
+  position: absolute;
+  bottom: 10px;
+  left: 10px;
+  background: rgba(255, 248, 237, 0.95);
+  color: var(--color-coffee-brown);
+  font-family: var(--font-display);
+  font-size: 0.75rem;
+  font-weight: 700;
+  padding: 0.3rem 0.75rem;
+  border-radius: var(--radius-pill);
+}
+
+.cat-modal-subtitle {
+  font-family: var(--font-heading);
+  font-size: 0.85rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--color-caramel);
+  display: block;
+  margin-bottom: 0.2rem;
+}
+
+.cat-modal-name {
+  font-size: 1.85rem;
+  color: var(--color-deep-espresso);
+  margin-bottom: 0.85rem;
+}
+
+.cat-modal-quote {
+  font-style: italic;
+  font-size: 1rem;
+  color: var(--color-coffee-brown);
+  background: rgba(201, 154, 107, 0.12);
+  border-left: 3.5px solid var(--color-caramel);
+  padding: 0.75rem 1.15rem;
+  border-radius: 0 var(--radius-sm) var(--radius-sm) 0;
+  margin-bottom: 1.35rem;
+  line-height: 1.5;
+}
+
+.modal-section-label {
+  font-size: 0.82rem;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--color-text-muted);
+  margin-bottom: 0.35rem;
+}
+
+.cat-modal-bio {
+  font-size: 0.95rem;
+  color: var(--color-text-main);
+  line-height: 1.65;
+  margin-bottom: 1.5rem;
+}
+
+.cat-modal-attributes {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
+  padding-top: 1.25rem;
+  border-top: 1px dashed var(--color-border);
+}
+
+.attr-box {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.75rem;
+  background: var(--color-bg-primary);
+  padding: 0.85rem;
+  border-radius: var(--radius-md);
+  border: 1px solid var(--color-border);
+}
+
+.attr-icon {
+  font-size: 1.2rem;
+  flex-shrink: 0;
+}
+
+.attr-text strong {
+  display: block;
+  font-size: 0.82rem;
+  color: var(--color-deep-espresso);
+}
+
+.attr-text span {
+  font-size: 0.85rem;
+  color: var(--color-text-muted);
+  line-height: 1.4;
+}
+
+/* --------------------------------------------------------------------------
+   10. THE BOOK NOOK SECTION
+   -------------------------------------------------------------------------- */
+.book-nook-section {
+  background-color: var(--color-bg-primary);
+}
+
+.sub-area-title {
+  font-size: 1.45rem;
+  color: var(--color-deep-espresso);
+  margin-bottom: 0.35rem;
+}
+
+.sub-area-subtitle {
+  font-size: 0.95rem;
+  color: var(--color-text-muted);
+  margin-bottom: 1.75rem;
+}
+
+/* Part A: Genre Discovery Cards */
+.genre-cards-area {
+  margin-bottom: 3.5rem;
+}
+
+.genre-cards-grid {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  gap: 1.15rem;
+}
+
+.genre-card {
+  position: relative;
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  box-shadow: var(--shadow-sm);
+  aspect-ratio: 4 / 5;
+  cursor: pointer;
+  border: 2px solid transparent;
+  transition: all var(--transition-normal);
+  padding: 0;
+}
+
+.genre-card:hover, .genre-card:focus-visible {
+  transform: translateY(-4px);
+  border-color: var(--color-caramel);
+  box-shadow: var(--shadow-hover);
+}
+
+.genre-card.is-selected {
+  border-color: var(--color-coffee-brown);
+  box-shadow: 0 0 0 3px rgba(111, 78, 55, 0.25);
+}
+
+.genre-card-media {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+.genre-card-media img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform var(--transition-slow);
+}
+.genre-card:hover .genre-card-media img {
+  transform: scale(1.08);
+}
+
+.genre-card-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to top, rgba(62, 43, 36, 0.85) 0%, rgba(62, 43, 36, 0.2) 60%, transparent 100%);
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  padding: 1rem 0.5rem;
+  text-align: center;
+}
+
+.genre-name {
+  font-family: var(--font-display);
+  font-size: 1rem;
+  font-weight: 700;
+  color: var(--color-warm-white);
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.6);
+  letter-spacing: 0.02em;
+}
+
+/* Part B: Search & Filter Toolbar */
+.book-search-toolbar {
+  background: var(--color-bg-surface);
+  border-radius: var(--radius-xl);
+  padding: 1.5rem 2rem;
+  box-shadow: var(--shadow-sm);
+  border: 1px solid var(--color-border);
+  margin-bottom: 2.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.search-input-group {
+  position: relative;
+  display: flex;
+  align-items: center;
+  width: 100%;
+}
+
+.search-icon {
+  position: absolute;
+  left: 1.25rem;
+  color: var(--color-caramel);
+  pointer-events: none;
+}
+
+.book-search-input {
+  width: 100%;
+  font-family: var(--font-body);
+  font-size: 1.05rem;
+  padding: 0.95rem 3rem 0.95rem 3.25rem;
+  background-color: var(--color-bg-primary);
+  border: 1.5px solid var(--color-border);
+  border-radius: var(--radius-pill);
+  color: var(--color-text-main);
+  transition: border-color var(--transition-fast), box-shadow var(--transition-fast);
+}
+
+.book-search-input:focus {
+  outline: none;
+  border-color: var(--color-caramel);
+  box-shadow: 0 0 0 3px rgba(201, 154, 107, 0.25);
+}
+
+.clear-search-btn {
+  position: absolute;
+  right: 1.25rem;
+  font-size: 1.4rem;
+  color: var(--color-text-muted);
+  width: 32px;
+  height: 32px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: var(--radius-pill);
+  cursor: pointer;
+}
+.clear-search-btn:hover {
+  color: var(--color-deep-espresso);
+  background-color: var(--color-soft-beige);
+}
+
+.search-status-bar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-size: 0.9rem;
+  color: var(--color-text-muted);
+}
+
+.results-count {
+  font-weight: 600;
+}
+
+.reset-filter-btn {
+  font-family: var(--font-heading);
+  font-weight: 700;
+  color: var(--color-coffee-brown);
+  text-decoration: underline;
+  cursor: pointer;
+  padding: 0.25rem 0.5rem;
+}
+.reset-filter-btn:hover {
+  color: var(--color-caramel);
+}
+
+/* Part C: Books Catalogue Grid */
+.books-catalogue-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+  gap: 2rem;
+  margin-bottom: 2.5rem;
+}
+
+.book-card {
+  background: var(--color-bg-surface);
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  border: 1px solid var(--color-border);
+  box-shadow: var(--shadow-sm);
+  display: flex;
+  flex-direction: column;
+  transition: transform var(--transition-normal), box-shadow var(--transition-normal);
+}
+.book-card:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-hover);
+}
+
+/* Strict requirement: contain cover proportion */
+.book-card-cover-wrap {
+  background: linear-gradient(to bottom, #F7EFE3, #EDE2D3);
+  padding: 1.5rem 1rem 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 290px;
+  position: relative;
+  border-bottom: 1px solid var(--color-border);
+}
+
+.book-card-cover {
+  max-width: 100%;
+  max-height: 250px;
+  width: auto;
+  height: auto;
+  object-fit: contain;
+  border-radius: 4px;
+  box-shadow: -4px 6px 14px rgba(62, 43, 36, 0.25);
+  transition: transform var(--transition-normal);
+}
+.book-card:hover .book-card-cover {
+  transform: scale(1.04) rotate(0.5deg);
+}
+
+.book-card-body {
+  padding: 1.25rem;
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+}
+
+.book-card-genre {
+  display: inline-block;
+  align-self: flex-start;
+  font-family: var(--font-display);
+  font-size: 0.72rem;
+  font-weight: 700;
+  color: var(--color-coffee-brown);
+  background-color: var(--color-soft-beige);
+  padding: 0.2rem 0.65rem;
+  border-radius: var(--radius-pill);
+  margin-bottom: 0.5rem;
+}
+
+.book-card-title {
+  font-size: 1.15rem;
+  color: var(--color-deep-espresso);
+  line-height: 1.3;
+  margin-bottom: 0.25rem;
+}
+
+.book-card-author {
+  font-size: 0.88rem;
+  color: var(--color-text-muted);
+  font-weight: 600;
+  margin-bottom: 0;
+}
+
+/* Empty Books State */
+.empty-books-state {
+  text-align: center;
+  padding: 4rem 2rem;
+  background: var(--color-bg-surface);
+  border-radius: var(--radius-xl);
+  border: 1px dashed var(--color-border);
+  margin-bottom: 2.5rem;
+}
+
+.empty-cat-illustration {
+  margin-bottom: 1.25rem;
+}
+
+.empty-title {
+  font-size: 1.35rem;
+  color: var(--color-deep-espresso);
+  margin-bottom: 0.5rem;
+}
+
+.empty-desc {
+  max-width: 480px;
+  margin-inline: auto;
+  color: var(--color-text-muted);
+  font-size: 0.95rem;
+  margin-bottom: 1.5rem;
+}
+
+/* --------------------------------------------------------------------------
+   11. SOUVENIRS SECTION ("Little Things to Take Home")
+   -------------------------------------------------------------------------- */
+.souvenirs-section {
+  background-color: var(--color-bg-surface);
+}
+
+.souvenirs-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+  gap: 2rem;
+  margin-bottom: 2.5rem;
+}
+
+.product-card {
+  background: var(--color-bg-primary);
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  border: 1px solid var(--color-border);
+  box-shadow: var(--shadow-sm);
+  display: flex;
+  flex-direction: column;
+  transition: transform var(--transition-normal), box-shadow var(--transition-normal);
+}
+.product-card:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-hover);
+}
+
+.product-media {
+  position: relative;
+  height: 220px;
+  overflow: hidden;
+}
+
+.product-media img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform var(--transition-slow);
+}
+.product-card:hover .product-media img {
+  transform: scale(1.06);
+}
+
+.product-badge {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background: rgba(255, 255, 255, 0.92);
+  backdrop-filter: blur(4px);
+  font-family: var(--font-display);
+  font-size: 0.72rem;
+  font-weight: 700;
+  color: var(--color-coffee-brown);
+  padding: 0.2rem 0.65rem;
+  border-radius: var(--radius-pill);
+}
+
+.product-body {
+  padding: 1.25rem;
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+}
+
+.product-title {
+  font-size: 1.1rem;
+  color: var(--color-deep-espresso);
+  margin-bottom: 0.4rem;
+}
+
+.product-desc {
+  font-size: 0.85rem;
+  color: var(--color-text-muted);
+  line-height: 1.5;
+  margin-bottom: 1.25rem;
+  flex-grow: 1;
+}
+
+.product-footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-top: 0.75rem;
+  border-top: 1px dashed var(--color-border);
+}
+
+.product-price {
+  font-family: var(--font-display);
+  font-size: 1.2rem;
+  font-weight: 700;
+  color: var(--color-coffee-brown);
+}
+
+.demo-buy-btn {
+  font-family: var(--font-heading);
+  font-size: 0.82rem;
+  font-weight: 700;
+  background-color: var(--color-coffee-brown);
+  color: var(--color-warm-white);
+  padding: 0.45rem 1rem;
+  border-radius: var(--radius-pill);
+  transition: all var(--transition-fast);
+}
+.demo-buy-btn:hover {
+  background-color: var(--color-deep-espresso);
+  transform: translateY(-1px);
+}
+
+/* --------------------------------------------------------------------------
+   12. GALLERY SECTION & LIGHTBOX
+   -------------------------------------------------------------------------- */
+.gallery-section {
+  background-color: var(--color-bg-primary);
+}
+
+.gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1.25rem;
+}
+
+.gallery-item {
+  position: relative;
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  box-shadow: var(--shadow-sm);
+  aspect-ratio: 4 / 3;
+}
+
+.gallery-trigger {
+  width: 100%;
+  height: 100%;
+  display: block;
+  position: relative;
+  padding: 0;
+  cursor: pointer;
+}
+
+.gallery-trigger img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform var(--transition-slow);
+}
+.gallery-trigger:hover img {
+  transform: scale(1.08);
+}
+
+.gallery-overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(62, 43, 36, 0.65);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  padding: 1rem;
+  opacity: 0;
+  transition: opacity var(--transition-normal);
+  color: var(--color-warm-white);
+  text-align: center;
+}
+.gallery-trigger:hover .gallery-overlay,
+.gallery-trigger:focus-visible .gallery-overlay {
+  opacity: 1;
+}
+
+.gallery-zoom-icon {
+  font-size: 1.5rem;
+}
+
+.gallery-caption {
+  font-family: var(--font-heading);
+  font-size: 0.9rem;
+  font-weight: 600;
+  line-height: 1.3;
+}
+
+/* Accessible Lightbox Modal */
+.lightbox-modal {
+  position: fixed;
+  inset: 0;
+  z-index: 99999;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem;
+}
+
+.lightbox-backdrop {
+  position: absolute;
+  inset: 0;
+  background: rgba(30, 20, 16, 0.92);
+  backdrop-filter: blur(10px);
+}
+
+.lightbox-dialog {
+  position: relative;
+  z-index: 2;
+  max-width: 900px;
+  width: 100%;
+  max-height: 90vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.lightbox-close-btn {
+  position: absolute;
+  top: -45px;
+  right: 0;
+  color: var(--color-warm-white);
+  background: transparent;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  border-radius: var(--radius-pill);
+  transition: transform var(--transition-fast), color var(--transition-fast);
+}
+.lightbox-close-btn:hover {
+  transform: scale(1.15);
+  color: var(--color-caramel);
+}
+
+.lightbox-nav-btn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: rgba(255, 255, 255, 0.15);
+  backdrop-filter: blur(4px);
+  color: var(--color-warm-white);
+  width: 48px;
+  height: 48px;
+  border-radius: var(--radius-pill);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: all var(--transition-fast);
+  z-index: 3;
+}
+.lightbox-nav-btn:hover {
+  background: rgba(255, 255, 255, 0.3);
+  color: var(--color-caramel);
+  transform: translateY(-50%) scale(1.1);
+}
+
+.lightbox-nav-btn--prev {
+  left: -60px;
+}
+.lightbox-nav-btn--next {
+  right: -60px;
+}
+
+.lightbox-content {
+  background: #000;
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.6);
+  display: flex;
+  flex-direction: column;
+}
+
+.lightbox-img-wrap {
+  width: 100%;
+  max-height: 70vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #111;
+}
+
+.lightbox-image {
+  max-width: 100%;
+  max-height: 70vh;
+  object-fit: contain;
+}
+
+.lightbox-caption-bar {
+  background: rgba(20, 15, 12, 0.95);
+  padding: 1rem 1.5rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: var(--color-warm-white);
+}
+
+.lightbox-caption-text {
+  font-family: var(--font-heading);
+  font-size: 1rem;
+  font-weight: 600;
+}
+
+.lightbox-counter {
+  font-size: 0.85rem;
+  color: var(--color-caramel);
+}
+
+/* --------------------------------------------------------------------------
+   13. CONTACT SECTION & VALIDATION
+   -------------------------------------------------------------------------- */
+.contact-section {
+  background-color: var(--color-bg-surface);
+}
+
+.contact-grid {
+  display: grid;
+  grid-template-columns: 0.9fr 1.1fr;
+  gap: 3.5rem;
+}
+
+.contact-card {
+  background: var(--color-bg-primary);
+  border-radius: var(--radius-xl);
+  padding: 2.25rem;
+  border: 1px solid var(--color-border);
+  box-shadow: var(--shadow-sm);
+  height: 100%;
+}
+
+.contact-panel-title {
+  font-size: 1.45rem;
+  color: var(--color-deep-espresso);
+  margin-bottom: 0.5rem;
+}
+
+.contact-panel-desc {
+  font-size: 0.95rem;
+  color: var(--color-text-muted);
+  line-height: 1.6;
+  margin-bottom: 2rem;
+}
+
+.info-list {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  margin-bottom: 2rem;
+}
+
+.info-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 1rem;
+}
+
+.info-icon {
+  width: 40px;
+  height: 40px;
+  border-radius: var(--radius-sm);
+  background: var(--color-soft-beige);
+  color: var(--color-coffee-brown);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.info-details {
+  display: flex;
+  flex-direction: column;
+}
+
+.info-details strong {
+  font-size: 0.92rem;
+  color: var(--color-deep-espresso);
+  margin-bottom: 0.15rem;
+}
+
+.info-details span {
+  font-size: 0.88rem;
+  color: var(--color-text-muted);
+  line-height: 1.4;
+}
+
+.info-details small {
+  font-size: 0.78rem;
+  color: var(--color-caramel);
+  font-weight: 600;
+  margin-top: 0.25rem;
+}
+
+/* Contact Form */
+.contact-form {
+  background: var(--color-warm-white);
+  border-radius: var(--radius-xl);
+  padding: 2.5rem;
+  border: 1px solid var(--color-border);
+  box-shadow: var(--shadow-md);
+}
+
+.form-title {
+  font-size: 1.45rem;
+  color: var(--color-deep-espresso);
+  margin-bottom: 0.4rem;
+}
+
+.form-intro {
+  font-size: 0.92rem;
+  color: var(--color-text-muted);
+  margin-bottom: 1.75rem;
+}
+
+.form-group {
+  margin-bottom: 1.35rem;
+}
+
+.form-label {
+  display: block;
+  font-family: var(--font-heading);
+  font-size: 0.9rem;
+  font-weight: 700;
+  color: var(--color-deep-espresso);
+  margin-bottom: 0.45rem;
+}
+
+.required {
+  color: var(--color-error-text);
+}
+
+.form-control {
+  width: 100%;
+  font-family: var(--font-body);
+  font-size: 0.95rem;
+  padding: 0.85rem 1.15rem;
+  background-color: var(--color-bg-primary);
+  border: 1.5px solid var(--color-border);
+  border-radius: var(--radius-md);
+  color: var(--color-text-main);
+  transition: all var(--transition-fast);
+}
+
+.form-control:focus {
+  outline: none;
+  border-color: var(--color-caramel);
+  box-shadow: 0 0 0 3px rgba(201, 154, 107, 0.2);
+  background-color: var(--color-warm-white);
+}
+
+.form-control.has-error {
+  border-color: var(--color-error-text);
+  background-color: var(--color-error-bg);
+}
+
+.field-error-msg {
+  display: block;
+  font-size: 0.82rem;
+  color: var(--color-error-text);
+  margin-top: 0.35rem;
+  font-weight: 600;
+  min-height: 1.1rem;
+}
+
+.field-meta {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+}
+
+.char-counter {
+  font-size: 0.78rem;
+  color: var(--color-text-muted);
+}
+
+.form-actions {
+  margin-top: 0.5rem;
+  margin-bottom: 1rem;
+}
+
+/* Feedback Demo Message */
+.form-feedback-box {
+  padding: 1rem 1.25rem;
+  border-radius: var(--radius-md);
+  font-size: 0.9rem;
+  line-height: 1.5;
+  margin-top: 1rem;
+}
+
+.form-feedback-box.is-success {
+  background-color: var(--color-success-bg);
+  border: 1px solid rgba(55, 94, 51, 0.3);
+  color: var(--color-success-text);
+}
+
+.form-feedback-box.is-error {
+  background-color: var(--color-error-bg);
+  border: 1px solid rgba(166, 58, 41, 0.3);
+  color: var(--color-error-text);
+}
+
+/* --------------------------------------------------------------------------
+   14. FOOTER
+   -------------------------------------------------------------------------- */
+.site-footer {
+  background-color: var(--color-deep-espresso);
+  color: var(--color-warm-cream);
+  padding-top: 5rem;
+  position: relative;
+}
+
+.footer-container {
+  display: grid;
+  grid-template-columns: 1.5fr 1fr 1fr 1.25fr;
+  gap: 3.5rem;
+  padding-bottom: 4rem;
+}
+
+.footer-logo-wrap {
+  display: inline-block;
+  background-color: var(--color-warm-cream);
+  padding: 0.85rem 1.4rem;
+  border-radius: var(--radius-md);
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.25);
+  margin-bottom: 1.5rem;
+  max-width: 270px;
+}
+
+.footer-logo-img {
+  max-height: 46px;
+  width: 100%;
+  height: auto;
+  object-fit: contain;
+  display: block;
+}
+
+.brand-logo-fallback--footer {
+  display: none;
+}
+
+.footer-bio {
+  font-size: 0.92rem;
+  color: #D3C4BA;
+  line-height: 1.6;
+  margin-bottom: 1.5rem;
+}
+
+.footer-tagline-badge {
+  display: inline-block;
+  font-family: var(--font-display);
+  font-size: 0.8rem;
+  font-weight: 700;
+  letter-spacing: 0.15em;
+  color: var(--color-caramel);
+  background: rgba(201, 154, 107, 0.15);
+  padding: 0.35rem 0.85rem;
+  border-radius: var(--radius-pill);
+}
+
+.footer-heading {
+  font-family: var(--font-heading);
+  font-size: 1.15rem;
+  color: var(--color-warm-white);
+  margin-bottom: 1.25rem;
+}
+
+.footer-links {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.footer-links a {
+  color: #D3C4BA;
+  font-size: 0.92rem;
+  transition: color var(--transition-fast), padding-left var(--transition-fast);
+}
+.footer-links a:hover {
+  color: var(--color-caramel);
+  padding-left: 4px;
+}
+
+.footer-text {
+  font-size: 0.9rem;
+  color: #D3C4BA;
+  line-height: 1.6;
+  margin-bottom: 1rem;
+}
+
+.footer-demo-tag {
+  font-family: var(--font-display);
+  font-size: 0.75rem;
+  font-weight: 700;
+  color: var(--color-muted-sage);
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+}
+
+.footer-bottom-bar {
+  border-top: 1px solid rgba(255, 248, 237, 0.1);
+  padding-block: 1.75rem;
+  background: #2E1F1A;
+}
+
+.footer-bottom-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1.5rem;
+}
+
+.copyright-text {
+  font-size: 0.85rem;
+  color: #B5A499;
+  margin: 0;
+}
+
+.back-to-top-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  color: var(--color-caramel);
+  font-family: var(--font-heading);
+  font-size: 0.88rem;
+  font-weight: 700;
+  padding: 0.4rem 0.8rem;
+  border-radius: var(--radius-sm);
+  transition: color var(--transition-fast), transform var(--transition-fast);
+}
+.back-to-top-btn:hover {
+  color: var(--color-warm-white);
+  transform: translateY(-2px);
+}
+
+/* --------------------------------------------------------------------------
+   15. BOOK PREVIEW MODAL
+   -------------------------------------------------------------------------- */
+.book-modal {
+  position: fixed;
+  inset: 0;
+  z-index: 99999;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1.5rem;
+}
+
+/* --------------------------------------------------------------------------
+   16. SCROLL ENTRANCE ANIMATIONS
+   -------------------------------------------------------------------------- */
+.fade-in-element {
+  opacity: 0;
+  transform: translateY(22px);
+  transition: opacity 0.6s cubic-bezier(0.4, 0, 0.2, 1), transform 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+  will-change: opacity, transform;
+}
+
+.fade-in-element.is-visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* --------------------------------------------------------------------------
+   17. RESPONSIVE DESIGN & MEDIA QUERIES
+   -------------------------------------------------------------------------- */
+
+/* Large Tablets & Laptops (< 1024px) */
+@media (max-width: 1024px) {
+  .hero-container {
+    grid-template-columns: 1fr;
+    gap: 3rem;
+    text-align: center;
+  }
+  
+  .hero-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .hero-actions {
+    justify-content: center;
+  }
+
+  .hero-stats {
+    justify-content: center;
+  }
+
+  .about-grid {
+    grid-template-columns: 1fr;
+    gap: 3rem;
+  }
+
+  .about-gallery {
+    max-width: 600px;
+    margin-inline: auto;
+  }
+
+  .genre-cards-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .gallery-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .contact-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .footer-container {
+    grid-template-columns: 1fr 1fr;
+    gap: 2.5rem;
+  }
+}
+
+/* Tablets & Mobile Navigation (< 860px) */
+@media (max-width: 860px) {
+  :root {
+    --header-height: 70px;
+  }
+
+  .nav-toggle-btn {
+    display: flex;
+  }
+
+  .primary-nav {
+    position: fixed;
+    top: var(--header-height);
+    left: 0;
+    width: 100%;
+    height: calc(100vh - var(--header-height));
+    background: var(--color-warm-cream);
+    padding: 2.5rem 2rem;
+    transform: translateX(100%);
+    transition: transform var(--transition-normal);
+    overflow-y: auto;
+    box-shadow: -6px 0 25px rgba(62, 43, 36, 0.15);
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .primary-nav.is-open {
+    transform: translateX(0);
+  }
+
+  .nav-list {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 1.25rem;
+    width: 100%;
+  }
+
+  .nav-link {
+    display: block;
+    font-size: 1.25rem;
+    padding: 0.75rem 1rem;
+    text-align: center;
+    border-radius: var(--radius-md);
+  }
+
+  .nav-link.active::after {
+    display: none;
+  }
+  .nav-link.active {
+    background-color: var(--color-soft-beige);
+  }
+
+  .brand-values {
+    grid-template-columns: 1fr;
+  }
+
+  .book-modal-content {
+    grid-template-columns: 1fr;
+    justify-items: center;
+    text-align: center;
+  }
+
+  .modal-genre-badge {
+    align-self: center;
+  }
+
+  .lightbox-nav-btn--prev {
+    left: 10px;
+  }
+  .lightbox-nav-btn--next {
+    right: 10px;
+  }
+}
+
+/* Small Screens & Smartphones (< 576px) */
+@media (max-width: 576px) {
+  .brand-logo-img {
+    height: 36px;
+    max-width: 170px;
+  }
+
+  .hero-brand-logo-img {
+    max-width: 220px;
+  }
+
+  .footer-logo-wrap {
+    max-width: 220px;
+    padding: 0.65rem 1rem;
+  }
+
+  .footer-logo-img {
+    max-height: 36px;
+  }
+
+  .section-padding {
+    padding-block: 3.75rem;
+  }
+
+  .hero-headline {
+    font-size: 2.2rem;
+  }
+
+  .hero-img {
+    height: 360px;
+  }
+
+  .hero-floating-card {
+    display: none;
+  }
+
+  .hero-stats {
+    flex-direction: column;
+    gap: 0.75rem;
+  }
+  .stat-divider {
+    display: none;
+  }
+
+  .genre-cards-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 0.75rem;
+  }
+
+  .genre-name {
+    font-size: 0.9rem;
+  }
+
+  .about-gallery {
+    grid-template-columns: 1fr;
+    grid-template-rows: auto;
+  }
+  .collage-item--large,
+  .collage-item--small,
+  .collage-item--medium {
+    grid-column: 1 / 2;
+    grid-row: auto;
+    height: 220px;
+  }
+
+  .menu-grid,
+  .cats-grid,
+  .books-catalogue-grid,
+  .souvenirs-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .gallery-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .contact-form,
+  .contact-card {
+    padding: 1.75rem 1.25rem;
+  }
+
+  .footer-container {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+
+  .footer-bottom-container {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .book-search-toolbar {
+    padding: 1.25rem 1rem;
+  }
+}
+
+  </style>
+</head>
+<body>
+
+  <!-- Accessible Skip Link -->
+  <a href="#mainContent" class="skip-link">Skip to main content</a>
+
+  <!-- Custom Paw Cursor (Desktop only, single instance, pointer-events none) -->
+  <div class="custom-paw-cursor" id="customPawCursor" aria-hidden="true">
+    <img src="assets/icons/paw-cursor.svg" alt="" width="28" height="28">
+  </div>
+
+  <!-- =========================================================================
+       HEADER & NAVIGATION BAR
+       ========================================================================= -->
+  <header class="site-header" id="siteHeader">
+    <div class="header-container">
+      
+      <!-- Logo Container with Fallback Badge -->
+      <a href="#hero" class="brand-logo-link" aria-label="Purr & Pages - Return to top">
+        <div class="brand-logo-wrap">
+          <!-- Primary image element with user's official logo -->
+          <img 
+            src="assets/images/logo/logo.png" 
+            alt="Purr &amp; Pages — READ • SIP • PURR" 
+            class="brand-logo-img" 
+            id="brandLogoImg"
+            onerror="this.style.display='none'; document.getElementById('brandLogoFallback').style.display='flex';"
+          >
+          <!-- Elegant fallback text & illustrated brand badge (only if image fails) -->
+          <div class="brand-logo-fallback" id="brandLogoFallback" style="display: none;">
+            <span class="fallback-icon" aria-hidden="true">
+              <svg viewBox="0 0 32 32" width="28" height="28" fill="none">
+                <rect width="32" height="32" rx="8" fill="#6F4E37"/>
+                <path d="M9 11 C9 18 11 21 16 21 C21 21 23 18 23 11 Z" fill="#FFF8ED" />
+                <path d="M23 13 C26 13 26 18 23 19" stroke="#FFF8ED" stroke-width="1.8" fill="none" stroke-linecap="round"/>
+                <circle cx="16" cy="14" r="3.5" fill="#C99A6B" />
+                <polygon points="13,12 14.5,9 16,12" fill="#C99A6B"/>
+                <polygon points="16,12 17.5,9 19,12" fill="#C99A6B"/>
+                <path d="M8 25 C12 23 15 24 16 25 C17 24 20 23 24 25" stroke="#C99A6B" stroke-width="1.8" fill="none" stroke-linecap="round"/>
+              </svg>
+            </span>
+            <div class="fallback-text">
+              <span class="brand-name">Purr &amp; Pages</span>
+              <span class="brand-tagline">READ • SIP • PURR</span>
+            </div>
+          </div>
+        </div>
+      </a>
+
+      <!-- Mobile Navigation Toggle Button -->
+      <button 
+        type="button" 
+        class="nav-toggle-btn" 
+        id="navToggleBtn" 
+        aria-controls="primaryNav" 
+        aria-expanded="false" 
+        aria-label="Toggle navigation menu"
+      >
+        <span class="hamburger-bar"></span>
+        <span class="hamburger-bar"></span>
+        <span class="hamburger-bar"></span>
+      </button>
+
+      <!-- Primary Navigation Links -->
+      <nav class="primary-nav" id="primaryNav" aria-label="Main navigation">
+        <ul class="nav-list">
+          <li class="nav-item"><a href="#hero" class="nav-link active">Home</a></li>
+          <li class="nav-item"><a href="#about" class="nav-link">About Us</a></li>
+          <li class="nav-item"><a href="#menu" class="nav-link">Menu</a></li>
+          <li class="nav-item"><a href="#cats" class="nav-link">Cats</a></li>
+          <li class="nav-item"><a href="#book-nook" class="nav-link">Book Nook</a></li>
+          <li class="nav-item"><a href="#souvenirs" class="nav-link">Souvenirs</a></li>
+          <li class="nav-item"><a href="#gallery" class="nav-link">Gallery</a></li>
+          <li class="nav-item"><a href="#contact" class="nav-link nav-link--cta">Contact</a></li>
+        </ul>
+      </nav>
+
+    </div>
+  </header>
+
+  <!-- =========================================================================
+       MAIN CONTENT
+       ========================================================================= -->
+  <main id="mainContent">
+
+    <!-- =======================================================================
+         1. HERO SECTION
+         ======================================================================= -->
+    <section class="hero-section" id="hero" aria-labelledby="heroHeading">
+      <div class="container hero-container">
+        
+        <div class="hero-content">
+          <div class="hero-brand-emblem">
+            <img src="assets/images/logo/logo.png" alt="Purr &amp; Pages — READ • SIP • PURR" class="hero-brand-logo-img" width="280" height="62">
+          </div>
+          <div class="hero-badge">
+            <span class="badge-icon" aria-hidden="true">🐾</span>
+            <span class="badge-text">COSY BOOKSTORE CAFÉ &amp; FELINE SANCTUARY</span>
+          </div>
+          
+          <h1 class="hero-headline" id="heroHeading">
+            A Little More <span class="highlight-purr">Purr</span>,<br>
+            A Little More Peace.
+          </h1>
+          
+          <p class="hero-description">
+            Your cosy corner for good books, great coffee, sweet treats, and a little feline company.
+          </p>
+
+          <div class="hero-actions">
+            <a href="#menu" class="btn btn--primary">
+              <span>Explore Our Café</span>
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+            </a>
+            <a href="#cats" class="btn btn--secondary">
+              <span>Meet the Cats</span>
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"></circle><path d="m10 15 5-3-5-3v6z"></path></svg>
+            </a>
+          </div>
+
+          <!-- Hero Statistics (Circular icon badges) -->
+          <div class="hero-stats">
+            <div class="stat-pill">
+              <span class="stat-icon-circle" aria-hidden="true">🐾</span>
+              <div class="stat-info">
+                <span class="stat-text-bold">10</span>
+                <span class="stat-text-label">Resident Cats</span>
+              </div>
+            </div>
+            <div class="stat-pill">
+              <span class="stat-icon-circle" aria-hidden="true">☕</span>
+              <div class="stat-info">
+                <span class="stat-text-bold">Artisanal</span>
+                <span class="stat-text-label">Coffee</span>
+              </div>
+            </div>
+            <div class="stat-pill">
+              <span class="stat-icon-circle" aria-hidden="true">📖</span>
+              <div class="stat-info">
+                <span class="stat-text-bold">Curated</span>
+                <span class="stat-text-label">Stories</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="hero-visual">
+          <div class="hero-image-frame">
+            <!-- Organic decorative backdrop shape -->
+            <div class="hero-blob" aria-hidden="true"></div>
+            <!-- Main Hero Image (Not lazy loaded for optimal LCP) -->
+            <img 
+              src="assets/images/hero/hero-main.jpg" 
+              alt="Warm, sunlit bookstore café with wooden bookshelves, comfortable armchairs, and fresh coffee" 
+              class="hero-img"
+              width="600" 
+              height="500"
+            >
+            <!-- Floating Decorative Badges -->
+            <div class="hero-floating-card hero-floating-card--top" aria-hidden="true">
+              <span class="floating-emoji">☕</span>
+              <div class="floating-text">
+                <strong>Freshly Brewed</strong>
+                <small>Single-origin arabica</small>
+              </div>
+            </div>
+            <div class="hero-floating-card hero-floating-card--bottom" aria-hidden="true">
+              <span class="floating-emoji">🐱</span>
+              <div class="floating-text">
+                <strong>Purr-Friendly Space</strong>
+                <small>Quiet paws &amp; soft corners</small>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- =======================================================================
+         2. ABOUT US SECTION
+         ======================================================================= -->
+    <section class="about-section section-padding" id="about" aria-labelledby="aboutHeading">
+      <div class="container">
+        
+        <div class="section-header text-center">
+          <span class="section-tag">OUR STORY</span>
+          <h2 class="section-title" id="aboutHeading">A little coffee, a lot of stories.</h2>
+          <div class="header-flourish" aria-hidden="true">
+            <svg width="48" height="12" viewBox="0 0 48 12" fill="none">
+              <path d="M2 6 Q 12 0, 24 6 T 46 6" stroke="#C99A6B" stroke-width="2" stroke-linecap="round"/>
+            </svg>
+          </div>
+        </div>
+
+        <div class="about-grid">
+          <!-- Story Narrative -->
+          <div class="about-narrative">
+            <p class="about-lead">
+              Purr &amp; Pages was imagined as a home away from home for people who love the smell of coffee, the magic of a good book and the quiet company of cats. Here, there is always another story to discover and always room for one more cup.
+            </p>
+            <p>
+              Tucked into a sunlit neighbourhood corner, our space brings together three of life’s most grounding pleasures: stories that transport you, warm beverages that slow your pulse, and affectionate rescue felines who remind us to savour the present moment.
+            </p>
+            <p>
+              Whether you are here to lose yourself in an afternoon of undisturbed reading, discover your next literary obsession, or simply let a sleeping cat warm your lap while you sip our house-roasted Chapter One Latte, our doors are open to every curious soul.
+            </p>
+
+            <!-- Brand Values Grid -->
+            <div class="brand-values">
+              <div class="value-card">
+                <div class="value-icon-box">
+                  <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path></svg>
+                </div>
+                <div class="value-content">
+                  <h3 class="value-title">Comfort</h3>
+                  <p class="value-desc">Plush armchairs, warm amber light, and an unhurried atmosphere.</p>
+                </div>
+              </div>
+
+              <div class="value-card">
+                <div class="value-icon-box">
+                  <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"></circle><path d="M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3"></path><line x1="12" y1="17" x2="12.01" y2="17"></line></svg>
+                </div>
+                <div class="value-content">
+                  <h3 class="value-title">Curiosity</h3>
+                  <p class="value-desc">Forgotten classics, bold independent voices, and inquisitive whiskers.</p>
+                </div>
+              </div>
+
+              <div class="value-card">
+                <div class="value-icon-box">
+                  <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path><circle cx="9" cy="7" r="4"></circle><path d="M23 21v-2a4 4 0 0 0-3-3.87"></path><path d="M16 3.13a4 4 0 0 1 0 7.75"></path></svg>
+                </div>
+                <div class="value-content">
+                  <h3 class="value-title">Community</h3>
+                  <p class="value-desc">A safe, gentle gathering place for readers, thinkers, and pet lovers.</p>
+                </div>
+              </div>
+
+              <div class="value-card">
+                <div class="value-icon-box">
+                  <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"></path></svg>
+                </div>
+                <div class="value-content">
+                  <h3 class="value-title">Kindness</h3>
+                  <p class="value-desc">All resident cats are beloved rescues, given loving lifetime care.</p>
+                </div>
+              </div>
+            </div>
+
+            <!-- Fictional Storytelling Disclaimer Note -->
+            <div class="portfolio-disclaimer">
+              <span class="disclaimer-badge">Portfolio Concept</span>
+              <p>Purr &amp; Pages is an original fictional bookstore café identity and portfolio design demonstrating web design, brand storytelling, and interactive UI systems.</p>
+            </div>
+          </div>
+
+          <!-- Editorial Photography Collage -->
+          <div class="about-gallery">
+            <div class="collage-item collage-item--large">
+              <img 
+                src="assets/images/about/about-corner.jpg" 
+                alt="Cosy sunlit reading nook with warm wood bookshelves and a deep cushioned armchair" 
+                loading="lazy"
+                width="400"
+                height="500"
+              >
+            </div>
+            <div class="collage-item collage-item--small">
+              <img 
+                src="assets/images/about/about-coffee.jpg" 
+                alt="Artisanal ceramic cup with delicate latte art on a rustic café table" 
+                loading="lazy"
+                width="300"
+                height="240"
+              >
+            </div>
+            <div class="collage-item collage-item--medium">
+              <img 
+                src="assets/images/about/about-books.jpg" 
+                alt="Floor-to-ceiling wooden bookshelves filled with curated literature and paperbacks" 
+                loading="lazy"
+                width="300"
+                height="240"
+              >
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- =======================================================================
+         3. MENU SECTION
+         ======================================================================= -->
+    <section class="menu-section section-padding" id="menu" aria-labelledby="menuHeading">
+      <div class="container">
+        
+        <div class="section-header text-center">
+          <span class="section-tag">SIP &amp; SAVOUR</span>
+          <h2 class="section-title" id="menuHeading">A Menu Worth Purring Over</h2>
+          <p class="section-subtitle">
+            Turn the page, take a sip and find your next favourite treat. There's something delicious waiting around every corner.
+          </p>
+          <div class="header-flourish" aria-hidden="true">
+            <svg width="48" height="12" viewBox="0 0 48 12" fill="none">
+              <path d="M2 6 Q 12 0, 24 6 T 46 6" stroke="#C99A6B" stroke-width="2" stroke-linecap="round"/>
+            </svg>
+          </div>
+        </div>
+
+        <!-- Category Filters -->
+        <div class="menu-filter-container" role="tablist" aria-label="Café Menu Categories">
+          <button type="button" class="menu-tab-btn active" role="tab" aria-selected="true" data-category="all">
+            All Menu Items
+          </button>
+          <button type="button" class="menu-tab-btn" role="tab" aria-selected="false" data-category="brews">
+            Purrfect Brews
+          </button>
+          <button type="button" class="menu-tab-btn" role="tab" aria-selected="false" data-category="sip-story">
+            Sip &amp; Story
+          </button>
+          <button type="button" class="menu-tab-btn" role="tab" aria-selected="false" data-category="sweets">
+            Whisker-Sized Sweets
+          </button>
+          <button type="button" class="menu-tab-btn" role="tab" aria-selected="false" data-category="savory">
+            The Plot Thickens
+          </button>
+          <button type="button" class="menu-tab-btn" role="tab" aria-selected="false" data-category="cat-treats">
+            Little Treats for Little Paws
+          </button>
+        </div>
+
+        <!-- Menu Items List (Playful, Text-Only Design — Zero Photographs/Illustrations) -->
+        <div class="menu-list-wrap" id="menuItemsList">
+
+          <!-- Staff Cat Treat Safety Note (Only shown with cat treats filter) -->
+          <div class="menu-cat-notice-banner" style="display: none;">
+            🐾 Dedicated feline treats for occasional enjoyment. Please ask our café staff before feeding resident cats.
+          </div>
+          
+          <!-- CATEGORY 1: PURRFECT BREWS (Coffee) -->
+          <article class="menu-item-row" data-category="brews">
+            <div class="menu-item-info">
+              <h3 class="menu-item-name">The Main Character Latte</h3>
+              <p class="menu-item-desc">Espresso with steamed milk.</p>
+            </div>
+            <span class="menu-item-price">₹180</span>
+          </article>
+
+          <article class="menu-item-row" data-category="brews">
+            <div class="menu-item-info">
+              <h3 class="menu-item-name">Purr-over Coffee</h3>
+              <p class="menu-item-desc">Freshly brewed filter coffee.</p>
+            </div>
+            <span class="menu-item-price">₹130</span>
+          </article>
+
+          <article class="menu-item-row" data-category="brews">
+            <div class="menu-item-info">
+              <h3 class="menu-item-name">Midnight Cat Mocha</h3>
+              <p class="menu-item-desc">Rich espresso and chocolate.</p>
+            </div>
+            <span class="menu-item-price">₹190</span>
+          </article>
+
+          <article class="menu-item-row" data-category="brews">
+            <div class="menu-item-info">
+              <h3 class="menu-item-name">The Plot Twist Cold Brew</h3>
+              <p class="menu-item-desc">Smooth, chilled coffee.</p>
+            </div>
+            <span class="menu-item-price">₹170</span>
+          </article>
+
+          <article class="menu-item-row" data-category="brews">
+            <div class="menu-item-info">
+              <h3 class="menu-item-name">Cat Nap Cappuccino</h3>
+              <p class="menu-item-desc">Espresso with creamy milk foam.</p>
+            </div>
+            <span class="menu-item-price">₹160</span>
+          </article>
+
+          <article class="menu-item-row" data-category="brews">
+            <div class="menu-item-info">
+              <h3 class="menu-item-name">Chapter One Espresso</h3>
+              <p class="menu-item-desc">A bold, classic espresso.</p>
+            </div>
+            <span class="menu-item-price">₹100</span>
+          </article>
+
+          <!-- CATEGORY 2: SIP & STORY (Tea & Specialty Drinks) -->
+          <article class="menu-item-row" data-category="sip-story">
+            <div class="menu-item-info">
+              <h3 class="menu-item-name">Once Upon a Chai</h3>
+              <p class="menu-item-desc">Aromatic Indian masala chai.</p>
+            </div>
+            <span class="menu-item-price">₹80</span>
+          </article>
+
+          <article class="menu-item-row" data-category="sip-story">
+            <div class="menu-item-info">
+              <h3 class="menu-item-name">The Mad Hatter Matcha</h3>
+              <p class="menu-item-desc">Matcha with creamy milk.</p>
+            </div>
+            <span class="menu-item-price">₹190</span>
+          </article>
+
+          <article class="menu-item-row" data-category="sip-story">
+            <div class="menu-item-info">
+              <h3 class="menu-item-name">Page-Turner Peach Iced Tea</h3>
+              <p class="menu-item-desc">Refreshing peach iced tea.</p>
+            </div>
+            <span class="menu-item-price">₹140</span>
+          </article>
+
+          <article class="menu-item-row" data-category="sip-story">
+            <div class="menu-item-info">
+              <h3 class="menu-item-name">Fairy-Tale Hot Chocolate</h3>
+              <p class="menu-item-desc">Rich, comforting hot chocolate.</p>
+            </div>
+            <span class="menu-item-price">₹150</span>
+          </article>
+
+          <article class="menu-item-row" data-category="sip-story">
+            <div class="menu-item-info">
+              <h3 class="menu-item-name">The Sleepy Tabby</h3>
+              <p class="menu-item-desc">Caffeine-free herbal infusion.</p>
+            </div>
+            <span class="menu-item-price">₹120</span>
+          </article>
+
+          <article class="menu-item-row" data-category="sip-story">
+            <div class="menu-item-info">
+              <h3 class="menu-item-name">The Cheshire Cat Cooler</h3>
+              <p class="menu-item-desc">A refreshing fruit cooler.</p>
+            </div>
+            <span class="menu-item-price">₹130</span>
+          </article>
+
+          <!-- CATEGORY 3: WHISKER-SIZED SWEETS (Cakes & Desserts) -->
+          <article class="menu-item-row" data-category="sweets">
+            <div class="menu-item-info">
+              <h3 class="menu-item-name">Paw-some Brownie</h3>
+              <p class="menu-item-desc">Rich chocolate brownie.</p>
+            </div>
+            <span class="menu-item-price">₹110</span>
+          </article>
+
+          <article class="menu-item-row" data-category="sweets">
+            <div class="menu-item-info">
+              <h3 class="menu-item-name">The Cookie Chapter</h3>
+              <p class="menu-item-desc">Chocolate-chip cookie.</p>
+            </div>
+            <span class="menu-item-price">₹70</span>
+          </article>
+
+          <article class="menu-item-row" data-category="sweets">
+            <div class="menu-item-info">
+              <h3 class="menu-item-name">Purrfect Cinnamon Roll</h3>
+              <p class="menu-item-desc">Soft cinnamon roll with glaze.</p>
+            </div>
+            <span class="menu-item-price">₹120</span>
+          </article>
+
+          <article class="menu-item-row" data-category="sweets">
+            <div class="menu-item-info">
+              <h3 class="menu-item-name">The Last Crumb Cheesecake</h3>
+              <p class="menu-item-desc">Creamy cheesecake slice.</p>
+            </div>
+            <span class="menu-item-price">₹160</span>
+          </article>
+
+          <article class="menu-item-row" data-category="sweets">
+            <div class="menu-item-info">
+              <h3 class="menu-item-name">Croissant &amp; Catnaps</h3>
+              <p class="menu-item-desc">Buttery, flaky croissant.</p>
+            </div>
+            <span class="menu-item-price">₹100</span>
+          </article>
+
+          <article class="menu-item-row" data-category="sweets">
+            <div class="menu-item-info">
+              <h3 class="menu-item-name">The Midnight Muffin</h3>
+              <p class="menu-item-desc">Chocolate muffin.</p>
+            </div>
+            <span class="menu-item-price">₹90</span>
+          </article>
+
+          <!-- CATEGORY 4: THE PLOT THICKENS (Savoury Snacks) -->
+          <article class="menu-item-row" data-category="savory">
+            <div class="menu-item-info">
+              <h3 class="menu-item-name">The Cliffhanger Toastie</h3>
+              <p class="menu-item-desc">Toasted sandwich with a savoury filling.</p>
+            </div>
+            <span class="menu-item-price">₹180</span>
+          </article>
+
+          <article class="menu-item-row" data-category="savory">
+            <div class="menu-item-info">
+              <h3 class="menu-item-name">The Book Club Bagel</h3>
+              <p class="menu-item-desc">Bagel with a creamy filling.</p>
+            </div>
+            <span class="menu-item-price">₹150</span>
+          </article>
+
+          <article class="menu-item-row" data-category="savory">
+            <div class="menu-item-info">
+              <h3 class="menu-item-name">The Novel Idea Sandwich</h3>
+              <p class="menu-item-desc">Freshly prepared sandwich.</p>
+            </div>
+            <span class="menu-item-price">₹170</span>
+          </article>
+
+          <article class="menu-item-row" data-category="savory">
+            <div class="menu-item-info">
+              <h3 class="menu-item-name">Detective's Loaded Fries</h3>
+              <p class="menu-item-desc">Seasoned fries with toppings.</p>
+            </div>
+            <span class="menu-item-price">₹140</span>
+          </article>
+
+          <article class="menu-item-row" data-category="savory">
+            <div class="menu-item-info">
+              <h3 class="menu-item-name">The Cozy Chapter Pasta</h3>
+              <p class="menu-item-desc">Comforting pasta dish.</p>
+            </div>
+            <span class="menu-item-price">₹220</span>
+          </article>
+
+          <article class="menu-item-row" data-category="savory">
+            <div class="menu-item-info">
+              <h3 class="menu-item-name">The Little Bookmark Wrap</h3>
+              <p class="menu-item-desc">Light savoury wrap.</p>
+            </div>
+            <span class="menu-item-price">₹160</span>
+          </article>
+
+          <!-- CATEGORY 5: LITTLE TREATS FOR LITTLE PAWS (Cat Treats) -->
+          <article class="menu-item-row" data-category="cat-treats">
+            <div class="menu-item-info">
+              <h3 class="menu-item-name">The Purrito Bites</h3>
+              <p class="menu-item-desc">Small bites of plain, cooked chicken.</p>
+            </div>
+            <span class="menu-item-price">₹50</span>
+          </article>
+
+          <article class="menu-item-row" data-category="cat-treats">
+            <div class="menu-item-info">
+              <h3 class="menu-item-name">The Tuna Tale</h3>
+              <p class="menu-item-desc">A small portion of plain tuna.</p>
+            </div>
+            <span class="menu-item-price">₹40</span>
+          </article>
+
+          <article class="menu-item-row" data-category="cat-treats">
+            <div class="menu-item-info">
+              <h3 class="menu-item-name">The Chicken Chapter</h3>
+              <p class="menu-item-desc">Bite-sized, plain cooked chicken.</p>
+            </div>
+            <span class="menu-item-price">₹50</span>
+          </article>
+
+          <article class="menu-item-row" data-category="cat-treats">
+            <div class="menu-item-info">
+              <h3 class="menu-item-name">The Tiny Paw Platter</h3>
+              <p class="menu-item-desc">A portion of approved cat treats.</p>
+            </div>
+            <span class="menu-item-price">₹60</span>
+          </article>
+
+          <article class="menu-item-row" data-category="cat-treats">
+            <div class="menu-item-info">
+              <h3 class="menu-item-name">The Salmon Story</h3>
+              <p class="menu-item-desc">A small portion of plain, fully cooked, boneless salmon.</p>
+            </div>
+            <span class="menu-item-price">₹70</span>
+          </article>
+
+          <article class="menu-item-row" data-category="cat-treats">
+            <div class="menu-item-info">
+              <h3 class="menu-item-name">The Gentle Whisker Treat</h3>
+              <p class="menu-item-desc">Commercially prepared cat treats.</p>
+            </div>
+            <span class="menu-item-price">₹30</span>
+          </article>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- =======================================================================
+         4. MEET OUR BOOKSHOP CATS SECTION (THE RESIDENTS’ CLUB)
+         ======================================================================= -->
+    <section class="cats-section section-padding" id="cats" aria-labelledby="catsHeading">
+      <div class="container">
+        
+        <!-- Section Introduction -->
+        <div class="section-header text-center">
+          <span class="section-tag">THE RESIDENTS’ CLUB</span>
+          <h2 class="section-title" id="catsHeading">Meet Our Bookshop Cats</h2>
+          <p class="section-supporting-headline">Small paws. Big personalities. Endless purr-sonality.</p>
+          <p class="section-subtitle">
+            Every good story has unforgettable characters. At Purr &amp; Pages, ours have whiskers, tiny paws, and a habit of stealing the best reading spots. Meet the little personalities who make our café feel like home.
+          </p>
+
+          <!-- Subtle Paw-Print Trail & Storybook Divider Motif -->
+          <div class="cat-storybook-divider" aria-hidden="true">
+            <svg class="paw-trail-svg" width="260" height="28" viewBox="0 0 260 28" fill="none">
+              <!-- Paw 1 -->
+              <ellipse cx="20" cy="18" rx="4.5" ry="3.8" fill="#C99A6B" opacity="0.35" transform="rotate(-15 20 18)"/>
+              <circle cx="15" cy="10" r="1.6" fill="#C99A6B" opacity="0.35"/>
+              <circle cx="21" cy="9" r="1.6" fill="#C99A6B" opacity="0.35"/>
+              <circle cx="27" cy="11" r="1.6" fill="#C99A6B" opacity="0.35"/>
+              <!-- Paw 2 -->
+              <ellipse cx="65" cy="12" rx="4.5" ry="3.8" fill="#C99A6B" opacity="0.55" transform="rotate(15 65 12)"/>
+              <circle cx="60" cy="4" r="1.6" fill="#C99A6B" opacity="0.55"/>
+              <circle cx="66" cy="3" r="1.6" fill="#C99A6B" opacity="0.55"/>
+              <circle cx="72" cy="5" r="1.6" fill="#C99A6B" opacity="0.55"/>
+              <!-- Center Storybook Book & Sleeping Cat -->
+              <g transform="translate(112, 2)">
+                <path d="M4 20 C12 17 18 18 20 20 C22 18 28 17 36 20 V8 C28 6 22 7 20 9 C18 7 12 6 4 8 Z" fill="#FFF8ED" stroke="#6F4E37" stroke-width="1.6"/>
+                <ellipse cx="20" cy="13" rx="6.5" ry="4.5" fill="#C99A6B"/>
+                <polygon points="16,10 17,6 19,10" fill="#6F4E37"/>
+                <polygon points="21,10 23,6 24,10" fill="#6F4E37"/>
+                <path d="M14 14 C13 17 15 18 17 18" stroke="#6F4E37" stroke-width="1.2" fill="none" stroke-linecap="round"/>
+              </g>
+              <!-- Paw 3 -->
+              <ellipse cx="195" cy="14" rx="4.5" ry="3.8" fill="#C99A6B" opacity="0.55" transform="rotate(-15 195 14)"/>
+              <circle cx="190" cy="6" r="1.6" fill="#C99A6B" opacity="0.55"/>
+              <circle cx="196" cy="5" r="1.6" fill="#C99A6B" opacity="0.55"/>
+              <circle cx="202" cy="7" r="1.6" fill="#C99A6B" opacity="0.55"/>
+              <!-- Paw 4 -->
+              <ellipse cx="240" cy="18" rx="4.5" ry="3.8" fill="#C99A6B" opacity="0.35" transform="rotate(15 240 18)"/>
+              <circle cx="235" cy="10" r="1.6" fill="#C99A6B" opacity="0.35"/>
+              <circle cx="241" cy="9" r="1.6" fill="#C99A6B" opacity="0.35"/>
+              <circle cx="247" cy="11" r="1.6" fill="#C99A6B" opacity="0.35"/>
+            </svg>
+          </div>
+        </div>
+
+        <!-- Interactive Personality Filters -->
+        <div class="cats-filter-container" role="tablist" aria-label="Filter resident cats by personality">
+          <button type="button" class="cat-filter-btn active" role="tab" aria-selected="true" data-filter="all">
+            <span class="filter-icon" aria-hidden="true">🐾</span> All Cats <span class="filter-badge">10</span>
+          </button>
+          <button type="button" class="cat-filter-btn" role="tab" aria-selected="false" data-filter="sleepy">
+            <span class="filter-icon" aria-hidden="true">💤</span> Sleepy Sweethearts <span class="filter-badge">2</span>
+          </button>
+          <button type="button" class="cat-filter-btn" role="tab" aria-selected="false" data-filter="explorers">
+            <span class="filter-icon" aria-hidden="true">🧭</span> Curious Explorers <span class="filter-badge">3</span>
+          </button>
+          <button type="button" class="cat-filter-btn" role="tab" aria-selected="false" data-filter="playful">
+            <span class="filter-icon" aria-hidden="true">🧶</span> Playful Personalities <span class="filter-badge">2</span>
+          </button>
+          <button type="button" class="cat-filter-btn" role="tab" aria-selected="false" data-filter="quiet">
+            <span class="filter-icon" aria-hidden="true">☕</span> Quiet Companions <span class="filter-badge">3</span>
+          </button>
+        </div>
+
+        <!-- 10 Unique Cat Profile Cards Grid -->
+        <div class="bookshop-cats-grid" id="catsGrid">
+
+          <!-- CAT 01 — MOCHI (Editable Photo & Bio) -->
+          <article class="cat-profile-card" data-cat-category="sleepy" data-cat-id="1">
+            <div class="cat-portrait-wrap">
+              <img 
+                src="assets/images/cats/cat-mochi.jpg" 
+                alt="Portrait of Mochi, a fluffy cream-and-white cat" 
+                class="cat-portrait-img" 
+                loading="lazy" 
+                width="340" 
+                height="270"
+              >
+              <span class="cat-library-tag"><span aria-hidden="true">🏷️</span> Sleepy Sweetheart</span>
+            </div>
+            <div class="cat-card-content">
+              <div class="cat-card-title-row">
+                <h3 class="cat-name-heading">Mochi <span class="cat-name-deco" aria-hidden="true">📖</span></h3>
+                <span class="cat-id-number">#01</span>
+              </div>
+              <p class="cat-personality-title">The Professional Napper</p>
+              <p class="cat-bio-preview">Mochi believes that every good book deserves a comfortable reading companion and every afternoon deserves at least three naps...</p>
+              <blockquote class="cat-quote-snip">“One more chapter? Make it one more nap.”</blockquote>
+              <button type="button" class="btn-meet-cat" data-cat-id="1" aria-haspopup="dialog" aria-label="Meet Mochi - View complete biography">
+                <span>Meet Mochi</span>
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+              </button>
+            </div>
+          </article>
+
+          <!-- CAT 02 — BISCUIT (Editable Photo & Bio) -->
+          <article class="cat-profile-card" data-cat-category="explorers" data-cat-id="2">
+            <div class="cat-portrait-wrap">
+              <img 
+                src="assets/images/cats/cat-biscuit.jpg" 
+                alt="Portrait of Biscuit, a friendly ginger-and-white cat" 
+                class="cat-portrait-img" 
+                loading="lazy" 
+                width="340" 
+                height="270"
+              >
+              <span class="cat-library-tag"><span aria-hidden="true">🏷️</span> Social Butterfly</span>
+            </div>
+            <div class="cat-card-content">
+              <div class="cat-card-title-row">
+                <h3 class="cat-name-heading">Biscuit <span class="cat-name-deco" aria-hidden="true">☕</span></h3>
+                <span class="cat-id-number">#02</span>
+              </div>
+              <p class="cat-personality-title">The Friendly Little Greeter</p>
+              <p class="cat-bio-preview">Biscuit considers every visitor a potential best friend. This cheerful little greeter loves inspecting shopping bags and supervising arrivals...</p>
+              <blockquote class="cat-quote-snip">“You came for coffee. You stayed for me.”</blockquote>
+              <button type="button" class="btn-meet-cat" data-cat-id="2" aria-haspopup="dialog" aria-label="Meet Biscuit - View complete biography">
+                <span>Meet Biscuit</span>
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+              </button>
+            </div>
+          </article>
+
+          <!-- CAT 03 — PEPPER (Editable Photo & Bio) -->
+          <article class="cat-profile-card" data-cat-category="playful" data-cat-id="3">
+            <div class="cat-portrait-wrap">
+              <img 
+                src="assets/images/cats/cat-pepper.jpg" 
+                alt="Portrait of Pepper, a sleek black-and-white cat" 
+                class="cat-portrait-img" 
+                loading="lazy" 
+                width="340" 
+                height="270"
+              >
+              <span class="cat-library-tag"><span aria-hidden="true">🏷️</span> Curious Chaos</span>
+            </div>
+            <div class="cat-card-content">
+              <div class="cat-card-title-row">
+                <h3 class="cat-name-heading">Pepper <span class="cat-name-deco" aria-hidden="true">🐾</span></h3>
+                <span class="cat-id-number">#03</span>
+              </div>
+              <p class="cat-personality-title">The Tiny Mischief-Maker</p>
+              <p class="cat-bio-preview">Pepper is convinced that bookmarks are toys, paper bags are secret hideouts, and every unattended book needs a thorough inspection...</p>
+              <blockquote class="cat-quote-snip">“I didn't knock it over. The book wanted to explore.”</blockquote>
+              <button type="button" class="btn-meet-cat" data-cat-id="3" aria-haspopup="dialog" aria-label="Meet Pepper - View complete biography">
+                <span>Meet Pepper</span>
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+              </button>
+            </div>
+          </article>
+
+          <!-- CAT 04 — CHAI (Editable Photo & Bio) -->
+          <article class="cat-profile-card" data-cat-category="quiet" data-cat-id="4">
+            <div class="cat-portrait-wrap">
+              <img 
+                src="assets/images/cats/cat-chai.jpg" 
+                alt="Portrait of Chai, a calm brown tabby cat" 
+                class="cat-portrait-img" 
+                loading="lazy" 
+                width="340" 
+                height="270"
+              >
+              <span class="cat-library-tag"><span aria-hidden="true">🏷️</span> Comfort Seeker</span>
+            </div>
+            <div class="cat-card-content">
+              <div class="cat-card-title-row">
+                <h3 class="cat-name-heading">Chai <span class="cat-name-deco" aria-hidden="true">🌿</span></h3>
+                <span class="cat-id-number">#04</span>
+              </div>
+              <p class="cat-personality-title">The Cosy Companion</p>
+              <p class="cat-bio-preview">Chai is the living definition of a slow afternoon. This gentle companion enjoys peaceful corners, quiet company, and turning pages...</p>
+              <blockquote class="cat-quote-snip">“Slow sips. Soft paws. Good stories.”</blockquote>
+              <button type="button" class="btn-meet-cat" data-cat-id="4" aria-haspopup="dialog" aria-label="Meet Chai - View complete biography">
+                <span>Meet Chai</span>
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+              </button>
+            </div>
+          </article>
+
+          <!-- CAT 05 — WAFFLES (Editable Photo & Bio) -->
+          <article class="cat-profile-card" data-cat-category="sleepy" data-cat-id="5">
+            <div class="cat-portrait-wrap">
+              <img 
+                src="assets/images/cats/cat-waffles.jpg" 
+                alt="Portrait of Waffles, a fluffy white cat with blue eyes" 
+                class="cat-portrait-img" 
+                loading="lazy" 
+                width="340" 
+                height="270"
+              >
+              <span class="cat-library-tag"><span aria-hidden="true">🏷️</span> Dreamy Reader</span>
+            </div>
+            <div class="cat-card-content">
+              <div class="cat-card-title-row">
+                <h3 class="cat-name-heading">Waffles <span class="cat-name-deco" aria-hidden="true">☁️</span></h3>
+                <span class="cat-id-number">#05</span>
+              </div>
+              <p class="cat-personality-title">The Sleepy Bookworm</p>
+              <p class="cat-bio-preview">Waffles starts every day with excellent intentions to explore and read. Somehow, plans always end with a nap in a patch of warm sunlight...</p>
+              <blockquote class="cat-quote-snip">“I'll finish this chapter after my nap.”</blockquote>
+              <button type="button" class="btn-meet-cat" data-cat-id="5" aria-haspopup="dialog" aria-label="Meet Waffles - View complete biography">
+                <span>Meet Waffles</span>
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+              </button>
+            </div>
+          </article>
+
+          <!-- CAT 06 — FIG (Editable Photo & Bio) -->
+          <article class="cat-profile-card" data-cat-category="explorers" data-cat-id="6">
+            <div class="cat-portrait-wrap">
+              <img 
+                src="assets/images/cats/cat-fig.jpg" 
+                alt="Portrait of Fig, an adventurous orange ginger tabby cat" 
+                class="cat-portrait-img" 
+                loading="lazy" 
+                width="340" 
+                height="270"
+              >
+              <span class="cat-library-tag"><span aria-hidden="true">🏷️</span> Little Adventurer</span>
+            </div>
+            <div class="cat-card-content">
+              <div class="cat-card-title-row">
+                <h3 class="cat-name-heading">Fig <span class="cat-name-deco" aria-hidden="true">🧭</span></h3>
+                <span class="cat-id-number">#06</span>
+              </div>
+              <p class="cat-personality-title">The Curious Explorer</p>
+              <p class="cat-bio-preview">Fig is the café's self-appointed explorer. New book deliveries, mysterious corners, and freshly arranged bookshelves demand immediate investigation...</p>
+              <blockquote class="cat-quote-snip">“Every corner hides a new chapter.”</blockquote>
+              <button type="button" class="btn-meet-cat" data-cat-id="6" aria-haspopup="dialog" aria-label="Meet Fig - View complete biography">
+                <span>Meet Fig</span>
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+              </button>
+            </div>
+          </article>
+
+          <!-- CAT 07 — PICKLES (Editable Photo & Bio) -->
+          <article class="cat-profile-card" data-cat-category="playful" data-cat-id="7">
+            <div class="cat-portrait-wrap">
+              <img 
+                src="assets/images/cats/cat-pickles.jpg" 
+                alt="Portrait of Pickles, a grey tabby cat with bright green eyes" 
+                class="cat-portrait-img" 
+                loading="lazy" 
+                width="340" 
+                height="270"
+              >
+              <span class="cat-library-tag"><span aria-hidden="true">🏷️</span> Playful Menace</span>
+            </div>
+            <div class="cat-card-content">
+              <div class="cat-card-title-row">
+                <h3 class="cat-name-heading">Pickles <span class="cat-name-deco" aria-hidden="true">⭐</span></h3>
+                <span class="cat-id-number">#07</span>
+              </div>
+              <p class="cat-personality-title">The Tiny Trouble-Maker</p>
+              <p class="cat-bio-preview">Pickles has two hobbies: making unexpected appearances and acting completely innocent afterward. A rustle of paper sparks instant excitement...</p>
+              <blockquote class="cat-quote-snip">“Trouble? I prefer the term plot development.”</blockquote>
+              <button type="button" class="btn-meet-cat" data-cat-id="7" aria-haspopup="dialog" aria-label="Meet Pickles - View complete biography">
+                <span>Meet Pickles</span>
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+              </button>
+            </div>
+          </article>
+
+          <!-- CAT 08 — INK (Editable Photo & Bio) -->
+          <article class="cat-profile-card" data-cat-category="quiet" data-cat-id="8">
+            <div class="cat-portrait-wrap">
+              <img 
+                src="assets/images/cats/cat-ink.jpg" 
+                alt="Portrait of Ink, a glossy solid black cat with golden eyes" 
+                class="cat-portrait-img" 
+                loading="lazy" 
+                width="340" 
+                height="270"
+              >
+              <span class="cat-library-tag"><span aria-hidden="true">🏷️</span> Quiet Observer</span>
+            </div>
+            <div class="cat-card-content">
+              <div class="cat-card-title-row">
+                <h3 class="cat-name-heading">Ink <span class="cat-name-deco" aria-hidden="true">✒️</span></h3>
+                <span class="cat-id-number">#08</span>
+              </div>
+              <p class="cat-personality-title">The Midnight Poet</p>
+              <p class="cat-bio-preview">Ink is a quiet soul with a talent for finding the most peaceful corner in the room. Ink prefers to observe from a comfortable distance in silent inspiration...</p>
+              <blockquote class="cat-quote-snip">“Some stories are better told in silence.”</blockquote>
+              <button type="button" class="btn-meet-cat" data-cat-id="8" aria-haspopup="dialog" aria-label="Meet Ink - View complete biography">
+                <span>Meet Ink</span>
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+              </button>
+            </div>
+          </article>
+
+          <!-- CAT 09 — PUDDING (Editable Photo & Bio) -->
+          <article class="cat-profile-card" data-cat-category="quiet" data-cat-id="9">
+            <div class="cat-portrait-wrap">
+              <img 
+                src="assets/images/cats/cat-pudding.jpg" 
+                alt="Portrait of Pudding, a distinctive calico cat with warm patches" 
+                class="cat-portrait-img" 
+                loading="lazy" 
+                width="340" 
+                height="270"
+              >
+              <span class="cat-library-tag"><span aria-hidden="true">🏷️</span> Queen of Comfort</span>
+            </div>
+            <div class="cat-card-content">
+              <div class="cat-card-title-row">
+                <h3 class="cat-name-heading">Pudding <span class="cat-name-deco" aria-hidden="true">👑</span></h3>
+                <span class="cat-id-number">#09</span>
+              </div>
+              <p class="cat-personality-title">The Royal Reviewer</p>
+              <p class="cat-bio-preview">Pudding takes comfort very seriously. Every cushion must meet her standards, and every cosy corner deserves a royal inspection...</p>
+              <blockquote class="cat-quote-snip">“The cushion is mine. The book may stay.”</blockquote>
+              <button type="button" class="btn-meet-cat" data-cat-id="9" aria-haspopup="dialog" aria-label="Meet Pudding - View complete biography">
+                <span>Meet Pudding</span>
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+              </button>
+            </div>
+          </article>
+
+          <!-- CAT 10 — NOODLE (Editable Photo & Bio) -->
+          <article class="cat-profile-card" data-cat-category="explorers" data-cat-id="10">
+            <div class="cat-portrait-wrap">
+              <img 
+                src="assets/images/cats/cat-noodle.jpg" 
+                alt="Portrait of Noodle, a fluffy cream-coloured kitten" 
+                class="cat-portrait-img" 
+                loading="lazy" 
+                width="340" 
+                height="270"
+              >
+              <span class="cat-library-tag"><span aria-hidden="true">🏷️</span> Curious Kitten</span>
+            </div>
+            <div class="cat-card-content">
+              <div class="cat-card-title-row">
+                <h3 class="cat-name-heading">Noodle <span class="cat-name-deco" aria-hidden="true">✨</span></h3>
+                <span class="cat-id-number">#10</span>
+              </div>
+              <p class="cat-personality-title">The Little Daydreamer</p>
+              <p class="cat-bio-preview">Noodle sees magic in the smallest things: a sunbeam on the floor, a ribbon on a gift, or the gentle flutter of a page. Full of wonder and energy...</p>
+              <blockquote class="cat-quote-snip">“Life is one big story. Let's explore it.”</blockquote>
+              <button type="button" class="btn-meet-cat" data-cat-id="10" aria-haspopup="dialog" aria-label="Meet Noodle - View complete biography">
+                <span>Meet Noodle</span>
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+              </button>
+            </div>
+          </article>
+
+        </div>
+
+        <!-- Section Decoration & Closing Storytelling -->
+        <div class="cats-closing-banner">
+          <div class="closing-stamp" aria-hidden="true">
+            <div class="stamp-circle">
+              <svg viewBox="0 0 100 100" width="90" height="90">
+                <path id="catStampPath" d="M 50,50 m -35,0 a 35,35 0 1,1 70,0 a 35,35 0 1,1 -70,0" fill="none"/>
+                <text class="stamp-text">
+                  <textPath href="#catStampPath" startOffset="50%" text-anchor="middle">
+                    PURR &amp; PAGES CAT CLUB •
+                  </textPath>
+                </text>
+                <circle cx="50" cy="50" r="21" fill="#EADBC8" stroke="#6F4E37" stroke-width="1.5"/>
+                <text x="50" y="56" text-anchor="middle" font-size="16">🐾</text>
+              </svg>
+            </div>
+          </div>
+          <div class="closing-content">
+            <h3 class="closing-heading">“Every visit has a different story. These ten little characters are part of ours.”</h3>
+            <p class="closing-text">Stop by, settle into your favourite reading nook, and let the café's resident personalities make your day a little cosier.</p>
+            <a href="#menu" class="btn btn--primary">
+              <span>Explore the Café</span>
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+            </a>
+          </div>
+        </div>
+
+        <!-- Cat Welfare and Visitor Etiquette Panel -->
+        <div class="cat-welfare-panel">
+          <div class="welfare-header">
+            <span class="welfare-icon" aria-hidden="true">🌿</span>
+            <h3 class="welfare-title">A Little Note About Our Little Residents</h3>
+          </div>
+          <div class="welfare-body">
+            <p class="welfare-primary-text">
+              Our cats are family, not attractions. They are free to rest, wander, or take a break whenever they need. Please let sleeping cats sleep, approach them gently, and follow our team's guidance when interacting with them. Not every cat wants to be petted, and that's perfectly okay.
+            </p>
+            <div class="welfare-treats-alert">
+              <span class="alert-icon" aria-hidden="true">⚠️</span>
+              <div class="alert-text">
+                <strong>Treat Safety Notice:</strong>
+                <p>Please ask our team before offering any cat treats. Only café-approved treats may be given, in small portions and under staff supervision. Never offer cats coffee, tea, chocolate, cakes, biscuits, dairy drinks, or other food from the human menu.</p>
+                <a href="#menu" class="etiquette-treats-link">Explore Café-Approved Cat Treats Menu &rarr;</a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- =======================================================================
+         5. THE BOOK NOOK SECTION
+         ======================================================================= -->
+    <section class="book-nook-section section-padding" id="book-nook" aria-labelledby="bookNookHeading">
+      <div class="container">
+        
+        <div class="section-header text-center">
+          <span class="section-tag">DISCOVER STORIES</span>
+          <h2 class="section-title" id="bookNookHeading">The Book Nook</h2>
+          <p class="section-subtitle">
+            A hand-curated sanctuary of timeless classics, spellbinding fantasy, tender romances, and gripping mysteries.
+          </p>
+          <div class="header-flourish" aria-hidden="true">
+            <svg width="48" height="12" viewBox="0 0 48 12" fill="none">
+              <path d="M2 6 Q 12 0, 24 6 T 46 6" stroke="#C99A6B" stroke-width="2" stroke-linecap="round"/>
+            </svg>
+          </div>
+        </div>
+
+        <!-- -------------------------------------------------------------------
+             PART A: GENRE DISCOVERY CARDS
+             (Strict requirement: Contains ONLY genre name and visual image)
+             ------------------------------------------------------------------- -->
+        <div class="genre-cards-area" aria-label="Discover by Genre">
+          <h3 class="sub-area-title text-center">Explore by Genre</h3>
+          <p class="sub-area-subtitle text-center">Select any genre card below to filter our book collection instantly.</p>
+          
+          <div class="genre-cards-grid">
+            
+            <button type="button" class="genre-card" data-genre="Romance" aria-label="Filter by Romance books">
+              <div class="genre-card-media">
+                <img src="assets/images/books/genre-romance.jpg" alt="" loading="lazy">
+                <div class="genre-card-overlay">
+                  <span class="genre-name">Romance</span>
+                </div>
+              </div>
+            </button>
+
+            <button type="button" class="genre-card" data-genre="Fantasy" aria-label="Filter by Fantasy books">
+              <div class="genre-card-media">
+                <img src="assets/images/books/genre-fantasy.jpg" alt="" loading="lazy">
+                <div class="genre-card-overlay">
+                  <span class="genre-name">Fantasy</span>
+                </div>
+              </div>
+            </button>
+
+            <button type="button" class="genre-card" data-genre="Mystery & Thriller" aria-label="Filter by Mystery &amp; Thriller books">
+              <div class="genre-card-media">
+                <img src="assets/images/books/genre-mystery.jpg" alt="" loading="lazy">
+                <div class="genre-card-overlay">
+                  <span class="genre-name">Mystery &amp; Thriller</span>
+                </div>
+              </div>
+            </button>
+
+            <button type="button" class="genre-card" data-genre="Literary Fiction" aria-label="Filter by Literary Fiction books">
+              <div class="genre-card-media">
+                <img src="assets/images/books/genre-fiction.jpg" alt="" loading="lazy">
+                <div class="genre-card-overlay">
+                  <span class="genre-name">Literary Fiction</span>
+                </div>
+              </div>
+            </button>
+
+            <button type="button" class="genre-card" data-genre="Young Adult" aria-label="Filter by Young Adult books">
+              <div class="genre-card-media">
+                <img src="assets/images/books/genre-ya.jpg" alt="" loading="lazy">
+                <div class="genre-card-overlay">
+                  <span class="genre-name">Young Adult</span>
+                </div>
+              </div>
+            </button>
+
+            <button type="button" class="genre-card" data-genre="Classics" aria-label="Filter by Classics books">
+              <div class="genre-card-media">
+                <img src="assets/images/books/genre-classics.jpg" alt="" loading="lazy">
+                <div class="genre-card-overlay">
+                  <span class="genre-name">Classics</span>
+                </div>
+              </div>
+            </button>
+
+          </div>
+        </div>
+
+        <!-- -------------------------------------------------------------------
+             PART B: SEARCH & FILTER CONTROLS TOOLBAR
+             ------------------------------------------------------------------- -->
+        <div class="book-search-toolbar">
+          <div class="search-input-group">
+            <span class="search-icon" aria-hidden="true">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>
+            </span>
+            <input 
+              type="text" 
+              id="bookSearchInput" 
+              class="book-search-input" 
+              placeholder="Search by title, author, or keyword (e.g. Orwell, Austen, Magic)..." 
+              aria-label="Search books by title, author, or genre"
+            >
+            <button type="button" id="clearSearchBtn" class="clear-search-btn" aria-label="Clear search query" style="display: none;">
+              &times;
+            </button>
+          </div>
+
+          <!-- Active Filter & Results Info -->
+          <div class="search-status-bar">
+            <div class="results-count" id="bookResultsCount" aria-live="polite">
+              Showing all 72 books
+            </div>
+            <button type="button" id="resetBooksBtn" class="reset-filter-btn" style="display: none;">
+              Show All Books
+            </button>
+          </div>
+        </div>
+
+        <!-- -------------------------------------------------------------------
+             PART C: INDIVIDUAL BOOK LISTINGS CATALOGUE
+             (Populated dynamically via JavaScript data array with real covers)
+             ------------------------------------------------------------------- -->
+        <div class="books-catalogue-grid" id="booksCatalogueGrid" aria-live="polite">
+          <!-- Populated by script.js -->
+        </div>
+
+        <!-- Empty State Container -->
+        <div class="empty-books-state" id="emptyBooksState" style="display: none;">
+          <div class="empty-cat-illustration" aria-hidden="true">
+            <svg viewBox="0 0 80 80" width="72" height="72" fill="none">
+              <circle cx="40" cy="40" r="38" fill="#FFF8ED" stroke="#EADBC8" stroke-width="2"/>
+              <ellipse cx="40" cy="48" rx="20" ry="14" fill="#C99A6B" opacity="0.4"/>
+              <circle cx="40" cy="38" r="14" fill="#C99A6B"/>
+              <polygon points="30,30 34,22 38,30" fill="#6F4E37"/>
+              <polygon points="42,30 46,22 50,30" fill="#6F4E37"/>
+              <circle cx="36" cy="36" r="1.8" fill="#3E2B24"/>
+              <circle cx="44" cy="36" r="1.8" fill="#3E2B24"/>
+              <path d="M38 40 L42 40 L40 42 Z" fill="#3E2B24"/>
+              <path d="M37 43 Q 40 45, 43 43" stroke="#3E2B24" stroke-width="1.2" fill="none"/>
+            </svg>
+          </div>
+          <h4 class="empty-title">No books match your search</h4>
+          <p class="empty-desc">Biscuit searched behind every shelf, but couldn’t locate that title or author. Try checking your spelling or clearing the active filters.</p>
+          <button type="button" class="btn btn--secondary" id="emptyResetBtn">Reset Search &amp; Show All</button>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- =======================================================================
+         6. SOUVENIRS SECTION ("Little Things to Take Home")
+         (Completely separate from The Book Nook)
+         ======================================================================= -->
+    <section class="souvenirs-section section-padding" id="souvenirs" aria-labelledby="souvenirsHeading">
+      <div class="container">
+        
+        <div class="section-header text-center">
+          <span class="section-tag">SOUVENIRS</span>
+          <h2 class="section-title" id="souvenirsHeading">Little Things to Take Home</h2>
+          <p class="section-subtitle">
+            Little keepsakes for book lovers and cat people. Take a little piece of Purr &amp; Pages home with you.
+          </p>
+          <div class="header-flourish" aria-hidden="true">
+            <svg width="48" height="12" viewBox="0 0 48 12" fill="none">
+              <path d="M2 6 Q 12 0, 24 6 T 46 6" stroke="#C99A6B" stroke-width="2" stroke-linecap="round"/>
+            </svg>
+          </div>
+        </div>
+
+        <div class="souvenirs-grid">
+          
+          <!-- Souvenir 1 -->
+          <article class="product-card">
+            <div class="product-media">
+              <img src="assets/images/souvenirs/souvenir-tote.jpg" alt="Embroidered Canvas Book Tote" loading="lazy">
+              <span class="product-badge">Bestseller</span>
+            </div>
+            <div class="product-body">
+              <h3 class="product-title">Embroidered Canvas Book Tote</h3>
+              <p class="product-desc">Heavyweight 12oz natural unbleached organic cotton tote with reinforced straps, deep inner pockets, and our stitched cat-and-coffee crest.</p>
+              <div class="product-footer">
+                <span class="product-price">₹550</span>
+                <button type="button" class="demo-buy-btn" data-product="Canvas Book Tote" aria-label="Add Canvas Book Tote to bag">
+                  <span>Add to Bag</span>
+                </button>
+              </div>
+            </div>
+          </article>
+
+          <!-- Souvenir 2 -->
+          <article class="product-card">
+            <div class="product-media">
+              <img src="assets/images/souvenirs/souvenir-mug.jpg" alt="Hand-thrown Ceramic Café Mug" loading="lazy">
+            </div>
+            <div class="product-body">
+              <h3 class="product-title">Ceramic Café Mug</h3>
+              <p class="product-desc">Hand-thrown stoneware mug glazed in warm speckled cream with an ergonomic handle and debossed sleeping cat illustration.</p>
+              <div class="product-footer">
+                <span class="product-price">₹420</span>
+                <button type="button" class="demo-buy-btn" data-product="Ceramic Café Mug" aria-label="Add Ceramic Café Mug to bag">
+                  <span>Add to Bag</span>
+                </button>
+              </div>
+            </div>
+          </article>
+
+          <!-- Souvenir 3 -->
+          <article class="product-card">
+            <div class="product-media">
+              <img src="assets/images/souvenirs/souvenir-bookmarks.jpg" alt="Brass Cat &amp; Ribbon Bookmark Set" loading="lazy">
+            </div>
+            <div class="product-body">
+              <h3 class="product-title">Brass Cat &amp; Ribbon Bookmarks</h3>
+              <p class="product-desc">Pair of solid antique brass page clips paired with double-faced forest green and caramel satin ribbons to mark your chapters gently.</p>
+              <div class="product-footer">
+                <span class="product-price">₹280</span>
+                <button type="button" class="demo-buy-btn" data-product="Brass Bookmarks" aria-label="Add Brass Cat &amp; Ribbon Bookmarks to bag">
+                  <span>Add to Bag</span>
+                </button>
+              </div>
+            </div>
+          </article>
+
+          <!-- Souvenir 4 -->
+          <article class="product-card">
+            <div class="product-media">
+              <img src="assets/images/souvenirs/souvenir-stickers.jpg" alt="Die-cut Weatherproof Sticker Pack" loading="lazy">
+            </div>
+            <div class="product-body">
+              <h3 class="product-title">Cat &amp; Book Sticker Pack</h3>
+              <p class="product-desc">Set of 5 matte weatherproof vinyl die-cut stickers featuring illustrations of Mochi, Biscuit, steaming mugs, and cosy literary quotes.</p>
+              <div class="product-footer">
+                <span class="product-price">₹180</span>
+                <button type="button" class="demo-buy-btn" data-product="Sticker Pack" aria-label="Add Cat &amp; Book Sticker Pack to bag">
+                  <span>Add to Bag</span>
+                </button>
+              </div>
+            </div>
+          </article>
+
+          <!-- Souvenir 5 -->
+          <article class="product-card">
+            <div class="product-media">
+              <img src="assets/images/souvenirs/souvenir-journal.jpg" alt="Linen-Bound Reading Journal with Purr &amp; Pages logo" loading="lazy">
+              <span class="product-badge">New</span>
+            </div>
+            <div class="product-body">
+              <h3 class="product-title">Linen-Bound Reading Journal</h3>
+              <p class="product-desc">160 pages of 120gsm fountain pen friendly paper with reading log spreads, TBR checklists, and gold foil embossed spine lettering.</p>
+              <div class="product-footer">
+                <span class="product-price">₹650</span>
+                <button type="button" class="demo-buy-btn" data-product="Reading Journal" aria-label="Add Linen-Bound Reading Journal to bag">
+                  <span>Add to Bag</span>
+                </button>
+              </div>
+            </div>
+          </article>
+
+          <!-- Souvenir 6 -->
+          <article class="product-card">
+            <div class="product-media">
+              <img src="assets/images/souvenirs/souvenir-candle.jpg" alt="Scented Candle — Old Books &amp; Coffee with branded label" loading="lazy">
+            </div>
+            <div class="product-body">
+              <h3 class="product-title">Scented Candle — Old Books &amp; Coffee</h3>
+              <p class="product-desc">Hand-poured amber glass soy candle with notes of teakwood, aged paper, vanilla bean, and freshly ground dark roast coffee beans.</p>
+              <div class="product-footer">
+                <span class="product-price">₹490</span>
+                <button type="button" class="demo-buy-btn" data-product="Scented Candle" aria-label="Add Scented Candle to bag">
+                  <span>Add to Bag</span>
+                </button>
+              </div>
+            </div>
+          </article>
+
+          <!-- Souvenir 7 -->
+          <article class="product-card">
+            <div class="product-media">
+              <img src="assets/images/souvenirs/souvenir-page-holder.jpg" alt="Handcrafted Wooden Thumb Page Holder with engraved cat" loading="lazy">
+            </div>
+            <div class="product-body">
+              <h3 class="product-title">Wooden Thumb Page Holder</h3>
+              <p class="product-desc">Silky-smooth hand-carved walnut wing that slides onto your thumb, keeping thick paperbacks wide open with zero finger fatigue.</p>
+              <div class="product-footer">
+                <span class="product-price">₹320</span>
+                <button type="button" class="demo-buy-btn" data-product="Page Holder" aria-label="Add Wooden Thumb Page Holder to bag">
+                  <span>Add to Bag</span>
+                </button>
+              </div>
+            </div>
+          </article>
+
+          <!-- Souvenir 8 -->
+          <article class="product-card">
+            <div class="product-media">
+              <img src="assets/images/souvenirs/souvenir-postcards.jpg" alt="Illustrated Café Postcard Collection with Purr &amp; Pages art" loading="lazy">
+            </div>
+            <div class="product-body">
+              <h3 class="product-title">Café Postcard Art Set</h3>
+              <p class="product-desc">Six art prints on 350gsm textured archival cotton board portraying peaceful illustrations of our cats, café corners, and book stacks.</p>
+              <div class="product-footer">
+                <span class="product-price">₹220</span>
+                <button type="button" class="demo-buy-btn" data-product="Postcard Set" aria-label="Add Café Postcard Art Set to bag">
+                  <span>Add to Bag</span>
+                </button>
+              </div>
+            </div>
+          </article>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- =======================================================================
+         7. GALLERY SECTION
+         ======================================================================= -->
+    <section class="gallery-section section-padding" id="gallery" aria-labelledby="galleryHeading">
+      <div class="container">
+        
+        <div class="section-header text-center">
+          <span class="section-tag">MOMENTS &amp; SPACES</span>
+          <h2 class="section-title" id="galleryHeading">Glimpses of Purr &amp; Pages</h2>
+          <p class="section-subtitle">
+            Sunlit reading corners, steaming cups, peaceful whiskers, and pages waiting to be turned. Click any photograph to view in high resolution.
+          </p>
+          <div class="header-flourish" aria-hidden="true">
+            <svg width="48" height="12" viewBox="0 0 48 12" fill="none">
+              <path d="M2 6 Q 12 0, 24 6 T 46 6" stroke="#C99A6B" stroke-width="2" stroke-linecap="round"/>
+            </svg>
+          </div>
+        </div>
+
+        <div class="gallery-grid" id="galleryGrid">
+          
+          <figure class="gallery-item" data-index="0">
+            <button type="button" class="gallery-trigger" aria-label="View photo 1 in lightbox: The Café Interior">
+              <img src="assets/images/gallery/gallery-1.jpg" alt="The Café Interior: A warm bookstore café with wooden tables, comfortable seating, indoor plants, and natural light" loading="lazy">
+              <div class="gallery-overlay">
+                <span class="gallery-zoom-icon" aria-hidden="true">🔍</span>
+                <span class="gallery-caption">The Café Interior</span>
+              </div>
+            </button>
+          </figure>
+
+          <figure class="gallery-item" data-index="1">
+            <button type="button" class="gallery-trigger" aria-label="View photo 2 in lightbox: Coffee in the Making">
+              <img src="assets/images/gallery/gallery-2.jpg" alt="Coffee in the Making: A barista carefully extracting espresso and crafting latte art with steaming milk" loading="lazy">
+              <div class="gallery-overlay">
+                <span class="gallery-zoom-icon" aria-hidden="true">🔍</span>
+                <span class="gallery-caption">Coffee in the Making</span>
+              </div>
+            </button>
+          </figure>
+
+          <figure class="gallery-item" data-index="2">
+            <button type="button" class="gallery-trigger" aria-label="View photo 3 in lightbox: Our Feline Residents">
+              <img src="assets/images/gallery/gallery-3.jpg" alt="Our Feline Residents: A resident cat relaxing comfortably beside warm wooden bookshelves" loading="lazy">
+              <div class="gallery-overlay">
+                <span class="gallery-zoom-icon" aria-hidden="true">🔍</span>
+                <span class="gallery-caption">Our Feline Residents</span>
+              </div>
+            </button>
+          </figure>
+
+          <figure class="gallery-item" data-index="3">
+            <button type="button" class="gallery-trigger" aria-label="View photo 4 in lightbox: Coffee &amp; Conversation">
+              <img src="assets/images/gallery/gallery-4.jpg" alt="Coffee &amp; Conversation: Warm artisan coffee cups on a café table surrounded by favourite books" loading="lazy">
+              <div class="gallery-overlay">
+                <span class="gallery-zoom-icon" aria-hidden="true">🔍</span>
+                <span class="gallery-caption">Coffee &amp; Conversation</span>
+              </div>
+            </button>
+          </figure>
+
+          <figure class="gallery-item" data-index="4">
+            <button type="button" class="gallery-trigger" aria-label="View photo 5 in lightbox: A Cosy Reading Corner">
+              <img src="assets/images/gallery/gallery-5.jpg" alt="A Cosy Reading Corner: A plush armchair beside tall bookshelves, soft cushions, and golden lighting" loading="lazy">
+              <div class="gallery-overlay">
+                <span class="gallery-zoom-icon" aria-hidden="true">🔍</span>
+                <span class="gallery-caption">A Cosy Reading Corner</span>
+              </div>
+            </button>
+          </figure>
+
+          <figure class="gallery-item" data-index="5">
+            <button type="button" class="gallery-trigger" aria-label="View photo 6 in lightbox: A Cat Nap">
+              <img src="assets/images/gallery/gallery-6.jpg" alt="A Cat Nap: A peaceful cat curled up fast asleep on a warm velvet cushion beside books" loading="lazy">
+              <div class="gallery-overlay">
+                <span class="gallery-zoom-icon" aria-hidden="true">🔍</span>
+                <span class="gallery-caption">A Cat Nap</span>
+              </div>
+            </button>
+          </figure>
+
+          <figure class="gallery-item" data-index="6">
+            <button type="button" class="gallery-trigger" aria-label="View photo 7 in lightbox: Stories Waiting to Be Read">
+              <img src="assets/images/gallery/gallery-7.jpg" alt="Stories Waiting to Be Read: An open volume with a curated stack of hardcovers in warm bookstore light" loading="lazy">
+              <div class="gallery-overlay">
+                <span class="gallery-zoom-icon" aria-hidden="true">🔍</span>
+                <span class="gallery-caption">Stories Waiting to Be Read</span>
+              </div>
+            </button>
+          </figure>
+
+          <figure class="gallery-item" data-index="7">
+            <button type="button" class="gallery-trigger" aria-label="View photo 8 in lightbox: Books, Cats &amp; Coffee Together">
+              <img src="assets/images/gallery/gallery-8.jpg" alt="Books, Cats &amp; Coffee Together: A cosy bookstore café scene with an open novel, fresh coffee, and a curious feline" loading="lazy">
+              <div class="gallery-overlay">
+                <span class="gallery-zoom-icon" aria-hidden="true">🔍</span>
+                <span class="gallery-caption">Books, Cats &amp; Coffee Together</span>
+              </div>
+            </button>
+          </figure>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- Accessible Lightbox Modal Dialog -->
+    <div 
+      class="lightbox-modal" 
+      id="galleryLightbox" 
+      role="dialog" 
+      aria-modal="true" 
+      aria-label="Image gallery view" 
+      aria-hidden="true" 
+      style="display: none;"
+    >
+      <div class="lightbox-backdrop" id="lightboxBackdrop"></div>
+      
+      <div class="lightbox-dialog">
+        <!-- Close Button -->
+        <button type="button" class="lightbox-close-btn" id="lightboxCloseBtn" aria-label="Close image viewer">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg>
+        </button>
+
+        <!-- Navigation Buttons -->
+        <button type="button" class="lightbox-nav-btn lightbox-nav-btn--prev" id="lightboxPrevBtn" aria-label="Previous image">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="15 18 9 12 15 6"></polyline></svg>
+        </button>
+        <button type="button" class="lightbox-nav-btn lightbox-nav-btn--next" id="lightboxNextBtn" aria-label="Next image">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"></polyline></svg>
+        </button>
+
+        <!-- Main Display Container -->
+        <div class="lightbox-content">
+          <div class="lightbox-img-wrap">
+            <img src="" alt="" id="lightboxImg" class="lightbox-image">
+          </div>
+          <div class="lightbox-caption-bar">
+            <span class="lightbox-caption-text" id="lightboxCaption"></span>
+            <span class="lightbox-counter" id="lightboxCounter">1 of 8</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- =======================================================================
+         8. CONTACT SECTION
+         ======================================================================= -->
+    <section class="contact-section section-padding" id="contact" aria-labelledby="contactHeading">
+      <div class="container">
+        
+        <div class="section-header text-center">
+          <span class="section-tag">VISIT &amp; CONNECT</span>
+          <h2 class="section-title" id="contactHeading">Say Hello or Save a Seat</h2>
+          <p class="section-subtitle">
+            Got a book suggestion, looking to organise a quiet reading club meetup, or simply want to check our cat visiting hours? We’d love to hear from you.
+          </p>
+          <div class="header-flourish" aria-hidden="true">
+            <svg width="48" height="12" viewBox="0 0 48 12" fill="none">
+              <path d="M2 6 Q 12 0, 24 6 T 46 6" stroke="#C99A6B" stroke-width="2" stroke-linecap="round"/>
+            </svg>
+          </div>
+        </div>
+
+        <div class="contact-grid">
+          
+          <!-- Contact Information & Hours (Explicitly Fictional) -->
+          <div class="contact-info-panel">
+            <div class="contact-card">
+              <h3 class="contact-panel-title">Café Information</h3>
+              <p class="contact-panel-desc">
+                Drop by for an unhurried brew, explore our shelves, or attend our monthly silent reading salon.
+              </p>
+
+              <div class="info-list">
+                <div class="info-item">
+                  <div class="info-icon" aria-hidden="true">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg>
+                  </div>
+                  <div class="info-details">
+                    <strong>Location (Fictional Demo):</strong>
+                    <span>42 Whisker Lane, Storybook Corner, Arts District</span>
+                  </div>
+                </div>
+
+                <div class="info-item">
+                  <div class="info-icon" aria-hidden="true">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg>
+                  </div>
+                  <div class="info-details">
+                    <strong>Opening Hours (Sample Schedule):</strong>
+                    <span>Monday – Friday: 8:30 AM – 8:00 PM</span>
+                    <span>Saturday – Sunday: 9:00 AM – 9:30 PM</span>
+                    <small>Cat quiet resting hours: 2:00 PM – 3:30 PM daily</small>
+                  </div>
+                </div>
+
+                <div class="info-item">
+                  <div class="info-icon" aria-hidden="true">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg>
+                  </div>
+                  <div class="info-details">
+                    <strong>Email (Illustrative):</strong>
+                    <span>hello@purrandpages.demo</span>
+                  </div>
+                </div>
+
+                <div class="info-item">
+                  <div class="info-icon" aria-hidden="true">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>
+                  </div>
+                  <div class="info-details">
+                    <strong>Telephone (Sample):</strong>
+                    <span>+91 98765 43210</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Contact Form with Front-end Validation -->
+          <div class="contact-form-panel">
+            <form class="contact-form" id="contactForm" novalidate>
+              <h3 class="form-title">Send Us a Message</h3>
+              <p class="form-intro">Drop your message below. We will validate your input right in your browser.</p>
+
+              <!-- Name Field -->
+              <div class="form-group" id="nameGroup">
+                <label for="contactName" class="form-label">Your Name <span class="required" aria-hidden="true">*</span></label>
+                <input 
+                  type="text" 
+                  id="contactName" 
+                  name="name" 
+                  class="form-control" 
+                  placeholder="e.g. Maya Sharma" 
+                  required 
+                  aria-describedby="nameError"
+                >
+                <span class="field-error-msg" id="nameError" role="alert" aria-live="assertive"></span>
+              </div>
+
+              <!-- Email Field -->
+              <div class="form-group" id="emailGroup">
+                <label for="contactEmail" class="form-label">Email Address <span class="required" aria-hidden="true">*</span></label>
+                <input 
+                  type="email" 
+                  id="contactEmail" 
+                  name="email" 
+                  class="form-control" 
+                  placeholder="e.g. maya@example.com" 
+                  required 
+                  aria-describedby="emailError"
+                >
+                <span class="field-error-msg" id="emailError" role="alert" aria-live="assertive"></span>
+              </div>
+
+              <!-- Subject Field -->
+              <div class="form-group" id="subjectGroup">
+                <label for="contactSubject" class="form-label">Topic / Subject <span class="required" aria-hidden="true">*</span></label>
+                <select id="contactSubject" name="subject" class="form-control" required aria-describedby="subjectError">
+                  <option value="" disabled selected>Select a topic...</option>
+                  <option value="general">General Café Inquiry</option>
+                  <option value="reading-club">Book Club &amp; Reading Circles</option>
+                  <option value="cats">Cat Care &amp; Adoption Inquiries</option>
+                  <option value="events">Private Events &amp; Author Evenings</option>
+                </select>
+                <span class="field-error-msg" id="subjectError" role="alert" aria-live="assertive"></span>
+              </div>
+
+              <!-- Message Field -->
+              <div class="form-group" id="messageGroup">
+                <label for="contactMessage" class="form-label">Message <span class="required" aria-hidden="true">*</span></label>
+                <textarea 
+                  id="contactMessage" 
+                  name="message" 
+                  rows="4" 
+                  class="form-control" 
+                  placeholder="Tell us what's on your mind (at least 15 characters)..." 
+                  required 
+                  aria-describedby="messageError"
+                ></textarea>
+                <div class="field-meta">
+                  <span class="field-error-msg" id="messageError" role="alert" aria-live="assertive"></span>
+                  <span class="char-counter" id="charCounter">0 / 15 min</span>
+                </div>
+              </div>
+
+              <!-- Submit Button -->
+              <div class="form-actions">
+                <button type="submit" class="btn btn--primary btn--full" id="contactSubmitBtn">
+                  <span>Send Message</span>
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="22" y1="2" x2="11" y2="13"></line><polygon points="22 2 15 22 11 13 2 9 22 2"></polygon></svg>
+                </button>
+              </div>
+
+              <!-- Honest Demo Feedback Container (Section 14 requirement) -->
+              <div class="form-feedback-box" id="formFeedback" role="status" aria-live="polite" style="display: none;"></div>
+
+            </form>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+  </main>
+
+  <!-- =========================================================================
+       FOOTER
+       ========================================================================= -->
+  <footer class="site-footer">
+    <div class="container footer-container">
+      
+      <!-- Column 1: Brand & Fallback Logo -->
+      <div class="footer-col footer-col--brand">
+        <div class="footer-logo-wrap">
+          <img 
+            src="assets/images/logo/logo.png" 
+            alt="Purr &amp; Pages — READ • SIP • PURR" 
+            class="footer-logo-img" 
+            onerror="this.style.display='none'; document.getElementById('footerLogoFallback').style.display='flex';"
+          >
+          <div class="brand-logo-fallback brand-logo-fallback--footer" id="footerLogoFallback" style="display: none;">
+            <span class="fallback-icon" aria-hidden="true">
+              <svg viewBox="0 0 32 32" width="24" height="24" fill="none">
+                <rect width="32" height="32" rx="8" fill="#C99A6B"/>
+                <path d="M9 11 C9 18 11 21 16 21 C21 21 23 18 23 11 Z" fill="#FFF8ED" />
+                <path d="M23 13 C26 13 26 18 23 19" stroke="#FFF8ED" stroke-width="1.8" fill="none" stroke-linecap="round"/>
+                <circle cx="16" cy="14" r="3.5" fill="#6F4E37" />
+              </svg>
+            </span>
+            <div class="fallback-text">
+              <span class="brand-name">Purr &amp; Pages</span>
+              <span class="brand-tagline">READ • SIP • PURR</span>
+            </div>
+          </div>
+        </div>
+
+        <p class="footer-bio">
+          A fictional bookstore café concept celebrating the gentle art of reading, handcrafted coffee, and friendly rescue cats.
+        </p>
+
+        <div class="footer-tagline-badge">
+          <span>READ • SIP • PURR</span>
+        </div>
+      </div>
+
+      <!-- Column 2: Navigation Links -->
+      <div class="footer-col">
+        <h4 class="footer-heading">Explore</h4>
+        <ul class="footer-links">
+          <li><a href="#hero">Home</a></li>
+          <li><a href="#about">About Our Story</a></li>
+          <li><a href="#menu">Café Menu</a></li>
+          <li><a href="#cats">Resident Cats</a></li>
+          <li><a href="#book-nook">The Book Nook</a></li>
+        </ul>
+      </div>
+
+      <!-- Column 3: More Links & Souvenirs -->
+      <div class="footer-col">
+        <h4 class="footer-heading">Discover</h4>
+        <ul class="footer-links">
+          <li><a href="#souvenirs">Souvenirs &amp; Merch</a></li>
+          <li><a href="#gallery">Café Gallery</a></li>
+          <li><a href="#contact">Hours &amp; Visit</a></li>
+          <li><a href="#cats">Cat Etiquette</a></li>
+        </ul>
+      </div>
+
+      <!-- Column 4: Hours & Demo Statement -->
+      <div class="footer-col footer-col--hours">
+        <h4 class="footer-heading">Hours &amp; Location</h4>
+        <p class="footer-text">
+          42 Whisker Lane, Storybook Corner<br>
+          Mon – Fri: 8:30 AM – 8:00 PM<br>
+          Sat – Sun: 9:00 AM – 9:30 PM
+        </p>
+        <p class="footer-demo-tag">
+          Fictional Portfolio Project
+        </p>
+      </div>
+
+    </div>
+
+    <!-- Bottom Bar -->
+    <div class="footer-bottom-bar">
+      <div class="container footer-bottom-container">
+        <p class="copyright-text">
+          &copy; <span id="currentYear">2026</span> Purr &amp; Pages. Built with HTML5, CSS3 &amp; Vanilla JavaScript. All trademarks &amp; book covers remain property of their respective creators.
+        </p>
+        <a href="#hero" class="back-to-top-btn" aria-label="Back to top of page">
+          <span>Back to Top</span>
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="18 15 12 9 6 15"></polyline></svg>
+        </a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- =========================================================================
+       CAT PROFILE MODAL (Interactive Storybook Modal)
+       ========================================================================= -->
+  <div 
+    class="cat-profile-modal" 
+    id="catProfileModal" 
+    role="dialog" 
+    aria-modal="true" 
+    aria-labelledby="modalCatName" 
+    aria-hidden="true" 
+    style="display: none;"
+  >
+    <div class="cat-modal-backdrop" id="catModalBackdrop"></div>
+    <div class="cat-modal-dialog">
+      <button type="button" class="cat-modal-close" id="catModalCloseBtn" aria-label="Close cat profile">&times;</button>
+      <div class="cat-modal-scrollable">
+        <div class="cat-modal-grid">
+          <div class="cat-modal-media">
+            <img src="" alt="" id="modalCatImg" class="cat-modal-img">
+            <span class="cat-modal-tag" id="modalCatTag"></span>
+          </div>
+          <div class="cat-modal-info">
+            <div class="cat-modal-header">
+              <span class="cat-modal-subtitle" id="modalCatTitle"></span>
+              <h3 class="cat-modal-name" id="modalCatName"></h3>
+            </div>
+            
+            <blockquote class="cat-modal-quote" id="modalCatQuote"></blockquote>
+            
+            <div class="cat-modal-bio-wrap">
+              <h4 class="modal-section-label">Biography</h4>
+              <p class="cat-modal-bio" id="modalCatBio"></p>
+            </div>
+            
+            <div class="cat-modal-attributes">
+              <div class="attr-box">
+                <span class="attr-icon" aria-hidden="true">📍</span>
+                <div class="attr-text">
+                  <strong>Favourite Spot:</strong>
+                  <span id="modalCatSpot"></span>
+                </div>
+              </div>
+              <div class="attr-box">
+                <span class="attr-icon" aria-hidden="true">🧶</span>
+                <div class="attr-text">
+                  <strong>Favourite Activity:</strong>
+                  <span id="modalCatActivity"></span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Main JavaScript File -->
+  <script>
+/**
+ * PURR & PAGES — MAIN JAVASCRIPT CONTROLLER
+ * Brand: Purr & Pages | Tagline: READ • SIP • PURR
+ * Vanilla JavaScript (ES6+) — Clean, modular, and dependency-free.
+ */
+
+'use strict';
+
+document.addEventListener('DOMContentLoaded', () => {
+
+  // =========================================================================
+  // 1. DATA REPOSITORY: 72 REAL PUBLISHED BOOKS (12 PER GENRE)
+  // =========================================================================
+  const booksData = [
+    // 1. Romance (1–12)
+    { id: 1, title: "The Seven Husbands of Evelyn Hugo", author: "Taylor Jenkins Reid", genre: "Romance", cover: "assets/images/books/the-seven-husbands-of-evelyn-hugo.jpg" },
+    { id: 2, title: "Red, White & Royal Blue", author: "Casey McQuiston", genre: "Romance", cover: "assets/images/books/red-white-royal-blue.jpg" },
+    { id: 3, title: "Beach Read", author: "Emily Henry", genre: "Romance", cover: "assets/images/books/beach-read.jpg" },
+    { id: 4, title: "It Ends with Us", author: "Colleen Hoover", genre: "Romance", cover: "assets/images/books/it-ends-with-us.jpg" },
+    { id: 5, title: "The Love Hypothesis", author: "Ali Hazelwood", genre: "Romance", cover: "assets/images/books/the-love-hypothesis.jpg" },
+    { id: 6, title: "Book Lovers", author: "Emily Henry", genre: "Romance", cover: "assets/images/books/book-lovers.jpg" },
+    { id: 7, title: "People We Meet on Vacation", author: "Emily Henry", genre: "Romance", cover: "assets/images/books/people-we-meet-on-vacation.jpg" },
+    { id: 8, title: "Normal People", author: "Sally Rooney", genre: "Romance", cover: "assets/images/books/normal-people.jpg" },
+    { id: 9, title: "Outlander", author: "Diana Gabaldon", genre: "Romance", cover: "assets/images/books/outlander.jpg" },
+    { id: 10, title: "The Hating Game", author: "Sally Thorne", genre: "Romance", cover: "assets/images/books/the-hating-game.jpg" },
+    { id: 11, title: "Me Before You", author: "Jojo Moyes", genre: "Romance", cover: "assets/images/books/me-before-you.jpg" },
+    { id: 12, title: "One Day", author: "David Nicholls", genre: "Romance", cover: "assets/images/books/one-day.jpg" },
+
+    // 2. Fantasy (13–24)
+    { id: 13, title: "The Hobbit", author: "J.R.R. Tolkien", genre: "Fantasy", cover: "assets/images/books/the-hobbit.jpg" },
+    { id: 14, title: "The Night Circus", author: "Erin Morgenstern", genre: "Fantasy", cover: "assets/images/books/the-night-circus.jpg" },
+    { id: 15, title: "The Name of the Wind", author: "Patrick Rothfuss", genre: "Fantasy", cover: "assets/images/books/the-name-of-the-wind.jpg" },
+    { id: 16, title: "A Game of Thrones", author: "George R.R. Martin", genre: "Fantasy", cover: "assets/images/books/a-game-of-thrones.jpg" },
+    { id: 17, title: "The Way of Kings", author: "Brandon Sanderson", genre: "Fantasy", cover: "assets/images/books/the-way-of-kings.jpg" },
+    { id: 18, title: "Good Omens", author: "Neil Gaiman & Terry Pratchett", genre: "Fantasy", cover: "assets/images/books/good-omens.jpg" },
+    { id: 19, title: "Circe", author: "Madeline Miller", genre: "Fantasy", cover: "assets/images/books/circe.jpg" },
+    { id: 20, title: "The Priory of the Orange Tree", author: "Samantha Shannon", genre: "Fantasy", cover: "assets/images/books/the-priory-of-the-orange-tree.jpg" },
+    { id: 21, title: "American Gods", author: "Neil Gaiman", genre: "Fantasy", cover: "assets/images/books/american-gods.jpg" },
+    { id: 22, title: "Mistborn: The Final Empire", author: "Brandon Sanderson", genre: "Fantasy", cover: "assets/images/books/mistborn-final-empire.jpg" },
+    { id: 23, title: "The Fellowship of the Ring", author: "J.R.R. Tolkien", genre: "Fantasy", cover: "assets/images/books/the-fellowship-of-the-ring.jpg" },
+    { id: 24, title: "The Starless Sea", author: "Erin Morgenstern", genre: "Fantasy", cover: "assets/images/books/the-starless-sea.jpg" },
+
+    // 3. Mystery & Thriller (25–36)
+    { id: 25, title: "The Thursday Murder Club", author: "Richard Osman", genre: "Mystery & Thriller", cover: "assets/images/books/the-thursday-murder-club.jpg" },
+    { id: 26, title: "The Shadow of the Wind", author: "Carlos Ruiz Zafón", genre: "Mystery & Thriller", cover: "assets/images/books/the-shadow-of-the-wind.jpg" },
+    { id: 27, title: "And Then There Were None", author: "Agatha Christie", genre: "Mystery & Thriller", cover: "assets/images/books/and-then-there-were-none.jpg" },
+    { id: 28, title: "The Girl with the Dragon Tattoo", author: "Stieg Larsson", genre: "Mystery & Thriller", cover: "assets/images/books/the-girl-with-the-dragon-tattoo.jpg" },
+    { id: 29, title: "Gone Girl", author: "Gillian Flynn", genre: "Mystery & Thriller", cover: "assets/images/books/gone-girl.jpg" },
+    { id: 30, title: "The Da Vinci Code", author: "Dan Brown", genre: "Mystery & Thriller", cover: "assets/images/books/the-da-vinci-code.jpg" },
+    { id: 31, title: "The Silent Patient", author: "Alex Michaelides", genre: "Mystery & Thriller", cover: "assets/images/books/the-silent-patient.jpg" },
+    { id: 32, title: "Murder on the Orient Express", author: "Agatha Christie", genre: "Mystery & Thriller", cover: "assets/images/books/murder-on-the-orient-express.jpg" },
+    { id: 33, title: "Big Little Lies", author: "Liane Moriarty", genre: "Mystery & Thriller", cover: "assets/images/books/big-little-lies.jpg" },
+    { id: 34, title: "The Maid", author: "Nita Prose", genre: "Mystery & Thriller", cover: "assets/images/books/the-maid.jpg" },
+    { id: 35, title: "In the Woods", author: "Tana French", genre: "Mystery & Thriller", cover: "assets/images/books/in-the-woods.jpg" },
+    { id: 36, title: "Sharp Objects", author: "Gillian Flynn", genre: "Mystery & Thriller", cover: "assets/images/books/sharp-objects.jpg" },
+
+    // 4. Literary Fiction (37–48)
+    { id: 37, title: "Where the Crawdads Sing", author: "Delia Owens", genre: "Literary Fiction", cover: "assets/images/books/where-the-crawdads-sing.jpg" },
+    { id: 38, title: "The Book Thief", author: "Markus Zusak", genre: "Literary Fiction", cover: "assets/images/books/the-book-thief.jpg" },
+    { id: 39, title: "The Midnight Library", author: "Matt Haig", genre: "Literary Fiction", cover: "assets/images/books/the-midnight-library.jpg" },
+    { id: 40, title: "A Man Called Ove", author: "Fredrik Backman", genre: "Literary Fiction", cover: "assets/images/books/a-man-called-ove.jpg" },
+    { id: 41, title: "The Kite Runner", author: "Khaled Hosseini", genre: "Literary Fiction", cover: "assets/images/books/the-kite-runner.jpg" },
+    { id: 42, title: "Life of Pi", author: "Yann Martel", genre: "Literary Fiction", cover: "assets/images/books/life-of-pi.jpg" },
+    { id: 43, title: "All the Light We Cannot See", author: "Anthony Doerr", genre: "Literary Fiction", cover: "assets/images/books/all-the-light-we-cannot-see.jpg" },
+    { id: 44, title: "The Overstory", author: "Richard Powers", genre: "Literary Fiction", cover: "assets/images/books/the-overstory.jpg" },
+    { id: 45, title: "A Thousand Splendid Suns", author: "Khaled Hosseini", genre: "Literary Fiction", cover: "assets/images/books/a-thousand-splendid-suns.jpg" },
+    { id: 46, title: "Beloved", author: "Toni Morrison", genre: "Literary Fiction", cover: "assets/images/books/beloved.jpg" },
+    { id: 47, title: "Never Let Me Go", author: "Kazuo Ishiguro", genre: "Literary Fiction", cover: "assets/images/books/never-let-me-go.jpg" },
+    { id: 48, title: "Pachinko", author: "Min Jin Lee", genre: "Literary Fiction", cover: "assets/images/books/pachinko.jpg" },
+
+    // 5. Young Adult (49–60)
+    { id: 49, title: "Six of Crows", author: "Leigh Bardugo", genre: "Young Adult", cover: "assets/images/books/six-of-crows.jpg" },
+    { id: 50, title: "The Hunger Games", author: "Suzanne Collins", genre: "Young Adult", cover: "assets/images/books/the-hunger-games.jpg" },
+    { id: 51, title: "The Fault in Our Stars", author: "John Green", genre: "Young Adult", cover: "assets/images/books/the-fault-in-our-stars.jpg" },
+    { id: 52, title: "To All the Boys I've Loved Before", author: "Jenny Han", genre: "Young Adult", cover: "assets/images/books/to-all-the-boys-ive-loved-before.jpg" },
+    { id: 53, title: "Divergent", author: "Veronica Roth", genre: "Young Adult", cover: "assets/images/books/divergent.jpg" },
+    { id: 54, title: "The Perks of Being a Wallflower", author: "Stephen Chbosky", genre: "Young Adult", cover: "assets/images/books/the-perks-of-being-a-wallflower.jpg" },
+    { id: 55, title: "One of Us Is Lying", author: "Karen M. McManus", genre: "Young Adult", cover: "assets/images/books/one-of-us-is-lying.jpg" },
+    { id: 56, title: "We Were Liars", author: "E. Lockhart", genre: "Young Adult", cover: "assets/images/books/we-were-liars.jpg" },
+    { id: 57, title: "A Good Girl's Guide to Murder", author: "Holly Jackson", genre: "Young Adult", cover: "assets/images/books/a-good-girls-guide-to-murder.jpg" },
+    { id: 58, title: "Shadow and Bone", author: "Leigh Bardugo", genre: "Young Adult", cover: "assets/images/books/shadow-and-bone.jpg" },
+    { id: 59, title: "The Maze Runner", author: "James Dashner", genre: "Young Adult", cover: "assets/images/books/the-maze-runner.jpg" },
+    { id: 60, title: "Eleanor & Park", author: "Rainbow Rowell", genre: "Young Adult", cover: "assets/images/books/eleanor-and-park.jpg" },
+
+    // 6. Classics (61–72)
+    { id: 61, title: "Pride and Prejudice", author: "Jane Austen", genre: "Classics", cover: "assets/images/books/pride-and-prejudice.jpg" },
+    { id: 62, title: "1984", author: "George Orwell", genre: "Classics", cover: "assets/images/books/1984.jpg" },
+    { id: 63, title: "The Great Gatsby", author: "F. Scott Fitzgerald", genre: "Classics", cover: "assets/images/books/the-great-gatsby.jpg" },
+    { id: 64, title: "The Little Prince", author: "Antoine de Saint-Exupéry", genre: "Classics", cover: "assets/images/books/the-little-prince.jpg" },
+    { id: 65, title: "To Kill a Mockingbird", author: "Harper Lee", genre: "Classics", cover: "assets/images/books/to-kill-a-mockingbird.jpg" },
+    { id: 66, title: "Jane Eyre", author: "Charlotte Brontë", genre: "Classics", cover: "assets/images/books/jane-eyre.jpg" },
+    { id: 67, title: "Wuthering Heights", author: "Emily Brontë", genre: "Classics", cover: "assets/images/books/wuthering-heights.jpg" },
+    { id: 68, title: "Frankenstein", author: "Mary Shelley", genre: "Classics", cover: "assets/images/books/frankenstein.jpg" },
+    { id: 69, title: "The Picture of Dorian Gray", author: "Oscar Wilde", genre: "Classics", cover: "assets/images/books/the-picture-of-dorian-gray.jpg" },
+    { id: 70, title: "Little Women", author: "Louisa May Alcott", genre: "Classics", cover: "assets/images/books/little-women.jpg" },
+    { id: 71, title: "Brave New World", author: "Aldous Huxley", genre: "Classics", cover: "assets/images/books/brave-new-world.jpg" },
+    { id: 72, title: "Animal Farm", author: "George Orwell", genre: "Classics", cover: "assets/images/books/animal-farm.jpg" }
+  ];
+
+  // =========================================================================
+  // 1B. DATA REPOSITORY: 10 BOOKSHOP RESIDENT CATS
+  // =========================================================================
+  const catsData = [
+    {
+      id: 1,
+      name: "Mochi",
+      category: "sleepy",
+      title: "The Professional Napper",
+      tag: "Sleepy Sweetheart",
+      appearance: "A fluffy cream-and-white cat with soft fur, round cheeks, and a gentle expression.",
+      bio: "Mochi believes that every good book deserves a comfortable reading companion and every afternoon deserves at least three naps. Usually found curled up on a cushion beside the window, Mochi has perfected the art of looking adorable without doing absolutely anything. Available for admiration, occasionally available for cuddles.",
+      quote: "One more chapter? Make it one more nap.",
+      spot: "The sunniest window seat.",
+      activity: "Napping beside open books.",
+      image: "assets/images/cats/cat-mochi.jpg",
+      icon: "📖"
+    },
+    {
+      id: 2,
+      name: "Biscuit",
+      category: "explorers",
+      title: "The Friendly Little Greeter",
+      tag: "Social Butterfly",
+      appearance: "A warm ginger-and-white cat with an expressive face, soft fur, and a welcoming personality.",
+      bio: "Biscuit considers every visitor a potential best friend. This cheerful little greeter loves inspecting shopping bags, supervising café arrivals, and sitting beside anyone who looks like they need company. Biscuit's social calendar is always full, especially when someone sits down with a good book.",
+      quote: "You came for coffee. You stayed for me.",
+      spot: "Near the entrance or a welcoming lounge chair.",
+      activity: "Greeting visitors and investigating bags.",
+      image: "assets/images/cats/cat-biscuit.jpg",
+      icon: "☕"
+    },
+    {
+      id: 3,
+      name: "Pepper",
+      category: "playful",
+      title: "The Tiny Mischief-Maker",
+      tag: "Curious Chaos",
+      appearance: "A sleek black-and-white cat with alert eyes and a playful, inquisitive expression.",
+      bio: "Pepper is convinced that bookmarks are toys, paper bags are secret hideouts, and every unattended book needs a thorough inspection. With a curious nose and a talent for appearing where least expected, Pepper adds a little unpredictability to every café visit. Quiet reading time is never guaranteed.",
+      quote: "I didn't knock it over. The book wanted to explore.",
+      spot: "Between the bookshelves.",
+      activity: "Exploring, investigating, and playing.",
+      image: "assets/images/cats/cat-pepper.jpg",
+      icon: "🐾"
+    },
+    {
+      id: 4,
+      name: "Chai",
+      category: "quiet",
+      title: "The Cosy Companion",
+      tag: "Comfort Seeker",
+      appearance: "A soft brown tabby cat with warm markings, relaxed eyes, and a calm, comforting presence.",
+      bio: "Chai is the living definition of a slow afternoon. This gentle companion enjoys peaceful corners, quiet company, and the comforting sound of pages turning. Chai is happiest when the café is calm and a favourite human is nearby, enjoying a warm drink and a good story.",
+      quote: "Slow sips. Soft paws. Good stories.",
+      spot: "A cushioned armchair in a quiet corner.",
+      activity: "Lounging beside peaceful readers.",
+      image: "assets/images/cats/cat-chai.jpg",
+      icon: "🌿"
+    },
+    {
+      id: 5,
+      name: "Waffles",
+      category: "sleepy",
+      title: "The Sleepy Bookworm",
+      tag: "Dreamy Reader",
+      appearance: "A fluffy white cat with bright blue eyes and a soft, cloud-like coat.",
+      bio: "Waffles starts every day with excellent intentions: explore the café, inspect a few books, and perhaps make a new friend. Somehow, these plans always end with a nap in a patch of sunlight. Waffles has never finished a chapter, but has personally tested the comfort of almost every reading cushion.",
+      quote: "I'll finish this chapter after my nap.",
+      spot: "A sunny windowsill beside the shelves.",
+      activity: "Sleeping on cushions and watching birds.",
+      image: "assets/images/cats/cat-waffles.jpg",
+      icon: "☁️"
+    },
+    {
+      id: 6,
+      name: "Fig",
+      category: "explorers",
+      title: "The Curious Explorer",
+      tag: "Little Adventurer",
+      appearance: "An orange ginger tabby with expressive eyes, distinctive stripes, and an alert, adventurous face.",
+      bio: "Fig is the café's self-appointed explorer. New deliveries, mysterious corners, and freshly arranged bookshelves all demand immediate investigation. Fig approaches everyday life like the beginning of a grand adventure, proving that you don't need to leave the bookstore to discover a whole new world.",
+      quote: "Every corner hides a new chapter.",
+      spot: "Beside the lower bookshelves and cosy hideaways.",
+      activity: "Exploring new surroundings.",
+      image: "assets/images/cats/cat-fig.jpg",
+      icon: "🧭"
+    },
+    {
+      id: 7,
+      name: "Pickles",
+      category: "playful",
+      title: "The Tiny Trouble-Maker",
+      tag: "Playful Menace",
+      appearance: "A grey tabby cat with a round face, bright green eyes, and a mischievous expression.",
+      bio: "Pickles has two hobbies: making unexpected appearances and acting completely innocent afterward. A rustle of paper or the movement of a dangling bookmark is enough to spark a new investigation. Despite the mischief, Pickles has a surprisingly sweet side and can often be found relaxing after a busy day of supervising absolutely everything.",
+      quote: "Trouble? I prefer the term plot development.",
+      spot: "Near the interactive play area.",
+      activity: "Chasing toys and investigating interesting objects.",
+      image: "assets/images/cats/cat-pickles.jpg",
+      icon: "⭐"
+    },
+    {
+      id: 8,
+      name: "Ink",
+      category: "quiet",
+      title: "The Midnight Poet",
+      tag: "Quiet Observer",
+      appearance: "An elegant black cat with glossy fur, golden eyes, and a calm, mysterious expression.",
+      bio: "Ink is a quiet soul with a talent for finding the most peaceful corner in the room. While the others entertain the café, Ink prefers to observe from a comfortable distance, as though collecting inspiration for an unpublished novel. A little mysterious, a little independent, and entirely unforgettable.",
+      quote: "Some stories are better told in silence.",
+      spot: "A secluded reading nook.",
+      activity: "Quiet observation and resting in peaceful places.",
+      image: "assets/images/cats/cat-ink.jpg",
+      icon: "✒️"
+    },
+    {
+      id: 9,
+      name: "Pudding",
+      category: "quiet",
+      title: "The Royal Reviewer",
+      tag: "Queen of Comfort",
+      appearance: "A beautiful calico cat with distinctive orange, black, and white patches and a confident expression.",
+      bio: "Pudding takes comfort very seriously. Every cushion must meet her standards, every cosy corner deserves an inspection, and every visitor may be observed before being granted the honour of her attention. She is the café's unofficial quality-control expert, ensuring that relaxation remains a first-class experience.",
+      quote: "The cushion is mine. The book may stay.",
+      spot: "The softest armchair in the café.",
+      activity: "Inspecting comfortable spaces and watching the room.",
+      image: "assets/images/cats/cat-pudding.jpg",
+      icon: "👑"
+    },
+    {
+      id: 10,
+      name: "Noodle",
+      category: "explorers",
+      title: "The Little Daydreamer",
+      tag: "Curious Kitten",
+      appearance: "A small, fluffy cream-coloured kitten with a sweet face, soft fur, and bright, curious eyes.",
+      bio: "Noodle sees magic in the smallest things: a sunbeam on the floor, a ribbon on a gift, or the gentle movement of a page. Curious, wiggly, and full of wonder, Noodle turns ordinary café moments into tiny adventures. When the exploring is over, a warm, quiet corner is the perfect place to recharge.",
+      quote: "Life is one big story. Let's explore it.",
+      spot: "A cosy, supervised kitten-friendly play corner.",
+      activity: "Discovering new toys and exploring safely.",
+      image: "assets/images/cats/cat-noodle.jpg",
+      icon: "✨"
+    }
+  ];
+
+  // Gallery items for Lightbox (8 distinct themes)
+  const galleryData = [
+    { src: "assets/images/gallery/gallery-1.jpg", caption: "The Café Interior" },
+    { src: "assets/images/gallery/gallery-2.jpg", caption: "Coffee in the Making" },
+    { src: "assets/images/gallery/gallery-3.jpg", caption: "Our Feline Residents" },
+    { src: "assets/images/gallery/gallery-4.jpg", caption: "Coffee & Conversation" },
+    { src: "assets/images/gallery/gallery-5.jpg", caption: "A Cosy Reading Corner" },
+    { src: "assets/images/gallery/gallery-6.jpg", caption: "A Cat Nap" },
+    { src: "assets/images/gallery/gallery-7.jpg", caption: "Stories Waiting to Be Read" },
+    { src: "assets/images/gallery/gallery-8.jpg", caption: "Books, Cats & Coffee Together" }
+  ];
+
+  // =========================================================================
+  // 2. CUSTOM PAW CURSOR (DESKTOP ONLY)
+  // =========================================================================
+  const pawCursor = document.getElementById('customPawCursor');
+  const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  const isTouchDevice = window.matchMedia('(hover: none) and (pointer: coarse)').matches;
+
+  if (pawCursor && !prefersReducedMotion && !isTouchDevice) {
+    let mouseX = -100;
+    let mouseY = -100;
+    let currentX = -100;
+    let currentY = -100;
+    let isCursorActive = false;
+
+    // Track mouse position
+    window.addEventListener('mousemove', (e) => {
+      mouseX = e.clientX;
+      mouseY = e.clientY;
+
+      if (!isCursorActive) {
+        isCursorActive = true;
+        pawCursor.classList.add('is-active');
+        currentX = mouseX;
+        currentY = mouseY;
+      }
+    }, { passive: true });
+
+    // Smooth follower using requestAnimationFrame
+    const updateCursor = () => {
+      if (isCursorActive) {
+        // Linear interpolation for smooth trailing
+        currentX += (mouseX - currentX) * 0.22;
+        currentY += (mouseY - currentY) * 0.22;
+        pawCursor.style.transform = `translate3d(${currentX}px, ${currentY}px, 0) translate(-50%, -50%)`;
+      }
+      requestAnimationFrame(updateCursor);
+    };
+    requestAnimationFrame(updateCursor);
+
+    // Subtle scale-up when hovering interactive elements
+    const interactiveSelectors = 'a, button, input, textarea, select, .genre-card, .menu-item-row, .cat-profile-card, .product-card, .gallery-trigger';
+    document.addEventListener('mouseover', (e) => {
+      if (e.target.closest(interactiveSelectors)) {
+        pawCursor.classList.add('is-hovering');
+      }
+    });
+
+    document.addEventListener('mouseout', (e) => {
+      if (e.target.closest(interactiveSelectors)) {
+        pawCursor.classList.remove('is-hovering');
+      }
+    });
+
+    // Hide if mouse leaves window
+    document.addEventListener('mouseleave', () => {
+      pawCursor.classList.remove('is-active');
+      isCursorActive = false;
+    });
+  }
+
+  // =========================================================================
+  // 3. HEADER SCROLL & MOBILE NAVIGATION TOGGLE
+  // =========================================================================
+  const siteHeader = document.getElementById('siteHeader');
+  const navToggleBtn = document.getElementById('navToggleBtn');
+  const primaryNav = document.getElementById('primaryNav');
+  const navLinks = document.querySelectorAll('.nav-link');
+
+  // Sticky header shadow on scroll
+  const handleHeaderScroll = () => {
+    if (window.scrollY > 40) {
+      siteHeader.classList.add('scrolled');
+    } else {
+      siteHeader.classList.remove('scrolled');
+    }
+  };
+  window.addEventListener('scroll', handleHeaderScroll, { passive: true });
+  handleHeaderScroll();
+
+  // Mobile menu open / close
+  const toggleMobileNav = (state) => {
+    const isExpanded = state !== undefined ? state : navToggleBtn.getAttribute('aria-expanded') !== 'true';
+    navToggleBtn.setAttribute('aria-expanded', isExpanded);
+    if (isExpanded) {
+      primaryNav.classList.add('is-open');
+      document.body.style.overflow = 'hidden'; // prevent background scroll
+    } else {
+      primaryNav.classList.remove('is-open');
+      document.body.style.overflow = '';
+    }
+  };
+
+  if (navToggleBtn && primaryNav) {
+    navToggleBtn.addEventListener('click', () => {
+      toggleMobileNav();
+    });
+
+    // Close when any nav link is clicked
+    navLinks.forEach(link => {
+      link.addEventListener('click', () => {
+        if (primaryNav.classList.contains('is-open')) {
+          toggleMobileNav(false);
+        }
+      });
+    });
+
+    // Close on Escape key
+    document.addEventListener('keydown', (e) => {
+      if (e.key === 'Escape' && primaryNav.classList.contains('is-open')) {
+        toggleMobileNav(false);
+        navToggleBtn.focus();
+      }
+    });
+
+    // Close when resizing back to desktop
+    window.addEventListener('resize', () => {
+      if (window.innerWidth > 860 && primaryNav.classList.contains('is-open')) {
+        toggleMobileNav(false);
+      }
+    });
+  }
+
+  // =========================================================================
+  // 4. ACTIVE NAVIGATION LINK ON SCROLL (INTERSECTION OBSERVER)
+  // =========================================================================
+  const sections = document.querySelectorAll('section[id]');
+  if ('IntersectionObserver' in window) {
+    const navObserver = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          const currentId = entry.target.getAttribute('id');
+          navLinks.forEach(link => {
+            const href = link.getAttribute('href').replace('#', '');
+            if (href === currentId) {
+              link.classList.add('active');
+            } else {
+              link.classList.remove('active');
+            }
+          });
+        }
+      });
+    }, {
+      rootMargin: '-25% 0px -55% 0px',
+      threshold: 0.1
+    });
+
+    sections.forEach(section => navObserver.observe(section));
+  }
+
+  // =========================================================================
+  // 5. CAFÉ MENU CATEGORY FILTERING (TEXT-ONLY DESIGN)
+  // =========================================================================
+  const menuTabs = document.querySelectorAll('.menu-tab-btn');
+  const menuRows = document.querySelectorAll('.menu-item-row');
+  const catNoticeBanner = document.querySelector('.menu-cat-notice-banner');
+
+  menuTabs.forEach(tab => {
+    tab.addEventListener('click', () => {
+      const selectedCategory = tab.getAttribute('data-category');
+
+      // Update tab active states
+      menuTabs.forEach(btn => {
+        btn.classList.remove('active');
+        btn.setAttribute('aria-selected', 'false');
+      });
+      tab.classList.add('active');
+      tab.setAttribute('aria-selected', 'true');
+
+      // Filter rows
+      menuRows.forEach(row => {
+        const itemCategory = row.getAttribute('data-category');
+        if (selectedCategory === 'all' || itemCategory === selectedCategory) {
+          row.style.display = 'flex';
+          row.style.opacity = '0';
+          setTimeout(() => { row.style.opacity = '1'; }, 30);
+        } else {
+          row.style.display = 'none';
+        }
+      });
+
+      // Toggle feline treat notice banner
+      if (catNoticeBanner) {
+        catNoticeBanner.style.display = (selectedCategory === 'cat-treats') ? 'block' : 'none';
+      }
+    });
+  });
+
+  // =========================================================================
+  // 5B. MEET OUR BOOKSHOP CATS: FILTERING & INTERACTIVE MODAL
+  // =========================================================================
+  const catFilterBtns = document.querySelectorAll('.cat-filter-btn');
+  const catCards = document.querySelectorAll('.cat-profile-card');
+  const catModal = document.getElementById('catProfileModal');
+  const catModalBackdrop = document.getElementById('catModalBackdrop');
+  const catModalCloseBtn = document.getElementById('catModalCloseBtn');
+  const modalCatImg = document.getElementById('modalCatImg');
+  const modalCatTag = document.getElementById('modalCatTag');
+  const modalCatTitle = document.getElementById('modalCatTitle');
+  const modalCatName = document.getElementById('modalCatName');
+  const modalCatQuote = document.getElementById('modalCatQuote');
+  const modalCatBio = document.getElementById('modalCatBio');
+  const modalCatSpot = document.getElementById('modalCatSpot');
+  const modalCatActivity = document.getElementById('modalCatActivity');
+  let lastActiveCatTrigger = null;
+
+  // Cat category filtering
+  catFilterBtns.forEach(btn => {
+    btn.addEventListener('click', () => {
+      const selectedFilter = btn.getAttribute('data-filter');
+
+      catFilterBtns.forEach(b => {
+        b.classList.remove('active');
+        b.setAttribute('aria-selected', 'false');
+      });
+      btn.classList.add('active');
+      btn.setAttribute('aria-selected', 'true');
+
+      catCards.forEach(card => {
+        const catCategory = card.getAttribute('data-cat-category');
+        if (selectedFilter === 'all' || catCategory === selectedFilter) {
+          card.style.display = 'flex';
+          card.style.opacity = '0';
+          setTimeout(() => { card.style.opacity = '1'; }, 30);
+        } else {
+          card.style.display = 'none';
+        }
+      });
+    });
+  });
+
+  // Open Cat Profile Modal
+  const openCatModal = (catId) => {
+    const cat = catsData.find(c => c.id === parseInt(catId, 10));
+    if (!cat || !catModal) return;
+
+    lastActiveCatTrigger = document.activeElement;
+
+    modalCatImg.src = cat.image;
+    modalCatImg.alt = `Portrait of ${cat.name}`;
+    modalCatTag.textContent = cat.tag;
+    modalCatTitle.textContent = cat.title;
+    modalCatName.textContent = `${cat.name} ${cat.icon || ''}`;
+    modalCatQuote.textContent = `“${cat.quote}”`;
+    modalCatBio.textContent = cat.bio;
+    modalCatSpot.textContent = cat.spot;
+    modalCatActivity.textContent = cat.activity;
+
+    catModal.style.display = 'flex';
+    catModal.setAttribute('aria-hidden', 'false');
+    document.body.style.overflow = 'hidden';
+    catModalCloseBtn.focus();
+  };
+
+  const closeCatModal = () => {
+    if (!catModal) return;
+    catModal.style.display = 'none';
+    catModal.setAttribute('aria-hidden', 'true');
+    document.body.style.overflow = '';
+    if (lastActiveCatTrigger) lastActiveCatTrigger.focus();
+  };
+
+  // Wire up Meet Cat buttons
+  const meetCatBtns = document.querySelectorAll('.btn-meet-cat');
+  meetCatBtns.forEach(btn => {
+    btn.addEventListener('click', () => {
+      const catId = btn.getAttribute('data-cat-id');
+      openCatModal(catId);
+    });
+  });
+
+  if (catModal) {
+    catModalCloseBtn.addEventListener('click', closeCatModal);
+    catModalBackdrop.addEventListener('click', closeCatModal);
+
+    document.addEventListener('keydown', (e) => {
+      if (e.key === 'Escape' && catModal.style.display === 'flex') {
+        closeCatModal();
+      }
+    });
+  }
+
+  // =========================================================================
+  // 6. THE BOOK NOOK: DYNAMIC CATALOGUE, COMBINED SEARCH & GENRE FILTERING
+  // =========================================================================
+  const booksContainer = document.getElementById('booksCatalogueGrid');
+  const searchInput = document.getElementById('bookSearchInput');
+  const clearSearchBtn = document.getElementById('clearSearchBtn');
+  const resetBooksBtn = document.getElementById('resetBooksBtn');
+  const resultsCountEl = document.getElementById('bookResultsCount');
+  const emptyStateEl = document.getElementById('emptyBooksState');
+  const emptyResetBtn = document.getElementById('emptyResetBtn');
+  const genreCards = document.querySelectorAll('.genre-card');
+
+  let activeGenre = 'all';
+  let searchQuery = '';
+
+  // Render book cards into DOM (Strictly cover, genre badge, title, author only)
+  const renderBooks = (booksToDisplay) => {
+    if (!booksContainer) return;
+    booksContainer.innerHTML = '';
+
+    if (booksToDisplay.length === 0) {
+      if (emptyStateEl) emptyStateEl.style.display = 'block';
+      if (resultsCountEl) resultsCountEl.textContent = 'Showing 0 books';
+      return;
+    }
+
+    if (emptyStateEl) emptyStateEl.style.display = 'none';
+
+    // Status text
+    if (resultsCountEl) {
+      let statusText = `Showing ${booksToDisplay.length} of ${booksData.length} books`;
+      if (activeGenre !== 'all') {
+        statusText += ` in "${activeGenre}"`;
+      }
+      if (searchQuery.trim() !== '') {
+        statusText += ` matching "${searchQuery}"`;
+      }
+      resultsCountEl.textContent = statusText;
+    }
+
+    // Create cards
+    booksToDisplay.forEach(book => {
+      const article = document.createElement('article');
+      article.className = 'book-card fade-in-element is-visible';
+      article.setAttribute('data-id', book.id);
+
+      article.innerHTML = `
+        <div class="book-card-cover-wrap">
+          <img 
+            src="${book.cover}" 
+            alt="Book cover of ${book.title} by ${book.author}" 
+            class="book-card-cover"
+            loading="lazy"
+          >
+        </div>
+        <div class="book-card-body">
+          <span class="book-card-genre">${book.genre}</span>
+          <h3 class="book-card-title">${book.title}</h3>
+          <p class="book-card-author">by ${book.author}</p>
+        </div>
+      `;
+
+      booksContainer.appendChild(article);
+    });
+  };
+
+  // Filter logic combining Genre AND Search term
+  const applyBookFilters = () => {
+    const query = searchQuery.trim().toLowerCase();
+
+    const filtered = booksData.filter(book => {
+      // 1. Genre filter
+      const matchesGenre = (activeGenre === 'all') || (book.genre.toLowerCase() === activeGenre.toLowerCase());
+      
+      // 2. Search filter (title, author, genre)
+      const matchesSearch = (query === '') || 
+        book.title.toLowerCase().includes(query) || 
+        book.author.toLowerCase().includes(query) || 
+        book.genre.toLowerCase().includes(query);
+
+      return matchesGenre && matchesSearch;
+    });
+
+    renderBooks(filtered);
+
+    // Show or hide clear controls
+    const isFiltered = (activeGenre !== 'all') || (query !== '');
+    if (resetBooksBtn) {
+      resetBooksBtn.style.display = isFiltered ? 'inline-block' : 'none';
+    }
+    if (clearSearchBtn) {
+      clearSearchBtn.style.display = (query !== '') ? 'flex' : 'none';
+    }
+  };
+
+  // Reset all filters
+  const resetAllBookFilters = () => {
+    activeGenre = 'all';
+    searchQuery = '';
+    if (searchInput) searchInput.value = '';
+    genreCards.forEach(c => c.classList.remove('is-selected'));
+    applyBookFilters();
+  };
+
+  // Genre Cards click listener
+  genreCards.forEach(card => {
+    card.addEventListener('click', () => {
+      const selected = card.getAttribute('data-genre');
+
+      if (activeGenre === selected) {
+        // Toggle off if already selected
+        activeGenre = 'all';
+        card.classList.remove('is-selected');
+      } else {
+        activeGenre = selected;
+        genreCards.forEach(c => c.classList.remove('is-selected'));
+        card.classList.add('is-selected');
+      }
+
+      applyBookFilters();
+
+      // Smooth scroll to the search toolbar
+      const toolbar = document.querySelector('.book-search-toolbar');
+      if (toolbar) {
+        toolbar.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      }
+    });
+  });
+
+  // Search Input live typing
+  if (searchInput) {
+    searchInput.addEventListener('input', (e) => {
+      searchQuery = e.target.value;
+      applyBookFilters();
+    });
+  }
+
+  if (clearSearchBtn) {
+    clearSearchBtn.addEventListener('click', () => {
+      searchQuery = '';
+      if (searchInput) {
+        searchInput.value = '';
+        searchInput.focus();
+      }
+      applyBookFilters();
+    });
+  }
+
+  if (resetBooksBtn) {
+    resetBooksBtn.addEventListener('click', resetAllBookFilters);
+  }
+
+  if (emptyResetBtn) {
+    emptyResetBtn.addEventListener('click', resetAllBookFilters);
+  }
+
+  // Initial render of all 72 books
+  renderBooks(booksData);
+
+  // =========================================================================
+  // 7. ACCESSIBLE GALLERY LIGHTBOX MODAL
+  // =========================================================================
+  const galleryTriggers = document.querySelectorAll('.gallery-trigger');
+  const lightboxModal = document.getElementById('galleryLightbox');
+  const lightboxBackdrop = document.getElementById('lightboxBackdrop');
+  const lightboxCloseBtn = document.getElementById('lightboxCloseBtn');
+  const lightboxPrevBtn = document.getElementById('lightboxPrevBtn');
+  const lightboxNextBtn = document.getElementById('lightboxNextBtn');
+  const lightboxImg = document.getElementById('lightboxImg');
+  const lightboxCaption = document.getElementById('lightboxCaption');
+  const lightboxCounter = document.getElementById('lightboxCounter');
+
+  let currentGalleryIndex = 0;
+  let galleryLastFocused = null;
+
+  const updateLightboxContent = (index) => {
+    const item = galleryData[index];
+    if (!item) return;
+
+    lightboxImg.src = item.src;
+    lightboxImg.alt = item.caption;
+    lightboxCaption.textContent = item.caption;
+    lightboxCounter.textContent = `${index + 1} of ${galleryData.length}`;
+  };
+
+  const openLightbox = (index) => {
+    galleryLastFocused = document.activeElement;
+    currentGalleryIndex = index;
+    updateLightboxContent(currentGalleryIndex);
+
+    lightboxModal.style.display = 'flex';
+    lightboxModal.setAttribute('aria-hidden', 'false');
+    document.body.style.overflow = 'hidden';
+    lightboxCloseBtn.focus();
+  };
+
+  const closeLightbox = () => {
+    lightboxModal.style.display = 'none';
+    lightboxModal.setAttribute('aria-hidden', 'true');
+    document.body.style.overflow = '';
+    if (galleryLastFocused) galleryLastFocused.focus();
+  };
+
+  const showNextImage = () => {
+    currentGalleryIndex = (currentGalleryIndex + 1) % galleryData.length;
+    updateLightboxContent(currentGalleryIndex);
+  };
+
+  const showPrevImage = () => {
+    currentGalleryIndex = (currentGalleryIndex - 1 + galleryData.length) % galleryData.length;
+    updateLightboxContent(currentGalleryIndex);
+  };
+
+  galleryTriggers.forEach((btn, idx) => {
+    btn.addEventListener('click', () => {
+      openLightbox(idx);
+    });
+  });
+
+  if (lightboxModal) {
+    lightboxCloseBtn.addEventListener('click', closeLightbox);
+    lightboxBackdrop.addEventListener('click', closeLightbox);
+    lightboxNextBtn.addEventListener('click', showNextImage);
+    lightboxPrevBtn.addEventListener('click', showPrevImage);
+
+    // Keyboard controls (Esc, Left arrow, Right arrow)
+    document.addEventListener('keydown', (e) => {
+      if (lightboxModal.style.display === 'flex') {
+        if (e.key === 'Escape') {
+          closeLightbox();
+        } else if (e.key === 'ArrowRight') {
+          showNextImage();
+        } else if (e.key === 'ArrowLeft') {
+          showPrevImage();
+        }
+      }
+    });
+  }
+
+  // =========================================================================
+  // 8. SOUVENIR BAG INTERACTION
+  // =========================================================================
+  const souvenirBtns = document.querySelectorAll('.demo-buy-btn');
+  souvenirBtns.forEach(btn => {
+    btn.addEventListener('click', () => {
+      const originalHtml = btn.innerHTML;
+      btn.innerHTML = '<span>Added to Bag! ✓</span>';
+      btn.style.backgroundColor = 'var(--color-caramel)';
+
+      setTimeout(() => {
+        btn.innerHTML = originalHtml;
+        btn.style.backgroundColor = '';
+      }, 1800);
+    });
+  });
+
+  // =========================================================================
+  // 9. CONTACT FORM VALIDATION & WELCOMING FEEDBACK
+  // =========================================================================
+  const contactForm = document.getElementById('contactForm');
+  const nameInput = document.getElementById('contactName');
+  const emailInput = document.getElementById('contactEmail');
+  const subjectInput = document.getElementById('contactSubject');
+  const messageInput = document.getElementById('contactMessage');
+  const charCounter = document.getElementById('charCounter');
+  const formFeedback = document.getElementById('formFeedback');
+
+  // Character counter for message
+  if (messageInput && charCounter) {
+    messageInput.addEventListener('input', () => {
+      const len = messageInput.value.length;
+      charCounter.textContent = `${len} / 15 min`;
+      if (len >= 15) {
+        charCounter.style.color = 'var(--color-muted-sage)';
+      } else {
+        charCounter.style.color = 'var(--color-text-muted)';
+      }
+    });
+  }
+
+  const validateEmail = (email) => {
+    const re = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    return re.test(String(email).toLowerCase());
+  };
+
+  const setFieldError = (inputEl, errorId, message) => {
+    inputEl.classList.add('has-error');
+    const errEl = document.getElementById(errorId);
+    if (errEl) errEl.textContent = message;
+  };
+
+  const clearFieldError = (inputEl, errorId) => {
+    inputEl.classList.remove('has-error');
+    const errEl = document.getElementById(errorId);
+    if (errEl) errEl.textContent = '';
+  };
+
+  // Real-time error clearance on input
+  [nameInput, emailInput, subjectInput, messageInput].forEach(input => {
+    if (input) {
+      input.addEventListener('input', () => {
+        clearFieldError(input, `${input.name}Error`);
+      });
+    }
+  });
+
+  if (contactForm) {
+    contactForm.addEventListener('submit', (e) => {
+      e.preventDefault();
+      let isValid = true;
+
+      // 1. Validate Name
+      if (!nameInput.value.trim() || nameInput.value.trim().length < 2) {
+        setFieldError(nameInput, 'nameError', 'Please enter your full name (minimum 2 characters).');
+        isValid = false;
+      } else {
+        clearFieldError(nameInput, 'nameError');
+      }
+
+      // 2. Validate Email
+      if (!emailInput.value.trim() || !validateEmail(emailInput.value.trim())) {
+        setFieldError(emailInput, 'emailError', 'Please enter a valid email address (e.g. reader@example.com).');
+        isValid = false;
+      } else {
+        clearFieldError(emailInput, 'emailError');
+      }
+
+      // 3. Validate Subject
+      if (!subjectInput.value) {
+        setFieldError(subjectInput, 'subjectError', 'Please select a topic from the list.');
+        isValid = false;
+      } else {
+        clearFieldError(subjectInput, 'subjectError');
+      }
+
+      // 4. Validate Message
+      if (!messageInput.value.trim() || messageInput.value.trim().length < 15) {
+        setFieldError(messageInput, 'messageError', 'Please write a message with at least 15 characters.');
+        isValid = false;
+      } else {
+        clearFieldError(messageInput, 'messageError');
+      }
+
+      // If invalid, focus first error input
+      if (!isValid) {
+        const firstError = contactForm.querySelector('.has-error');
+        if (firstError) firstError.focus();
+        return;
+      }
+
+      // Clean, welcoming confirmation feedback
+      formFeedback.className = 'form-feedback-box is-success';
+      formFeedback.innerHTML = `
+        <strong>Thank you, ${nameInput.value.trim()}!</strong>
+        <p>Your message has been received. Our team and café cats will get back to you shortly.</p>
+      `;
+      formFeedback.style.display = 'block';
+
+      // Reset form fields
+      contactForm.reset();
+      if (charCounter) charCounter.textContent = '0 / 15 min';
+
+      // Scroll into view
+      formFeedback.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+    });
+  }
+
+  // =========================================================================
+  // 10. DYNAMIC COPYRIGHT YEAR
+  // =========================================================================
+  const yearEl = document.getElementById('currentYear');
+  if (yearEl) {
+    yearEl.textContent = new Date().getFullYear();
+  }
+
+  // =========================================================================
+  // 11. SCROLL ENTRANCE REVEAL (INTERSECTION OBSERVER)
+  // =========================================================================
+  if ('IntersectionObserver' in window && !prefersReducedMotion) {
+    const revealObserver = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('is-visible');
+          revealObserver.unobserve(entry.target);
+        }
+      });
+    }, {
+      rootMargin: '0px 0px -40px 0px',
+      threshold: 0.1
+    });
+
+    const revealCandidates = document.querySelectorAll('.cat-profile-card, .cat-card, .menu-item-row, .product-card, .value-card, .about-narrative, .about-gallery, .contact-card, .contact-form, .cat-welfare-panel, .cats-closing-banner');
+    revealCandidates.forEach(el => {
+      el.classList.add('fade-in-element');
+      revealObserver.observe(el);
+    });
+  }
+
+});
+
+  </script>
+</body>
+</html>

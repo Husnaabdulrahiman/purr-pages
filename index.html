@@ -1,0 +1,1790 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Purr & Pages — A cosy fictional bookstore café combining hand-curated books, artisanal coffee, resident rescue cats, and a peaceful reading atmosphere. READ • SIP • PURR.">
+  <meta name="theme-color" content="#6F4E37">
+  
+  <title>Purr &amp; Pages | Bookstore Café — READ • SIP • PURR</title>
+  
+  <!-- Favicon -->
+  <link rel="icon" type="image/svg+xml" href="assets/icons/favicon.svg">
+  
+  <!-- Google Fonts: Fredoka (Headings), Nunito Sans (Body & Controls) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@600;700&family=Nunito+Sans:ital,opsz,wght@0,6..12,400;0,6..12,500;0,6..12,600;0,6..12,700;1,6..12,400&display=swap" rel="stylesheet">
+  
+  <!-- Main Stylesheet -->
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <!-- Accessible Skip Link -->
+  <a href="#mainContent" class="skip-link">Skip to main content</a>
+
+  <!-- Custom Paw Cursor (Desktop only, single instance, pointer-events none) -->
+  <div class="custom-paw-cursor" id="customPawCursor" aria-hidden="true">
+    <img src="assets/icons/paw-cursor.svg" alt="" width="28" height="28">
+  </div>
+
+  <!-- =========================================================================
+       HEADER & NAVIGATION BAR
+       ========================================================================= -->
+  <header class="site-header" id="siteHeader">
+    <div class="header-container">
+      
+      <!-- Logo Container with Fallback Badge -->
+      <a href="#hero" class="brand-logo-link" aria-label="Purr & Pages - Return to top">
+        <div class="brand-logo-wrap">
+          <!-- Primary image element with user's official logo -->
+          <img 
+            src="assets/images/logo/logo.png" 
+            alt="Purr &amp; Pages — READ • SIP • PURR" 
+            class="brand-logo-img" 
+            id="brandLogoImg"
+            onerror="this.style.display='none'; document.getElementById('brandLogoFallback').style.display='flex';"
+          >
+          <!-- Elegant fallback text & illustrated brand badge (only if image fails) -->
+          <div class="brand-logo-fallback" id="brandLogoFallback" style="display: none;">
+            <span class="fallback-icon" aria-hidden="true">
+              <svg viewBox="0 0 32 32" width="28" height="28" fill="none">
+                <rect width="32" height="32" rx="8" fill="#6F4E37"/>
+                <path d="M9 11 C9 18 11 21 16 21 C21 21 23 18 23 11 Z" fill="#FFF8ED" />
+                <path d="M23 13 C26 13 26 18 23 19" stroke="#FFF8ED" stroke-width="1.8" fill="none" stroke-linecap="round"/>
+                <circle cx="16" cy="14" r="3.5" fill="#C99A6B" />
+                <polygon points="13,12 14.5,9 16,12" fill="#C99A6B"/>
+                <polygon points="16,12 17.5,9 19,12" fill="#C99A6B"/>
+                <path d="M8 25 C12 23 15 24 16 25 C17 24 20 23 24 25" stroke="#C99A6B" stroke-width="1.8" fill="none" stroke-linecap="round"/>
+              </svg>
+            </span>
+            <div class="fallback-text">
+              <span class="brand-name">Purr &amp; Pages</span>
+              <span class="brand-tagline">READ • SIP • PURR</span>
+            </div>
+          </div>
+        </div>
+      </a>
+
+      <!-- Mobile Navigation Toggle Button -->
+      <button 
+        type="button" 
+        class="nav-toggle-btn" 
+        id="navToggleBtn" 
+        aria-controls="primaryNav" 
+        aria-expanded="false" 
+        aria-label="Toggle navigation menu"
+      >
+        <span class="hamburger-bar"></span>
+        <span class="hamburger-bar"></span>
+        <span class="hamburger-bar"></span>
+      </button>
+
+      <!-- Primary Navigation Links -->
+      <nav class="primary-nav" id="primaryNav" aria-label="Main navigation">
+        <ul class="nav-list">
+          <li class="nav-item"><a href="#hero" class="nav-link active">Home</a></li>
+          <li class="nav-item"><a href="#about" class="nav-link">About Us</a></li>
+          <li class="nav-item"><a href="#menu" class="nav-link">Menu</a></li>
+          <li class="nav-item"><a href="#cats" class="nav-link">Cats</a></li>
+          <li class="nav-item"><a href="#book-nook" class="nav-link">Book Nook</a></li>
+          <li class="nav-item"><a href="#souvenirs" class="nav-link">Souvenirs</a></li>
+          <li class="nav-item"><a href="#gallery" class="nav-link">Gallery</a></li>
+          <li class="nav-item"><a href="#contact" class="nav-link nav-link--cta">Contact</a></li>
+        </ul>
+      </nav>
+
+    </div>
+  </header>
+
+  <!-- =========================================================================
+       MAIN CONTENT
+       ========================================================================= -->
+  <main id="mainContent">
+
+    <!-- =======================================================================
+         1. HERO SECTION
+         ======================================================================= -->
+    <section class="hero-section" id="hero" aria-labelledby="heroHeading">
+      <div class="container hero-container">
+        
+        <div class="hero-content">
+          <div class="hero-brand-emblem">
+            <img src="assets/images/logo/logo.png" alt="Purr &amp; Pages — READ • SIP • PURR" class="hero-brand-logo-img" width="280" height="62">
+          </div>
+          <div class="hero-badge">
+            <span class="badge-icon" aria-hidden="true">🐾</span>
+            <span class="badge-text">COSY BOOKSTORE CAFÉ &amp; FELINE SANCTUARY</span>
+          </div>
+          
+          <h1 class="hero-headline" id="heroHeading">
+            A Little More <span class="highlight-purr">Purr</span>,<br>
+            A Little More Peace.
+          </h1>
+          
+          <p class="hero-description">
+            Your cosy corner for good books, great coffee, sweet treats, and a little feline company.
+          </p>
+
+          <div class="hero-actions">
+            <a href="#menu" class="btn btn--primary">
+              <span>Explore Our Café</span>
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+            </a>
+            <a href="#cats" class="btn btn--secondary">
+              <span>Meet the Cats</span>
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"></circle><path d="m10 15 5-3-5-3v6z"></path></svg>
+            </a>
+          </div>
+
+          <!-- Hero Statistics (Circular icon badges) -->
+          <div class="hero-stats">
+            <div class="stat-pill">
+              <span class="stat-icon-circle" aria-hidden="true">🐾</span>
+              <div class="stat-info">
+                <span class="stat-text-bold">10</span>
+                <span class="stat-text-label">Resident Cats</span>
+              </div>
+            </div>
+            <div class="stat-pill">
+              <span class="stat-icon-circle" aria-hidden="true">☕</span>
+              <div class="stat-info">
+                <span class="stat-text-bold">Artisanal</span>
+                <span class="stat-text-label">Coffee</span>
+              </div>
+            </div>
+            <div class="stat-pill">
+              <span class="stat-icon-circle" aria-hidden="true">📖</span>
+              <div class="stat-info">
+                <span class="stat-text-bold">Curated</span>
+                <span class="stat-text-label">Stories</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="hero-visual">
+          <div class="hero-image-frame">
+            <!-- Organic decorative backdrop shape -->
+            <div class="hero-blob" aria-hidden="true"></div>
+            <!-- Main Hero Image (Not lazy loaded for optimal LCP) -->
+            <img 
+              src="assets/images/hero/hero-main.jpg" 
+              alt="Warm, sunlit bookstore café with wooden bookshelves, comfortable armchairs, and fresh coffee" 
+              class="hero-img"
+              width="600" 
+              height="500"
+            >
+            <!-- Floating Decorative Badges -->
+            <div class="hero-floating-card hero-floating-card--top" aria-hidden="true">
+              <span class="floating-emoji">☕</span>
+              <div class="floating-text">
+                <strong>Freshly Brewed</strong>
+                <small>Single-origin arabica</small>
+              </div>
+            </div>
+            <div class="hero-floating-card hero-floating-card--bottom" aria-hidden="true">
+              <span class="floating-emoji">🐱</span>
+              <div class="floating-text">
+                <strong>Purr-Friendly Space</strong>
+                <small>Quiet paws &amp; soft corners</small>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- =======================================================================
+         2. ABOUT US SECTION
+         ======================================================================= -->
+    <section class="about-section section-padding" id="about" aria-labelledby="aboutHeading">
+      <div class="container">
+        
+        <div class="section-header text-center">
+          <span class="section-tag">OUR STORY</span>
+          <h2 class="section-title" id="aboutHeading">A little coffee, a lot of stories.</h2>
+          <div class="header-flourish" aria-hidden="true">
+            <svg width="48" height="12" viewBox="0 0 48 12" fill="none">
+              <path d="M2 6 Q 12 0, 24 6 T 46 6" stroke="#C99A6B" stroke-width="2" stroke-linecap="round"/>
+            </svg>
+          </div>
+        </div>
+
+        <div class="about-grid">
+          <!-- Story Narrative -->
+          <div class="about-narrative">
+            <p class="about-lead">
+              Purr &amp; Pages was imagined as a home away from home for people who love the smell of coffee, the magic of a good book and the quiet company of cats. Here, there is always another story to discover and always room for one more cup.
+            </p>
+            <p>
+              Tucked into a sunlit neighbourhood corner, our space brings together three of life’s most grounding pleasures: stories that transport you, warm beverages that slow your pulse, and affectionate rescue felines who remind us to savour the present moment.
+            </p>
+            <p>
+              Whether you are here to lose yourself in an afternoon of undisturbed reading, discover your next literary obsession, or simply let a sleeping cat warm your lap while you sip our house-roasted Chapter One Latte, our doors are open to every curious soul.
+            </p>
+
+            <!-- Brand Values Grid -->
+            <div class="brand-values">
+              <div class="value-card">
+                <div class="value-icon-box">
+                  <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path></svg>
+                </div>
+                <div class="value-content">
+                  <h3 class="value-title">Comfort</h3>
+                  <p class="value-desc">Plush armchairs, warm amber light, and an unhurried atmosphere.</p>
+                </div>
+              </div>
+
+              <div class="value-card">
+                <div class="value-icon-box">
+                  <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"></circle><path d="M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3"></path><line x1="12" y1="17" x2="12.01" y2="17"></line></svg>
+                </div>
+                <div class="value-content">
+                  <h3 class="value-title">Curiosity</h3>
+                  <p class="value-desc">Forgotten classics, bold independent voices, and inquisitive whiskers.</p>
+                </div>
+              </div>
+
+              <div class="value-card">
+                <div class="value-icon-box">
+                  <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path><circle cx="9" cy="7" r="4"></circle><path d="M23 21v-2a4 4 0 0 0-3-3.87"></path><path d="M16 3.13a4 4 0 0 1 0 7.75"></path></svg>
+                </div>
+                <div class="value-content">
+                  <h3 class="value-title">Community</h3>
+                  <p class="value-desc">A safe, gentle gathering place for readers, thinkers, and pet lovers.</p>
+                </div>
+              </div>
+
+              <div class="value-card">
+                <div class="value-icon-box">
+                  <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"></path></svg>
+                </div>
+                <div class="value-content">
+                  <h3 class="value-title">Kindness</h3>
+                  <p class="value-desc">All resident cats are beloved rescues, given loving lifetime care.</p>
+                </div>
+              </div>
+            </div>
+
+            <!-- Fictional Storytelling Disclaimer Note -->
+            <div class="portfolio-disclaimer">
+              <span class="disclaimer-badge">Portfolio Concept</span>
+              <p>Purr &amp; Pages is an original fictional bookstore café identity and portfolio design demonstrating web design, brand storytelling, and interactive UI systems.</p>
+            </div>
+          </div>
+
+          <!-- Editorial Photography Collage -->
+          <div class="about-gallery">
+            <div class="collage-item collage-item--large">
+              <img 
+                src="assets/images/about/about-corner.jpg" 
+                alt="Cosy sunlit reading nook with warm wood bookshelves and a deep cushioned armchair" 
+                loading="lazy"
+                width="400"
+                height="500"
+              >
+            </div>
+            <div class="collage-item collage-item--small">
+              <img 
+                src="assets/images/about/about-coffee.jpg" 
+                alt="Artisanal ceramic cup with delicate latte art on a rustic café table" 
+                loading="lazy"
+                width="300"
+                height="240"
+              >
+            </div>
+            <div class="collage-item collage-item--medium">
+              <img 
+                src="assets/images/about/about-books.jpg" 
+                alt="Floor-to-ceiling wooden bookshelves filled with curated literature and paperbacks" 
+                loading="lazy"
+                width="300"
+                height="240"
+              >
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- =======================================================================
+         3. MENU SECTION
+         ======================================================================= -->
+    <section class="menu-section section-padding" id="menu" aria-labelledby="menuHeading">
+      <div class="container">
+        
+        <div class="section-header text-center">
+          <span class="section-tag">SIP &amp; SAVOUR</span>
+          <h2 class="section-title" id="menuHeading">A Menu Worth Purring Over</h2>
+          <p class="section-subtitle">
+            Turn the page, take a sip and find your next favourite treat. There's something delicious waiting around every corner.
+          </p>
+          <div class="header-flourish" aria-hidden="true">
+            <svg width="48" height="12" viewBox="0 0 48 12" fill="none">
+              <path d="M2 6 Q 12 0, 24 6 T 46 6" stroke="#C99A6B" stroke-width="2" stroke-linecap="round"/>
+            </svg>
+          </div>
+        </div>
+
+        <!-- Category Filters -->
+        <div class="menu-filter-container" role="tablist" aria-label="Café Menu Categories">
+          <button type="button" class="menu-tab-btn active" role="tab" aria-selected="true" data-category="all">
+            All Menu Items
+          </button>
+          <button type="button" class="menu-tab-btn" role="tab" aria-selected="false" data-category="brews">
+            Purrfect Brews
+          </button>
+          <button type="button" class="menu-tab-btn" role="tab" aria-selected="false" data-category="sip-story">
+            Sip &amp; Story
+          </button>
+          <button type="button" class="menu-tab-btn" role="tab" aria-selected="false" data-category="sweets">
+            Whisker-Sized Sweets
+          </button>
+          <button type="button" class="menu-tab-btn" role="tab" aria-selected="false" data-category="savory">
+            The Plot Thickens
+          </button>
+          <button type="button" class="menu-tab-btn" role="tab" aria-selected="false" data-category="cat-treats">
+            Little Treats for Little Paws
+          </button>
+        </div>
+
+        <!-- Menu Items List (Playful, Text-Only Design — Zero Photographs/Illustrations) -->
+        <div class="menu-list-wrap" id="menuItemsList">
+
+          <!-- Staff Cat Treat Safety Note (Only shown with cat treats filter) -->
+          <div class="menu-cat-notice-banner" style="display: none;">
+            🐾 Dedicated feline treats for occasional enjoyment. Please ask our café staff before feeding resident cats.
+          </div>
+          
+          <!-- CATEGORY 1: PURRFECT BREWS (Coffee) -->
+          <article class="menu-item-row" data-category="brews">
+            <div class="menu-item-info">
+              <h3 class="menu-item-name">The Main Character Latte</h3>
+              <p class="menu-item-desc">Espresso with steamed milk.</p>
+            </div>
+            <span class="menu-item-price">₹180</span>
+          </article>
+
+          <article class="menu-item-row" data-category="brews">
+            <div class="menu-item-info">
+              <h3 class="menu-item-name">Purr-over Coffee</h3>
+              <p class="menu-item-desc">Freshly brewed filter coffee.</p>
+            </div>
+            <span class="menu-item-price">₹130</span>
+          </article>
+
+          <article class="menu-item-row" data-category="brews">
+            <div class="menu-item-info">
+              <h3 class="menu-item-name">Midnight Cat Mocha</h3>
+              <p class="menu-item-desc">Rich espresso and chocolate.</p>
+            </div>
+            <span class="menu-item-price">₹190</span>
+          </article>
+
+          <article class="menu-item-row" data-category="brews">
+            <div class="menu-item-info">
+              <h3 class="menu-item-name">The Plot Twist Cold Brew</h3>
+              <p class="menu-item-desc">Smooth, chilled coffee.</p>
+            </div>
+            <span class="menu-item-price">₹170</span>
+          </article>
+
+          <article class="menu-item-row" data-category="brews">
+            <div class="menu-item-info">
+              <h3 class="menu-item-name">Cat Nap Cappuccino</h3>
+              <p class="menu-item-desc">Espresso with creamy milk foam.</p>
+            </div>
+            <span class="menu-item-price">₹160</span>
+          </article>
+
+          <article class="menu-item-row" data-category="brews">
+            <div class="menu-item-info">
+              <h3 class="menu-item-name">Chapter One Espresso</h3>
+              <p class="menu-item-desc">A bold, classic espresso.</p>
+            </div>
+            <span class="menu-item-price">₹100</span>
+          </article>
+
+          <!-- CATEGORY 2: SIP & STORY (Tea & Specialty Drinks) -->
+          <article class="menu-item-row" data-category="sip-story">
+            <div class="menu-item-info">
+              <h3 class="menu-item-name">Once Upon a Chai</h3>
+              <p class="menu-item-desc">Aromatic Indian masala chai.</p>
+            </div>
+            <span class="menu-item-price">₹80</span>
+          </article>
+
+          <article class="menu-item-row" data-category="sip-story">
+            <div class="menu-item-info">
+              <h3 class="menu-item-name">The Mad Hatter Matcha</h3>
+              <p class="menu-item-desc">Matcha with creamy milk.</p>
+            </div>
+            <span class="menu-item-price">₹190</span>
+          </article>
+
+          <article class="menu-item-row" data-category="sip-story">
+            <div class="menu-item-info">
+              <h3 class="menu-item-name">Page-Turner Peach Iced Tea</h3>
+              <p class="menu-item-desc">Refreshing peach iced tea.</p>
+            </div>
+            <span class="menu-item-price">₹140</span>
+          </article>
+
+          <article class="menu-item-row" data-category="sip-story">
+            <div class="menu-item-info">
+              <h3 class="menu-item-name">Fairy-Tale Hot Chocolate</h3>
+              <p class="menu-item-desc">Rich, comforting hot chocolate.</p>
+            </div>
+            <span class="menu-item-price">₹150</span>
+          </article>
+
+          <article class="menu-item-row" data-category="sip-story">
+            <div class="menu-item-info">
+              <h3 class="menu-item-name">The Sleepy Tabby</h3>
+              <p class="menu-item-desc">Caffeine-free herbal infusion.</p>
+            </div>
+            <span class="menu-item-price">₹120</span>
+          </article>
+
+          <article class="menu-item-row" data-category="sip-story">
+            <div class="menu-item-info">
+              <h3 class="menu-item-name">The Cheshire Cat Cooler</h3>
+              <p class="menu-item-desc">A refreshing fruit cooler.</p>
+            </div>
+            <span class="menu-item-price">₹130</span>
+          </article>
+
+          <!-- CATEGORY 3: WHISKER-SIZED SWEETS (Cakes & Desserts) -->
+          <article class="menu-item-row" data-category="sweets">
+            <div class="menu-item-info">
+              <h3 class="menu-item-name">Paw-some Brownie</h3>
+              <p class="menu-item-desc">Rich chocolate brownie.</p>
+            </div>
+            <span class="menu-item-price">₹110</span>
+          </article>
+
+          <article class="menu-item-row" data-category="sweets">
+            <div class="menu-item-info">
+              <h3 class="menu-item-name">The Cookie Chapter</h3>
+              <p class="menu-item-desc">Chocolate-chip cookie.</p>
+            </div>
+            <span class="menu-item-price">₹70</span>
+          </article>
+
+          <article class="menu-item-row" data-category="sweets">
+            <div class="menu-item-info">
+              <h3 class="menu-item-name">Purrfect Cinnamon Roll</h3>
+              <p class="menu-item-desc">Soft cinnamon roll with glaze.</p>
+            </div>
+            <span class="menu-item-price">₹120</span>
+          </article>
+
+          <article class="menu-item-row" data-category="sweets">
+            <div class="menu-item-info">
+              <h3 class="menu-item-name">The Last Crumb Cheesecake</h3>
+              <p class="menu-item-desc">Creamy cheesecake slice.</p>
+            </div>
+            <span class="menu-item-price">₹160</span>
+          </article>
+
+          <article class="menu-item-row" data-category="sweets">
+            <div class="menu-item-info">
+              <h3 class="menu-item-name">Croissant &amp; Catnaps</h3>
+              <p class="menu-item-desc">Buttery, flaky croissant.</p>
+            </div>
+            <span class="menu-item-price">₹100</span>
+          </article>
+
+          <article class="menu-item-row" data-category="sweets">
+            <div class="menu-item-info">
+              <h3 class="menu-item-name">The Midnight Muffin</h3>
+              <p class="menu-item-desc">Chocolate muffin.</p>
+            </div>
+            <span class="menu-item-price">₹90</span>
+          </article>
+
+          <!-- CATEGORY 4: THE PLOT THICKENS (Savoury Snacks) -->
+          <article class="menu-item-row" data-category="savory">
+            <div class="menu-item-info">
+              <h3 class="menu-item-name">The Cliffhanger Toastie</h3>
+              <p class="menu-item-desc">Toasted sandwich with a savoury filling.</p>
+            </div>
+            <span class="menu-item-price">₹180</span>
+          </article>
+
+          <article class="menu-item-row" data-category="savory">
+            <div class="menu-item-info">
+              <h3 class="menu-item-name">The Book Club Bagel</h3>
+              <p class="menu-item-desc">Bagel with a creamy filling.</p>
+            </div>
+            <span class="menu-item-price">₹150</span>
+          </article>
+
+          <article class="menu-item-row" data-category="savory">
+            <div class="menu-item-info">
+              <h3 class="menu-item-name">The Novel Idea Sandwich</h3>
+              <p class="menu-item-desc">Freshly prepared sandwich.</p>
+            </div>
+            <span class="menu-item-price">₹170</span>
+          </article>
+
+          <article class="menu-item-row" data-category="savory">
+            <div class="menu-item-info">
+              <h3 class="menu-item-name">Detective's Loaded Fries</h3>
+              <p class="menu-item-desc">Seasoned fries with toppings.</p>
+            </div>
+            <span class="menu-item-price">₹140</span>
+          </article>
+
+          <article class="menu-item-row" data-category="savory">
+            <div class="menu-item-info">
+              <h3 class="menu-item-name">The Cozy Chapter Pasta</h3>
+              <p class="menu-item-desc">Comforting pasta dish.</p>
+            </div>
+            <span class="menu-item-price">₹220</span>
+          </article>
+
+          <article class="menu-item-row" data-category="savory">
+            <div class="menu-item-info">
+              <h3 class="menu-item-name">The Little Bookmark Wrap</h3>
+              <p class="menu-item-desc">Light savoury wrap.</p>
+            </div>
+            <span class="menu-item-price">₹160</span>
+          </article>
+
+          <!-- CATEGORY 5: LITTLE TREATS FOR LITTLE PAWS (Cat Treats) -->
+          <article class="menu-item-row" data-category="cat-treats">
+            <div class="menu-item-info">
+              <h3 class="menu-item-name">The Purrito Bites</h3>
+              <p class="menu-item-desc">Small bites of plain, cooked chicken.</p>
+            </div>
+            <span class="menu-item-price">₹50</span>
+          </article>
+
+          <article class="menu-item-row" data-category="cat-treats">
+            <div class="menu-item-info">
+              <h3 class="menu-item-name">The Tuna Tale</h3>
+              <p class="menu-item-desc">A small portion of plain tuna.</p>
+            </div>
+            <span class="menu-item-price">₹40</span>
+          </article>
+
+          <article class="menu-item-row" data-category="cat-treats">
+            <div class="menu-item-info">
+              <h3 class="menu-item-name">The Chicken Chapter</h3>
+              <p class="menu-item-desc">Bite-sized, plain cooked chicken.</p>
+            </div>
+            <span class="menu-item-price">₹50</span>
+          </article>
+
+          <article class="menu-item-row" data-category="cat-treats">
+            <div class="menu-item-info">
+              <h3 class="menu-item-name">The Tiny Paw Platter</h3>
+              <p class="menu-item-desc">A portion of approved cat treats.</p>
+            </div>
+            <span class="menu-item-price">₹60</span>
+          </article>
+
+          <article class="menu-item-row" data-category="cat-treats">
+            <div class="menu-item-info">
+              <h3 class="menu-item-name">The Salmon Story</h3>
+              <p class="menu-item-desc">A small portion of plain, fully cooked, boneless salmon.</p>
+            </div>
+            <span class="menu-item-price">₹70</span>
+          </article>
+
+          <article class="menu-item-row" data-category="cat-treats">
+            <div class="menu-item-info">
+              <h3 class="menu-item-name">The Gentle Whisker Treat</h3>
+              <p class="menu-item-desc">Commercially prepared cat treats.</p>
+            </div>
+            <span class="menu-item-price">₹30</span>
+          </article>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- =======================================================================
+         4. MEET OUR BOOKSHOP CATS SECTION (THE RESIDENTS’ CLUB)
+         ======================================================================= -->
+    <section class="cats-section section-padding" id="cats" aria-labelledby="catsHeading">
+      <div class="container">
+        
+        <!-- Section Introduction -->
+        <div class="section-header text-center">
+          <span class="section-tag">THE RESIDENTS’ CLUB</span>
+          <h2 class="section-title" id="catsHeading">Meet Our Bookshop Cats</h2>
+          <p class="section-supporting-headline">Small paws. Big personalities. Endless purr-sonality.</p>
+          <p class="section-subtitle">
+            Every good story has unforgettable characters. At Purr &amp; Pages, ours have whiskers, tiny paws, and a habit of stealing the best reading spots. Meet the little personalities who make our café feel like home.
+          </p>
+
+          <!-- Subtle Paw-Print Trail & Storybook Divider Motif -->
+          <div class="cat-storybook-divider" aria-hidden="true">
+            <svg class="paw-trail-svg" width="260" height="28" viewBox="0 0 260 28" fill="none">
+              <!-- Paw 1 -->
+              <ellipse cx="20" cy="18" rx="4.5" ry="3.8" fill="#C99A6B" opacity="0.35" transform="rotate(-15 20 18)"/>
+              <circle cx="15" cy="10" r="1.6" fill="#C99A6B" opacity="0.35"/>
+              <circle cx="21" cy="9" r="1.6" fill="#C99A6B" opacity="0.35"/>
+              <circle cx="27" cy="11" r="1.6" fill="#C99A6B" opacity="0.35"/>
+              <!-- Paw 2 -->
+              <ellipse cx="65" cy="12" rx="4.5" ry="3.8" fill="#C99A6B" opacity="0.55" transform="rotate(15 65 12)"/>
+              <circle cx="60" cy="4" r="1.6" fill="#C99A6B" opacity="0.55"/>
+              <circle cx="66" cy="3" r="1.6" fill="#C99A6B" opacity="0.55"/>
+              <circle cx="72" cy="5" r="1.6" fill="#C99A6B" opacity="0.55"/>
+              <!-- Center Storybook Book & Sleeping Cat -->
+              <g transform="translate(112, 2)">
+                <path d="M4 20 C12 17 18 18 20 20 C22 18 28 17 36 20 V8 C28 6 22 7 20 9 C18 7 12 6 4 8 Z" fill="#FFF8ED" stroke="#6F4E37" stroke-width="1.6"/>
+                <ellipse cx="20" cy="13" rx="6.5" ry="4.5" fill="#C99A6B"/>
+                <polygon points="16,10 17,6 19,10" fill="#6F4E37"/>
+                <polygon points="21,10 23,6 24,10" fill="#6F4E37"/>
+                <path d="M14 14 C13 17 15 18 17 18" stroke="#6F4E37" stroke-width="1.2" fill="none" stroke-linecap="round"/>
+              </g>
+              <!-- Paw 3 -->
+              <ellipse cx="195" cy="14" rx="4.5" ry="3.8" fill="#C99A6B" opacity="0.55" transform="rotate(-15 195 14)"/>
+              <circle cx="190" cy="6" r="1.6" fill="#C99A6B" opacity="0.55"/>
+              <circle cx="196" cy="5" r="1.6" fill="#C99A6B" opacity="0.55"/>
+              <circle cx="202" cy="7" r="1.6" fill="#C99A6B" opacity="0.55"/>
+              <!-- Paw 4 -->
+              <ellipse cx="240" cy="18" rx="4.5" ry="3.8" fill="#C99A6B" opacity="0.35" transform="rotate(15 240 18)"/>
+              <circle cx="235" cy="10" r="1.6" fill="#C99A6B" opacity="0.35"/>
+              <circle cx="241" cy="9" r="1.6" fill="#C99A6B" opacity="0.35"/>
+              <circle cx="247" cy="11" r="1.6" fill="#C99A6B" opacity="0.35"/>
+            </svg>
+          </div>
+        </div>
+
+        <!-- Interactive Personality Filters -->
+        <div class="cats-filter-container" role="tablist" aria-label="Filter resident cats by personality">
+          <button type="button" class="cat-filter-btn active" role="tab" aria-selected="true" data-filter="all">
+            <span class="filter-icon" aria-hidden="true">🐾</span> All Cats <span class="filter-badge">10</span>
+          </button>
+          <button type="button" class="cat-filter-btn" role="tab" aria-selected="false" data-filter="sleepy">
+            <span class="filter-icon" aria-hidden="true">💤</span> Sleepy Sweethearts <span class="filter-badge">2</span>
+          </button>
+          <button type="button" class="cat-filter-btn" role="tab" aria-selected="false" data-filter="explorers">
+            <span class="filter-icon" aria-hidden="true">🧭</span> Curious Explorers <span class="filter-badge">3</span>
+          </button>
+          <button type="button" class="cat-filter-btn" role="tab" aria-selected="false" data-filter="playful">
+            <span class="filter-icon" aria-hidden="true">🧶</span> Playful Personalities <span class="filter-badge">2</span>
+          </button>
+          <button type="button" class="cat-filter-btn" role="tab" aria-selected="false" data-filter="quiet">
+            <span class="filter-icon" aria-hidden="true">☕</span> Quiet Companions <span class="filter-badge">3</span>
+          </button>
+        </div>
+
+        <!-- 10 Unique Cat Profile Cards Grid -->
+        <div class="bookshop-cats-grid" id="catsGrid">
+
+          <!-- CAT 01 — MOCHI (Editable Photo & Bio) -->
+          <article class="cat-profile-card" data-cat-category="sleepy" data-cat-id="1">
+            <div class="cat-portrait-wrap">
+              <img 
+                src="assets/images/cats/cat-mochi.jpg" 
+                alt="Portrait of Mochi, a fluffy cream-and-white cat" 
+                class="cat-portrait-img" 
+                loading="lazy" 
+                width="340" 
+                height="270"
+              >
+              <span class="cat-library-tag"><span aria-hidden="true">🏷️</span> Sleepy Sweetheart</span>
+            </div>
+            <div class="cat-card-content">
+              <div class="cat-card-title-row">
+                <h3 class="cat-name-heading">Mochi <span class="cat-name-deco" aria-hidden="true">📖</span></h3>
+                <span class="cat-id-number">#01</span>
+              </div>
+              <p class="cat-personality-title">The Professional Napper</p>
+              <p class="cat-bio-preview">Mochi believes that every good book deserves a comfortable reading companion and every afternoon deserves at least three naps...</p>
+              <blockquote class="cat-quote-snip">“One more chapter? Make it one more nap.”</blockquote>
+              <button type="button" class="btn-meet-cat" data-cat-id="1" aria-haspopup="dialog" aria-label="Meet Mochi - View complete biography">
+                <span>Meet Mochi</span>
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+              </button>
+            </div>
+          </article>
+
+          <!-- CAT 02 — BISCUIT (Editable Photo & Bio) -->
+          <article class="cat-profile-card" data-cat-category="explorers" data-cat-id="2">
+            <div class="cat-portrait-wrap">
+              <img 
+                src="assets/images/cats/cat-biscuit.jpg" 
+                alt="Portrait of Biscuit, a friendly ginger-and-white cat" 
+                class="cat-portrait-img" 
+                loading="lazy" 
+                width="340" 
+                height="270"
+              >
+              <span class="cat-library-tag"><span aria-hidden="true">🏷️</span> Social Butterfly</span>
+            </div>
+            <div class="cat-card-content">
+              <div class="cat-card-title-row">
+                <h3 class="cat-name-heading">Biscuit <span class="cat-name-deco" aria-hidden="true">☕</span></h3>
+                <span class="cat-id-number">#02</span>
+              </div>
+              <p class="cat-personality-title">The Friendly Little Greeter</p>
+              <p class="cat-bio-preview">Biscuit considers every visitor a potential best friend. This cheerful little greeter loves inspecting shopping bags and supervising arrivals...</p>
+              <blockquote class="cat-quote-snip">“You came for coffee. You stayed for me.”</blockquote>
+              <button type="button" class="btn-meet-cat" data-cat-id="2" aria-haspopup="dialog" aria-label="Meet Biscuit - View complete biography">
+                <span>Meet Biscuit</span>
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+              </button>
+            </div>
+          </article>
+
+          <!-- CAT 03 — PEPPER (Editable Photo & Bio) -->
+          <article class="cat-profile-card" data-cat-category="playful" data-cat-id="3">
+            <div class="cat-portrait-wrap">
+              <img 
+                src="assets/images/cats/cat-pepper.jpg" 
+                alt="Portrait of Pepper, a sleek black-and-white cat" 
+                class="cat-portrait-img" 
+                loading="lazy" 
+                width="340" 
+                height="270"
+              >
+              <span class="cat-library-tag"><span aria-hidden="true">🏷️</span> Curious Chaos</span>
+            </div>
+            <div class="cat-card-content">
+              <div class="cat-card-title-row">
+                <h3 class="cat-name-heading">Pepper <span class="cat-name-deco" aria-hidden="true">🐾</span></h3>
+                <span class="cat-id-number">#03</span>
+              </div>
+              <p class="cat-personality-title">The Tiny Mischief-Maker</p>
+              <p class="cat-bio-preview">Pepper is convinced that bookmarks are toys, paper bags are secret hideouts, and every unattended book needs a thorough inspection...</p>
+              <blockquote class="cat-quote-snip">“I didn't knock it over. The book wanted to explore.”</blockquote>
+              <button type="button" class="btn-meet-cat" data-cat-id="3" aria-haspopup="dialog" aria-label="Meet Pepper - View complete biography">
+                <span>Meet Pepper</span>
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+              </button>
+            </div>
+          </article>
+
+          <!-- CAT 04 — CHAI (Editable Photo & Bio) -->
+          <article class="cat-profile-card" data-cat-category="quiet" data-cat-id="4">
+            <div class="cat-portrait-wrap">
+              <img 
+                src="assets/images/cats/cat-chai.jpg" 
+                alt="Portrait of Chai, a calm brown tabby cat" 
+                class="cat-portrait-img" 
+                loading="lazy" 
+                width="340" 
+                height="270"
+              >
+              <span class="cat-library-tag"><span aria-hidden="true">🏷️</span> Comfort Seeker</span>
+            </div>
+            <div class="cat-card-content">
+              <div class="cat-card-title-row">
+                <h3 class="cat-name-heading">Chai <span class="cat-name-deco" aria-hidden="true">🌿</span></h3>
+                <span class="cat-id-number">#04</span>
+              </div>
+              <p class="cat-personality-title">The Cosy Companion</p>
+              <p class="cat-bio-preview">Chai is the living definition of a slow afternoon. This gentle companion enjoys peaceful corners, quiet company, and turning pages...</p>
+              <blockquote class="cat-quote-snip">“Slow sips. Soft paws. Good stories.”</blockquote>
+              <button type="button" class="btn-meet-cat" data-cat-id="4" aria-haspopup="dialog" aria-label="Meet Chai - View complete biography">
+                <span>Meet Chai</span>
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+              </button>
+            </div>
+          </article>
+
+          <!-- CAT 05 — WAFFLES (Editable Photo & Bio) -->
+          <article class="cat-profile-card" data-cat-category="sleepy" data-cat-id="5">
+            <div class="cat-portrait-wrap">
+              <img 
+                src="assets/images/cats/cat-waffles.jpg" 
+                alt="Portrait of Waffles, a fluffy white cat with blue eyes" 
+                class="cat-portrait-img" 
+                loading="lazy" 
+                width="340" 
+                height="270"
+              >
+              <span class="cat-library-tag"><span aria-hidden="true">🏷️</span> Dreamy Reader</span>
+            </div>
+            <div class="cat-card-content">
+              <div class="cat-card-title-row">
+                <h3 class="cat-name-heading">Waffles <span class="cat-name-deco" aria-hidden="true">☁️</span></h3>
+                <span class="cat-id-number">#05</span>
+              </div>
+              <p class="cat-personality-title">The Sleepy Bookworm</p>
+              <p class="cat-bio-preview">Waffles starts every day with excellent intentions to explore and read. Somehow, plans always end with a nap in a patch of warm sunlight...</p>
+              <blockquote class="cat-quote-snip">“I'll finish this chapter after my nap.”</blockquote>
+              <button type="button" class="btn-meet-cat" data-cat-id="5" aria-haspopup="dialog" aria-label="Meet Waffles - View complete biography">
+                <span>Meet Waffles</span>
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+              </button>
+            </div>
+          </article>
+
+          <!-- CAT 06 — FIG (Editable Photo & Bio) -->
+          <article class="cat-profile-card" data-cat-category="explorers" data-cat-id="6">
+            <div class="cat-portrait-wrap">
+              <img 
+                src="assets/images/cats/cat-fig.jpg" 
+                alt="Portrait of Fig, an adventurous orange ginger tabby cat" 
+                class="cat-portrait-img" 
+                loading="lazy" 
+                width="340" 
+                height="270"
+              >
+              <span class="cat-library-tag"><span aria-hidden="true">🏷️</span> Little Adventurer</span>
+            </div>
+            <div class="cat-card-content">
+              <div class="cat-card-title-row">
+                <h3 class="cat-name-heading">Fig <span class="cat-name-deco" aria-hidden="true">🧭</span></h3>
+                <span class="cat-id-number">#06</span>
+              </div>
+              <p class="cat-personality-title">The Curious Explorer</p>
+              <p class="cat-bio-preview">Fig is the café's self-appointed explorer. New book deliveries, mysterious corners, and freshly arranged bookshelves demand immediate investigation...</p>
+              <blockquote class="cat-quote-snip">“Every corner hides a new chapter.”</blockquote>
+              <button type="button" class="btn-meet-cat" data-cat-id="6" aria-haspopup="dialog" aria-label="Meet Fig - View complete biography">
+                <span>Meet Fig</span>
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+              </button>
+            </div>
+          </article>
+
+          <!-- CAT 07 — PICKLES (Editable Photo & Bio) -->
+          <article class="cat-profile-card" data-cat-category="playful" data-cat-id="7">
+            <div class="cat-portrait-wrap">
+              <img 
+                src="assets/images/cats/cat-pickles.jpg" 
+                alt="Portrait of Pickles, a grey tabby cat with bright green eyes" 
+                class="cat-portrait-img" 
+                loading="lazy" 
+                width="340" 
+                height="270"
+              >
+              <span class="cat-library-tag"><span aria-hidden="true">🏷️</span> Playful Menace</span>
+            </div>
+            <div class="cat-card-content">
+              <div class="cat-card-title-row">
+                <h3 class="cat-name-heading">Pickles <span class="cat-name-deco" aria-hidden="true">⭐</span></h3>
+                <span class="cat-id-number">#07</span>
+              </div>
+              <p class="cat-personality-title">The Tiny Trouble-Maker</p>
+              <p class="cat-bio-preview">Pickles has two hobbies: making unexpected appearances and acting completely innocent afterward. A rustle of paper sparks instant excitement...</p>
+              <blockquote class="cat-quote-snip">“Trouble? I prefer the term plot development.”</blockquote>
+              <button type="button" class="btn-meet-cat" data-cat-id="7" aria-haspopup="dialog" aria-label="Meet Pickles - View complete biography">
+                <span>Meet Pickles</span>
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+              </button>
+            </div>
+          </article>
+
+          <!-- CAT 08 — INK (Editable Photo & Bio) -->
+          <article class="cat-profile-card" data-cat-category="quiet" data-cat-id="8">
+            <div class="cat-portrait-wrap">
+              <img 
+                src="assets/images/cats/cat-ink.jpg" 
+                alt="Portrait of Ink, a glossy solid black cat with golden eyes" 
+                class="cat-portrait-img" 
+                loading="lazy" 
+                width="340" 
+                height="270"
+              >
+              <span class="cat-library-tag"><span aria-hidden="true">🏷️</span> Quiet Observer</span>
+            </div>
+            <div class="cat-card-content">
+              <div class="cat-card-title-row">
+                <h3 class="cat-name-heading">Ink <span class="cat-name-deco" aria-hidden="true">✒️</span></h3>
+                <span class="cat-id-number">#08</span>
+              </div>
+              <p class="cat-personality-title">The Midnight Poet</p>
+              <p class="cat-bio-preview">Ink is a quiet soul with a talent for finding the most peaceful corner in the room. Ink prefers to observe from a comfortable distance in silent inspiration...</p>
+              <blockquote class="cat-quote-snip">“Some stories are better told in silence.”</blockquote>
+              <button type="button" class="btn-meet-cat" data-cat-id="8" aria-haspopup="dialog" aria-label="Meet Ink - View complete biography">
+                <span>Meet Ink</span>
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+              </button>
+            </div>
+          </article>
+
+          <!-- CAT 09 — PUDDING (Editable Photo & Bio) -->
+          <article class="cat-profile-card" data-cat-category="quiet" data-cat-id="9">
+            <div class="cat-portrait-wrap">
+              <img 
+                src="assets/images/cats/cat-pudding.jpg" 
+                alt="Portrait of Pudding, a distinctive calico cat with warm patches" 
+                class="cat-portrait-img" 
+                loading="lazy" 
+                width="340" 
+                height="270"
+              >
+              <span class="cat-library-tag"><span aria-hidden="true">🏷️</span> Queen of Comfort</span>
+            </div>
+            <div class="cat-card-content">
+              <div class="cat-card-title-row">
+                <h3 class="cat-name-heading">Pudding <span class="cat-name-deco" aria-hidden="true">👑</span></h3>
+                <span class="cat-id-number">#09</span>
+              </div>
+              <p class="cat-personality-title">The Royal Reviewer</p>
+              <p class="cat-bio-preview">Pudding takes comfort very seriously. Every cushion must meet her standards, and every cosy corner deserves a royal inspection...</p>
+              <blockquote class="cat-quote-snip">“The cushion is mine. The book may stay.”</blockquote>
+              <button type="button" class="btn-meet-cat" data-cat-id="9" aria-haspopup="dialog" aria-label="Meet Pudding - View complete biography">
+                <span>Meet Pudding</span>
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+              </button>
+            </div>
+          </article>
+
+          <!-- CAT 10 — NOODLE (Editable Photo & Bio) -->
+          <article class="cat-profile-card" data-cat-category="explorers" data-cat-id="10">
+            <div class="cat-portrait-wrap">
+              <img 
+                src="assets/images/cats/cat-noodle.jpg" 
+                alt="Portrait of Noodle, a fluffy cream-coloured kitten" 
+                class="cat-portrait-img" 
+                loading="lazy" 
+                width="340" 
+                height="270"
+              >
+              <span class="cat-library-tag"><span aria-hidden="true">🏷️</span> Curious Kitten</span>
+            </div>
+            <div class="cat-card-content">
+              <div class="cat-card-title-row">
+                <h3 class="cat-name-heading">Noodle <span class="cat-name-deco" aria-hidden="true">✨</span></h3>
+                <span class="cat-id-number">#10</span>
+              </div>
+              <p class="cat-personality-title">The Little Daydreamer</p>
+              <p class="cat-bio-preview">Noodle sees magic in the smallest things: a sunbeam on the floor, a ribbon on a gift, or the gentle flutter of a page. Full of wonder and energy...</p>
+              <blockquote class="cat-quote-snip">“Life is one big story. Let's explore it.”</blockquote>
+              <button type="button" class="btn-meet-cat" data-cat-id="10" aria-haspopup="dialog" aria-label="Meet Noodle - View complete biography">
+                <span>Meet Noodle</span>
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+              </button>
+            </div>
+          </article>
+
+        </div>
+
+        <!-- Section Decoration & Closing Storytelling -->
+        <div class="cats-closing-banner">
+          <div class="closing-stamp" aria-hidden="true">
+            <div class="stamp-circle">
+              <svg viewBox="0 0 100 100" width="90" height="90">
+                <path id="catStampPath" d="M 50,50 m -35,0 a 35,35 0 1,1 70,0 a 35,35 0 1,1 -70,0" fill="none"/>
+                <text class="stamp-text">
+                  <textPath href="#catStampPath" startOffset="50%" text-anchor="middle">
+                    PURR &amp; PAGES CAT CLUB •
+                  </textPath>
+                </text>
+                <circle cx="50" cy="50" r="21" fill="#EADBC8" stroke="#6F4E37" stroke-width="1.5"/>
+                <text x="50" y="56" text-anchor="middle" font-size="16">🐾</text>
+              </svg>
+            </div>
+          </div>
+          <div class="closing-content">
+            <h3 class="closing-heading">“Every visit has a different story. These ten little characters are part of ours.”</h3>
+            <p class="closing-text">Stop by, settle into your favourite reading nook, and let the café's resident personalities make your day a little cosier.</p>
+            <a href="#menu" class="btn btn--primary">
+              <span>Explore the Café</span>
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+            </a>
+          </div>
+        </div>
+
+        <!-- Cat Welfare and Visitor Etiquette Panel -->
+        <div class="cat-welfare-panel">
+          <div class="welfare-header">
+            <span class="welfare-icon" aria-hidden="true">🌿</span>
+            <h3 class="welfare-title">A Little Note About Our Little Residents</h3>
+          </div>
+          <div class="welfare-body">
+            <p class="welfare-primary-text">
+              Our cats are family, not attractions. They are free to rest, wander, or take a break whenever they need. Please let sleeping cats sleep, approach them gently, and follow our team's guidance when interacting with them. Not every cat wants to be petted, and that's perfectly okay.
+            </p>
+            <div class="welfare-treats-alert">
+              <span class="alert-icon" aria-hidden="true">⚠️</span>
+              <div class="alert-text">
+                <strong>Treat Safety Notice:</strong>
+                <p>Please ask our team before offering any cat treats. Only café-approved treats may be given, in small portions and under staff supervision. Never offer cats coffee, tea, chocolate, cakes, biscuits, dairy drinks, or other food from the human menu.</p>
+                <a href="#menu" class="etiquette-treats-link">Explore Café-Approved Cat Treats Menu &rarr;</a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- =======================================================================
+         5. THE BOOK NOOK SECTION
+         ======================================================================= -->
+    <section class="book-nook-section section-padding" id="book-nook" aria-labelledby="bookNookHeading">
+      <div class="container">
+        
+        <div class="section-header text-center">
+          <span class="section-tag">DISCOVER STORIES</span>
+          <h2 class="section-title" id="bookNookHeading">The Book Nook</h2>
+          <p class="section-subtitle">
+            A hand-curated sanctuary of timeless classics, spellbinding fantasy, tender romances, and gripping mysteries.
+          </p>
+          <div class="header-flourish" aria-hidden="true">
+            <svg width="48" height="12" viewBox="0 0 48 12" fill="none">
+              <path d="M2 6 Q 12 0, 24 6 T 46 6" stroke="#C99A6B" stroke-width="2" stroke-linecap="round"/>
+            </svg>
+          </div>
+        </div>
+
+        <!-- -------------------------------------------------------------------
+             PART A: GENRE DISCOVERY CARDS
+             (Strict requirement: Contains ONLY genre name and visual image)
+             ------------------------------------------------------------------- -->
+        <div class="genre-cards-area" aria-label="Discover by Genre">
+          <h3 class="sub-area-title text-center">Explore by Genre</h3>
+          <p class="sub-area-subtitle text-center">Select any genre card below to filter our book collection instantly.</p>
+          
+          <div class="genre-cards-grid">
+            
+            <button type="button" class="genre-card" data-genre="Romance" aria-label="Filter by Romance books">
+              <div class="genre-card-media">
+                <img src="assets/images/books/genre-romance.jpg" alt="" loading="lazy">
+                <div class="genre-card-overlay">
+                  <span class="genre-name">Romance</span>
+                </div>
+              </div>
+            </button>
+
+            <button type="button" class="genre-card" data-genre="Fantasy" aria-label="Filter by Fantasy books">
+              <div class="genre-card-media">
+                <img src="assets/images/books/genre-fantasy.jpg" alt="" loading="lazy">
+                <div class="genre-card-overlay">
+                  <span class="genre-name">Fantasy</span>
+                </div>
+              </div>
+            </button>
+
+            <button type="button" class="genre-card" data-genre="Mystery & Thriller" aria-label="Filter by Mystery &amp; Thriller books">
+              <div class="genre-card-media">
+                <img src="assets/images/books/genre-mystery.jpg" alt="" loading="lazy">
+                <div class="genre-card-overlay">
+                  <span class="genre-name">Mystery &amp; Thriller</span>
+                </div>
+              </div>
+            </button>
+
+            <button type="button" class="genre-card" data-genre="Literary Fiction" aria-label="Filter by Literary Fiction books">
+              <div class="genre-card-media">
+                <img src="assets/images/books/genre-fiction.jpg" alt="" loading="lazy">
+                <div class="genre-card-overlay">
+                  <span class="genre-name">Literary Fiction</span>
+                </div>
+              </div>
+            </button>
+
+            <button type="button" class="genre-card" data-genre="Young Adult" aria-label="Filter by Young Adult books">
+              <div class="genre-card-media">
+                <img src="assets/images/books/genre-ya.jpg" alt="" loading="lazy">
+                <div class="genre-card-overlay">
+                  <span class="genre-name">Young Adult</span>
+                </div>
+              </div>
+            </button>
+
+            <button type="button" class="genre-card" data-genre="Classics" aria-label="Filter by Classics books">
+              <div class="genre-card-media">
+                <img src="assets/images/books/genre-classics.jpg" alt="" loading="lazy">
+                <div class="genre-card-overlay">
+                  <span class="genre-name">Classics</span>
+                </div>
+              </div>
+            </button>
+
+          </div>
+        </div>
+
+        <!-- -------------------------------------------------------------------
+             PART B: SEARCH & FILTER CONTROLS TOOLBAR
+             ------------------------------------------------------------------- -->
+        <div class="book-search-toolbar">
+          <div class="search-input-group">
+            <span class="search-icon" aria-hidden="true">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>
+            </span>
+            <input 
+              type="text" 
+              id="bookSearchInput" 
+              class="book-search-input" 
+              placeholder="Search by title, author, or keyword (e.g. Orwell, Austen, Magic)..." 
+              aria-label="Search books by title, author, or genre"
+            >
+            <button type="button" id="clearSearchBtn" class="clear-search-btn" aria-label="Clear search query" style="display: none;">
+              &times;
+            </button>
+          </div>
+
+          <!-- Active Filter & Results Info -->
+          <div class="search-status-bar">
+            <div class="results-count" id="bookResultsCount" aria-live="polite">
+              Showing all 72 books
+            </div>
+            <button type="button" id="resetBooksBtn" class="reset-filter-btn" style="display: none;">
+              Show All Books
+            </button>
+          </div>
+        </div>
+
+        <!-- -------------------------------------------------------------------
+             PART C: INDIVIDUAL BOOK LISTINGS CATALOGUE
+             (Populated dynamically via JavaScript data array with real covers)
+             ------------------------------------------------------------------- -->
+        <div class="books-catalogue-grid" id="booksCatalogueGrid" aria-live="polite">
+          <!-- Populated by script.js -->
+        </div>
+
+        <!-- Empty State Container -->
+        <div class="empty-books-state" id="emptyBooksState" style="display: none;">
+          <div class="empty-cat-illustration" aria-hidden="true">
+            <svg viewBox="0 0 80 80" width="72" height="72" fill="none">
+              <circle cx="40" cy="40" r="38" fill="#FFF8ED" stroke="#EADBC8" stroke-width="2"/>
+              <ellipse cx="40" cy="48" rx="20" ry="14" fill="#C99A6B" opacity="0.4"/>
+              <circle cx="40" cy="38" r="14" fill="#C99A6B"/>
+              <polygon points="30,30 34,22 38,30" fill="#6F4E37"/>
+              <polygon points="42,30 46,22 50,30" fill="#6F4E37"/>
+              <circle cx="36" cy="36" r="1.8" fill="#3E2B24"/>
+              <circle cx="44" cy="36" r="1.8" fill="#3E2B24"/>
+              <path d="M38 40 L42 40 L40 42 Z" fill="#3E2B24"/>
+              <path d="M37 43 Q 40 45, 43 43" stroke="#3E2B24" stroke-width="1.2" fill="none"/>
+            </svg>
+          </div>
+          <h4 class="empty-title">No books match your search</h4>
+          <p class="empty-desc">Biscuit searched behind every shelf, but couldn’t locate that title or author. Try checking your spelling or clearing the active filters.</p>
+          <button type="button" class="btn btn--secondary" id="emptyResetBtn">Reset Search &amp; Show All</button>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- =======================================================================
+         6. SOUVENIRS SECTION ("Little Things to Take Home")
+         (Completely separate from The Book Nook)
+         ======================================================================= -->
+    <section class="souvenirs-section section-padding" id="souvenirs" aria-labelledby="souvenirsHeading">
+      <div class="container">
+        
+        <div class="section-header text-center">
+          <span class="section-tag">SOUVENIRS</span>
+          <h2 class="section-title" id="souvenirsHeading">Little Things to Take Home</h2>
+          <p class="section-subtitle">
+            Little keepsakes for book lovers and cat people. Take a little piece of Purr &amp; Pages home with you.
+          </p>
+          <div class="header-flourish" aria-hidden="true">
+            <svg width="48" height="12" viewBox="0 0 48 12" fill="none">
+              <path d="M2 6 Q 12 0, 24 6 T 46 6" stroke="#C99A6B" stroke-width="2" stroke-linecap="round"/>
+            </svg>
+          </div>
+        </div>
+
+        <div class="souvenirs-grid">
+          
+          <!-- Souvenir 1 -->
+          <article class="product-card">
+            <div class="product-media">
+              <img src="assets/images/souvenirs/souvenir-tote.jpg" alt="Embroidered Canvas Book Tote" loading="lazy">
+              <span class="product-badge">Bestseller</span>
+            </div>
+            <div class="product-body">
+              <h3 class="product-title">Embroidered Canvas Book Tote</h3>
+              <p class="product-desc">Heavyweight 12oz natural unbleached organic cotton tote with reinforced straps, deep inner pockets, and our stitched cat-and-coffee crest.</p>
+              <div class="product-footer">
+                <span class="product-price">₹550</span>
+                <button type="button" class="demo-buy-btn" data-product="Canvas Book Tote" aria-label="Add Canvas Book Tote to bag">
+                  <span>Add to Bag</span>
+                </button>
+              </div>
+            </div>
+          </article>
+
+          <!-- Souvenir 2 -->
+          <article class="product-card">
+            <div class="product-media">
+              <img src="assets/images/souvenirs/souvenir-mug.jpg" alt="Hand-thrown Ceramic Café Mug" loading="lazy">
+            </div>
+            <div class="product-body">
+              <h3 class="product-title">Ceramic Café Mug</h3>
+              <p class="product-desc">Hand-thrown stoneware mug glazed in warm speckled cream with an ergonomic handle and debossed sleeping cat illustration.</p>
+              <div class="product-footer">
+                <span class="product-price">₹420</span>
+                <button type="button" class="demo-buy-btn" data-product="Ceramic Café Mug" aria-label="Add Ceramic Café Mug to bag">
+                  <span>Add to Bag</span>
+                </button>
+              </div>
+            </div>
+          </article>
+
+          <!-- Souvenir 3 -->
+          <article class="product-card">
+            <div class="product-media">
+              <img src="assets/images/souvenirs/souvenir-bookmarks.jpg" alt="Brass Cat &amp; Ribbon Bookmark Set" loading="lazy">
+            </div>
+            <div class="product-body">
+              <h3 class="product-title">Brass Cat &amp; Ribbon Bookmarks</h3>
+              <p class="product-desc">Pair of solid antique brass page clips paired with double-faced forest green and caramel satin ribbons to mark your chapters gently.</p>
+              <div class="product-footer">
+                <span class="product-price">₹280</span>
+                <button type="button" class="demo-buy-btn" data-product="Brass Bookmarks" aria-label="Add Brass Cat &amp; Ribbon Bookmarks to bag">
+                  <span>Add to Bag</span>
+                </button>
+              </div>
+            </div>
+          </article>
+
+          <!-- Souvenir 4 -->
+          <article class="product-card">
+            <div class="product-media">
+              <img src="assets/images/souvenirs/souvenir-stickers.jpg" alt="Die-cut Weatherproof Sticker Pack" loading="lazy">
+            </div>
+            <div class="product-body">
+              <h3 class="product-title">Cat &amp; Book Sticker Pack</h3>
+              <p class="product-desc">Set of 5 matte weatherproof vinyl die-cut stickers featuring illustrations of Mochi, Biscuit, steaming mugs, and cosy literary quotes.</p>
+              <div class="product-footer">
+                <span class="product-price">₹180</span>
+                <button type="button" class="demo-buy-btn" data-product="Sticker Pack" aria-label="Add Cat &amp; Book Sticker Pack to bag">
+                  <span>Add to Bag</span>
+                </button>
+              </div>
+            </div>
+          </article>
+
+          <!-- Souvenir 5 -->
+          <article class="product-card">
+            <div class="product-media">
+              <img src="assets/images/souvenirs/souvenir-journal.jpg" alt="Linen-Bound Reading Journal with Purr &amp; Pages logo" loading="lazy">
+              <span class="product-badge">New</span>
+            </div>
+            <div class="product-body">
+              <h3 class="product-title">Linen-Bound Reading Journal</h3>
+              <p class="product-desc">160 pages of 120gsm fountain pen friendly paper with reading log spreads, TBR checklists, and gold foil embossed spine lettering.</p>
+              <div class="product-footer">
+                <span class="product-price">₹650</span>
+                <button type="button" class="demo-buy-btn" data-product="Reading Journal" aria-label="Add Linen-Bound Reading Journal to bag">
+                  <span>Add to Bag</span>
+                </button>
+              </div>
+            </div>
+          </article>
+
+          <!-- Souvenir 6 -->
+          <article class="product-card">
+            <div class="product-media">
+              <img src="assets/images/souvenirs/souvenir-candle.jpg" alt="Scented Candle — Old Books &amp; Coffee with branded label" loading="lazy">
+            </div>
+            <div class="product-body">
+              <h3 class="product-title">Scented Candle — Old Books &amp; Coffee</h3>
+              <p class="product-desc">Hand-poured amber glass soy candle with notes of teakwood, aged paper, vanilla bean, and freshly ground dark roast coffee beans.</p>
+              <div class="product-footer">
+                <span class="product-price">₹490</span>
+                <button type="button" class="demo-buy-btn" data-product="Scented Candle" aria-label="Add Scented Candle to bag">
+                  <span>Add to Bag</span>
+                </button>
+              </div>
+            </div>
+          </article>
+
+          <!-- Souvenir 7 -->
+          <article class="product-card">
+            <div class="product-media">
+              <img src="assets/images/souvenirs/souvenir-page-holder.jpg" alt="Handcrafted Wooden Thumb Page Holder with engraved cat" loading="lazy">
+            </div>
+            <div class="product-body">
+              <h3 class="product-title">Wooden Thumb Page Holder</h3>
+              <p class="product-desc">Silky-smooth hand-carved walnut wing that slides onto your thumb, keeping thick paperbacks wide open with zero finger fatigue.</p>
+              <div class="product-footer">
+                <span class="product-price">₹320</span>
+                <button type="button" class="demo-buy-btn" data-product="Page Holder" aria-label="Add Wooden Thumb Page Holder to bag">
+                  <span>Add to Bag</span>
+                </button>
+              </div>
+            </div>
+          </article>
+
+          <!-- Souvenir 8 -->
+          <article class="product-card">
+            <div class="product-media">
+              <img src="assets/images/souvenirs/souvenir-postcards.jpg" alt="Illustrated Café Postcard Collection with Purr &amp; Pages art" loading="lazy">
+            </div>
+            <div class="product-body">
+              <h3 class="product-title">Café Postcard Art Set</h3>
+              <p class="product-desc">Six art prints on 350gsm textured archival cotton board portraying peaceful illustrations of our cats, café corners, and book stacks.</p>
+              <div class="product-footer">
+                <span class="product-price">₹220</span>
+                <button type="button" class="demo-buy-btn" data-product="Postcard Set" aria-label="Add Café Postcard Art Set to bag">
+                  <span>Add to Bag</span>
+                </button>
+              </div>
+            </div>
+          </article>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- =======================================================================
+         7. GALLERY SECTION
+         ======================================================================= -->
+    <section class="gallery-section section-padding" id="gallery" aria-labelledby="galleryHeading">
+      <div class="container">
+        
+        <div class="section-header text-center">
+          <span class="section-tag">MOMENTS &amp; SPACES</span>
+          <h2 class="section-title" id="galleryHeading">Glimpses of Purr &amp; Pages</h2>
+          <p class="section-subtitle">
+            Sunlit reading corners, steaming cups, peaceful whiskers, and pages waiting to be turned. Click any photograph to view in high resolution.
+          </p>
+          <div class="header-flourish" aria-hidden="true">
+            <svg width="48" height="12" viewBox="0 0 48 12" fill="none">
+              <path d="M2 6 Q 12 0, 24 6 T 46 6" stroke="#C99A6B" stroke-width="2" stroke-linecap="round"/>
+            </svg>
+          </div>
+        </div>
+
+        <div class="gallery-grid" id="galleryGrid">
+          
+          <figure class="gallery-item" data-index="0">
+            <button type="button" class="gallery-trigger" aria-label="View photo 1 in lightbox: The Café Interior">
+              <img src="assets/images/gallery/gallery-1.jpg" alt="The Café Interior: A warm bookstore café with wooden tables, comfortable seating, indoor plants, and natural light" loading="lazy">
+              <div class="gallery-overlay">
+                <span class="gallery-zoom-icon" aria-hidden="true">🔍</span>
+                <span class="gallery-caption">The Café Interior</span>
+              </div>
+            </button>
+          </figure>
+
+          <figure class="gallery-item" data-index="1">
+            <button type="button" class="gallery-trigger" aria-label="View photo 2 in lightbox: Coffee in the Making">
+              <img src="assets/images/gallery/gallery-2.jpg" alt="Coffee in the Making: A barista carefully extracting espresso and crafting latte art with steaming milk" loading="lazy">
+              <div class="gallery-overlay">
+                <span class="gallery-zoom-icon" aria-hidden="true">🔍</span>
+                <span class="gallery-caption">Coffee in the Making</span>
+              </div>
+            </button>
+          </figure>
+
+          <figure class="gallery-item" data-index="2">
+            <button type="button" class="gallery-trigger" aria-label="View photo 3 in lightbox: Our Feline Residents">
+              <img src="assets/images/gallery/gallery-3.jpg" alt="Our Feline Residents: A resident cat relaxing comfortably beside warm wooden bookshelves" loading="lazy">
+              <div class="gallery-overlay">
+                <span class="gallery-zoom-icon" aria-hidden="true">🔍</span>
+                <span class="gallery-caption">Our Feline Residents</span>
+              </div>
+            </button>
+          </figure>
+
+          <figure class="gallery-item" data-index="3">
+            <button type="button" class="gallery-trigger" aria-label="View photo 4 in lightbox: Coffee &amp; Conversation">
+              <img src="assets/images/gallery/gallery-4.jpg" alt="Coffee &amp; Conversation: Warm artisan coffee cups on a café table surrounded by favourite books" loading="lazy">
+              <div class="gallery-overlay">
+                <span class="gallery-zoom-icon" aria-hidden="true">🔍</span>
+                <span class="gallery-caption">Coffee &amp; Conversation</span>
+              </div>
+            </button>
+          </figure>
+
+          <figure class="gallery-item" data-index="4">
+            <button type="button" class="gallery-trigger" aria-label="View photo 5 in lightbox: A Cosy Reading Corner">
+              <img src="assets/images/gallery/gallery-5.jpg" alt="A Cosy Reading Corner: A plush armchair beside tall bookshelves, soft cushions, and golden lighting" loading="lazy">
+              <div class="gallery-overlay">
+                <span class="gallery-zoom-icon" aria-hidden="true">🔍</span>
+                <span class="gallery-caption">A Cosy Reading Corner</span>
+              </div>
+            </button>
+          </figure>
+
+          <figure class="gallery-item" data-index="5">
+            <button type="button" class="gallery-trigger" aria-label="View photo 6 in lightbox: A Cat Nap">
+              <img src="assets/images/gallery/gallery-6.jpg" alt="A Cat Nap: A peaceful cat curled up fast asleep on a warm velvet cushion beside books" loading="lazy">
+              <div class="gallery-overlay">
+                <span class="gallery-zoom-icon" aria-hidden="true">🔍</span>
+                <span class="gallery-caption">A Cat Nap</span>
+              </div>
+            </button>
+          </figure>
+
+          <figure class="gallery-item" data-index="6">
+            <button type="button" class="gallery-trigger" aria-label="View photo 7 in lightbox: Stories Waiting to Be Read">
+              <img src="assets/images/gallery/gallery-7.jpg" alt="Stories Waiting to Be Read: An open volume with a curated stack of hardcovers in warm bookstore light" loading="lazy">
+              <div class="gallery-overlay">
+                <span class="gallery-zoom-icon" aria-hidden="true">🔍</span>
+                <span class="gallery-caption">Stories Waiting to Be Read</span>
+              </div>
+            </button>
+          </figure>
+
+          <figure class="gallery-item" data-index="7">
+            <button type="button" class="gallery-trigger" aria-label="View photo 8 in lightbox: Books, Cats &amp; Coffee Together">
+              <img src="assets/images/gallery/gallery-8.jpg" alt="Books, Cats &amp; Coffee Together: A cosy bookstore café scene with an open novel, fresh coffee, and a curious feline" loading="lazy">
+              <div class="gallery-overlay">
+                <span class="gallery-zoom-icon" aria-hidden="true">🔍</span>
+                <span class="gallery-caption">Books, Cats &amp; Coffee Together</span>
+              </div>
+            </button>
+          </figure>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- Accessible Lightbox Modal Dialog -->
+    <div 
+      class="lightbox-modal" 
+      id="galleryLightbox" 
+      role="dialog" 
+      aria-modal="true" 
+      aria-label="Image gallery view" 
+      aria-hidden="true" 
+      style="display: none;"
+    >
+      <div class="lightbox-backdrop" id="lightboxBackdrop"></div>
+      
+      <div class="lightbox-dialog">
+        <!-- Close Button -->
+        <button type="button" class="lightbox-close-btn" id="lightboxCloseBtn" aria-label="Close image viewer">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg>
+        </button>
+
+        <!-- Navigation Buttons -->
+        <button type="button" class="lightbox-nav-btn lightbox-nav-btn--prev" id="lightboxPrevBtn" aria-label="Previous image">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="15 18 9 12 15 6"></polyline></svg>
+        </button>
+        <button type="button" class="lightbox-nav-btn lightbox-nav-btn--next" id="lightboxNextBtn" aria-label="Next image">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"></polyline></svg>
+        </button>
+
+        <!-- Main Display Container -->
+        <div class="lightbox-content">
+          <div class="lightbox-img-wrap">
+            <img src="" alt="" id="lightboxImg" class="lightbox-image">
+          </div>
+          <div class="lightbox-caption-bar">
+            <span class="lightbox-caption-text" id="lightboxCaption"></span>
+            <span class="lightbox-counter" id="lightboxCounter">1 of 8</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- =======================================================================
+         8. CONTACT SECTION
+         ======================================================================= -->
+    <section class="contact-section section-padding" id="contact" aria-labelledby="contactHeading">
+      <div class="container">
+        
+        <div class="section-header text-center">
+          <span class="section-tag">VISIT &amp; CONNECT</span>
+          <h2 class="section-title" id="contactHeading">Say Hello or Save a Seat</h2>
+          <p class="section-subtitle">
+            Got a book suggestion, looking to organise a quiet reading club meetup, or simply want to check our cat visiting hours? We’d love to hear from you.
+          </p>
+          <div class="header-flourish" aria-hidden="true">
+            <svg width="48" height="12" viewBox="0 0 48 12" fill="none">
+              <path d="M2 6 Q 12 0, 24 6 T 46 6" stroke="#C99A6B" stroke-width="2" stroke-linecap="round"/>
+            </svg>
+          </div>
+        </div>
+
+        <div class="contact-grid">
+          
+          <!-- Contact Information & Hours (Explicitly Fictional) -->
+          <div class="contact-info-panel">
+            <div class="contact-card">
+              <h3 class="contact-panel-title">Café Information</h3>
+              <p class="contact-panel-desc">
+                Drop by for an unhurried brew, explore our shelves, or attend our monthly silent reading salon.
+              </p>
+
+              <div class="info-list">
+                <div class="info-item">
+                  <div class="info-icon" aria-hidden="true">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg>
+                  </div>
+                  <div class="info-details">
+                    <strong>Location (Fictional Demo):</strong>
+                    <span>42 Whisker Lane, Storybook Corner, Arts District</span>
+                  </div>
+                </div>
+
+                <div class="info-item">
+                  <div class="info-icon" aria-hidden="true">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg>
+                  </div>
+                  <div class="info-details">
+                    <strong>Opening Hours (Sample Schedule):</strong>
+                    <span>Monday – Friday: 8:30 AM – 8:00 PM</span>
+                    <span>Saturday – Sunday: 9:00 AM – 9:30 PM</span>
+                    <small>Cat quiet resting hours: 2:00 PM – 3:30 PM daily</small>
+                  </div>
+                </div>
+
+                <div class="info-item">
+                  <div class="info-icon" aria-hidden="true">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg>
+                  </div>
+                  <div class="info-details">
+                    <strong>Email (Illustrative):</strong>
+                    <span>hello@purrandpages.demo</span>
+                  </div>
+                </div>
+
+                <div class="info-item">
+                  <div class="info-icon" aria-hidden="true">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>
+                  </div>
+                  <div class="info-details">
+                    <strong>Telephone (Sample):</strong>
+                    <span>+91 98765 43210</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Contact Form with Front-end Validation -->
+          <div class="contact-form-panel">
+            <form class="contact-form" id="contactForm" novalidate>
+              <h3 class="form-title">Send Us a Message</h3>
+              <p class="form-intro">Drop your message below. We will validate your input right in your browser.</p>
+
+              <!-- Name Field -->
+              <div class="form-group" id="nameGroup">
+                <label for="contactName" class="form-label">Your Name <span class="required" aria-hidden="true">*</span></label>
+                <input 
+                  type="text" 
+                  id="contactName" 
+                  name="name" 
+                  class="form-control" 
+                  placeholder="e.g. Maya Sharma" 
+                  required 
+                  aria-describedby="nameError"
+                >
+                <span class="field-error-msg" id="nameError" role="alert" aria-live="assertive"></span>
+              </div>
+
+              <!-- Email Field -->
+              <div class="form-group" id="emailGroup">
+                <label for="contactEmail" class="form-label">Email Address <span class="required" aria-hidden="true">*</span></label>
+                <input 
+                  type="email" 
+                  id="contactEmail" 
+                  name="email" 
+                  class="form-control" 
+                  placeholder="e.g. maya@example.com" 
+                  required 
+                  aria-describedby="emailError"
+                >
+                <span class="field-error-msg" id="emailError" role="alert" aria-live="assertive"></span>
+              </div>
+
+              <!-- Subject Field -->
+              <div class="form-group" id="subjectGroup">
+                <label for="contactSubject" class="form-label">Topic / Subject <span class="required" aria-hidden="true">*</span></label>
+                <select id="contactSubject" name="subject" class="form-control" required aria-describedby="subjectError">
+                  <option value="" disabled selected>Select a topic...</option>
+                  <option value="general">General Café Inquiry</option>
+                  <option value="reading-club">Book Club &amp; Reading Circles</option>
+                  <option value="cats">Cat Care &amp; Adoption Inquiries</option>
+                  <option value="events">Private Events &amp; Author Evenings</option>
+                </select>
+                <span class="field-error-msg" id="subjectError" role="alert" aria-live="assertive"></span>
+              </div>
+
+              <!-- Message Field -->
+              <div class="form-group" id="messageGroup">
+                <label for="contactMessage" class="form-label">Message <span class="required" aria-hidden="true">*</span></label>
+                <textarea 
+                  id="contactMessage" 
+                  name="message" 
+                  rows="4" 
+                  class="form-control" 
+                  placeholder="Tell us what's on your mind (at least 15 characters)..." 
+                  required 
+                  aria-describedby="messageError"
+                ></textarea>
+                <div class="field-meta">
+                  <span class="field-error-msg" id="messageError" role="alert" aria-live="assertive"></span>
+                  <span class="char-counter" id="charCounter">0 / 15 min</span>
+                </div>
+              </div>
+
+              <!-- Submit Button -->
+              <div class="form-actions">
+                <button type="submit" class="btn btn--primary btn--full" id="contactSubmitBtn">
+                  <span>Send Message</span>
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="22" y1="2" x2="11" y2="13"></line><polygon points="22 2 15 22 11 13 2 9 22 2"></polygon></svg>
+                </button>
+              </div>
+
+              <!-- Honest Demo Feedback Container (Section 14 requirement) -->
+              <div class="form-feedback-box" id="formFeedback" role="status" aria-live="polite" style="display: none;"></div>
+
+            </form>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+  </main>
+
+  <!-- =========================================================================
+       FOOTER
+       ========================================================================= -->
+  <footer class="site-footer">
+    <div class="container footer-container">
+      
+      <!-- Column 1: Brand & Fallback Logo -->
+      <div class="footer-col footer-col--brand">
+        <div class="footer-logo-wrap">
+          <img 
+            src="assets/images/logo/logo.png" 
+            alt="Purr &amp; Pages — READ • SIP • PURR" 
+            class="footer-logo-img" 
+            onerror="this.style.display='none'; document.getElementById('footerLogoFallback').style.display='flex';"
+          >
+          <div class="brand-logo-fallback brand-logo-fallback--footer" id="footerLogoFallback" style="display: none;">
+            <span class="fallback-icon" aria-hidden="true">
+              <svg viewBox="0 0 32 32" width="24" height="24" fill="none">
+                <rect width="32" height="32" rx="8" fill="#C99A6B"/>
+                <path d="M9 11 C9 18 11 21 16 21 C21 21 23 18 23 11 Z" fill="#FFF8ED" />
+                <path d="M23 13 C26 13 26 18 23 19" stroke="#FFF8ED" stroke-width="1.8" fill="none" stroke-linecap="round"/>
+                <circle cx="16" cy="14" r="3.5" fill="#6F4E37" />
+              </svg>
+            </span>
+            <div class="fallback-text">
+              <span class="brand-name">Purr &amp; Pages</span>
+              <span class="brand-tagline">READ • SIP • PURR</span>
+            </div>
+          </div>
+        </div>
+
+        <p class="footer-bio">
+          A fictional bookstore café concept celebrating the gentle art of reading, handcrafted coffee, and friendly rescue cats.
+        </p>
+
+        <div class="footer-tagline-badge">
+          <span>READ • SIP • PURR</span>
+        </div>
+      </div>
+
+      <!-- Column 2: Navigation Links -->
+      <div class="footer-col">
+        <h4 class="footer-heading">Explore</h4>
+        <ul class="footer-links">
+          <li><a href="#hero">Home</a></li>
+          <li><a href="#about">About Our Story</a></li>
+          <li><a href="#menu">Café Menu</a></li>
+          <li><a href="#cats">Resident Cats</a></li>
+          <li><a href="#book-nook">The Book Nook</a></li>
+        </ul>
+      </div>
+
+      <!-- Column 3: More Links & Souvenirs -->
+      <div class="footer-col">
+        <h4 class="footer-heading">Discover</h4>
+        <ul class="footer-links">
+          <li><a href="#souvenirs">Souvenirs &amp; Merch</a></li>
+          <li><a href="#gallery">Café Gallery</a></li>
+          <li><a href="#contact">Hours &amp; Visit</a></li>
+          <li><a href="#cats">Cat Etiquette</a></li>
+        </ul>
+      </div>
+
+      <!-- Column 4: Hours & Demo Statement -->
+      <div class="footer-col footer-col--hours">
+        <h4 class="footer-heading">Hours &amp; Location</h4>
+        <p class="footer-text">
+          42 Whisker Lane, Storybook Corner<br>
+          Mon – Fri: 8:30 AM – 8:00 PM<br>
+          Sat – Sun: 9:00 AM – 9:30 PM
+        </p>
+        <p class="footer-demo-tag">
+          Fictional Portfolio Project
+        </p>
+      </div>
+
+    </div>
+
+    <!-- Bottom Bar -->
+    <div class="footer-bottom-bar">
+      <div class="container footer-bottom-container">
+        <p class="copyright-text">
+          &copy; <span id="currentYear">2026</span> Purr &amp; Pages. Built with HTML5, CSS3 &amp; Vanilla JavaScript. All trademarks &amp; book covers remain property of their respective creators.
+        </p>
+        <a href="#hero" class="back-to-top-btn" aria-label="Back to top of page">
+          <span>Back to Top</span>
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="18 15 12 9 6 15"></polyline></svg>
+        </a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- =========================================================================
+       CAT PROFILE MODAL (Interactive Storybook Modal)
+       ========================================================================= -->
+  <div 
+    class="cat-profile-modal" 
+    id="catProfileModal" 
+    role="dialog" 
+    aria-modal="true" 
+    aria-labelledby="modalCatName" 
+    aria-hidden="true" 
+    style="display: none;"
+  >
+    <div class="cat-modal-backdrop" id="catModalBackdrop"></div>
+    <div class="cat-modal-dialog">
+      <button type="button" class="cat-modal-close" id="catModalCloseBtn" aria-label="Close cat profile">&times;</button>
+      <div class="cat-modal-scrollable">
+        <div class="cat-modal-grid">
+          <div class="cat-modal-media">
+            <img src="" alt="" id="modalCatImg" class="cat-modal-img">
+            <span class="cat-modal-tag" id="modalCatTag"></span>
+          </div>
+          <div class="cat-modal-info">
+            <div class="cat-modal-header">
+              <span class="cat-modal-subtitle" id="modalCatTitle"></span>
+              <h3 class="cat-modal-name" id="modalCatName"></h3>
+            </div>
+            
+            <blockquote class="cat-modal-quote" id="modalCatQuote"></blockquote>
+            
+            <div class="cat-modal-bio-wrap">
+              <h4 class="modal-section-label">Biography</h4>
+              <p class="cat-modal-bio" id="modalCatBio"></p>
+            </div>
+            
+            <div class="cat-modal-attributes">
+              <div class="attr-box">
+                <span class="attr-icon" aria-hidden="true">📍</span>
+                <div class="attr-text">
+                  <strong>Favourite Spot:</strong>
+                  <span id="modalCatSpot"></span>
+                </div>
+              </div>
+              <div class="attr-box">
+                <span class="attr-icon" aria-hidden="true">🧶</span>
+                <div class="attr-text">
+                  <strong>Favourite Activity:</strong>
+                  <span id="modalCatActivity"></span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Main JavaScript File -->
+  <script src="js/script.js"></script>
+</body>
+</html>
