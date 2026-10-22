@@ -1,0 +1,32 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" width="64" height="64" fill="none">
+  <!-- Rounded Background -->
+  <rect width="64" height="64" rx="16" fill="#6F4E37" />
+  
+  <!-- Steam curls -->
+  <path d="M26 14 C25 10 28 8 27 6" stroke="#EADBC8" stroke-width="2.5" stroke-linecap="round" fill="none" opacity="0.85" />
+  <path d="M34 15 C33 11 36 9 35 7" stroke="#EADBC8" stroke-width="2.5" stroke-linecap="round" fill="none" opacity="0.85" />
+  
+  <!-- Cup body -->
+  <path d="M18 22 H46 C46 36 42 42 32 42 C22 42 18 36 18 22 Z" fill="#FFF8ED" stroke="#EADBC8" stroke-width="2" />
+  <!-- Cup handle -->
+  <path d="M46 25 C52 25 52 35 46 37" stroke="#FFF8ED" stroke-width="3" stroke-linecap="round" fill="none" />
+  
+  <!-- Cat face in cup foam -->
+  <!-- Ears -->
+  <polygon points="25,27 28,21 31,27" fill="#C99A6B" />
+  <polygon points="33,27 36,21 39,27" fill="#C99A6B" />
+  <polygon points="26.5,26.5 28,23 29.5,26.5" fill="#FFF8ED" />
+  <polygon points="34.5,26.5 36,23 37.5,26.5" fill="#FFF8ED" />
+  <!-- Head -->
+  <circle cx="32" cy="30" r="7.5" fill="#C99A6B" />
+  <!-- Eyes -->
+  <circle cx="29.5" cy="29" r="1.1" fill="#3E2B24" />
+  <circle cx="34.5" cy="29" r="1.1" fill="#3E2B24" />
+  <!-- Nose/mouth -->
+  <path d="M31.5 31.5 L32.5 31.5 L32 32.2 Z" fill="#3E2B24" />
+  <path d="M30.5 33 C31.2 33.7 32 33.7 32 33.2 C32 33.7 32.8 33.7 33.5 33" stroke="#3E2B24" stroke-width="0.8" fill="none" stroke-linecap="round" />
+  
+  <!-- Open Book underneath -->
+  <path d="M14 48 C22 45 30 47 32 49 C34 47 42 45 50 48 V53 C42 50 34 52 32 54 C30 52 22 50 14 53 Z" fill="#C99A6B" stroke="#EADBC8" stroke-width="1.5" />
+  <line x1="32" y1="49" x2="32" y2="54" stroke="#6F4E37" stroke-width="1.5" />
+</svg>
