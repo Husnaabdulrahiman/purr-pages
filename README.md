@@ -121,3 +121,4 @@ All photographic and cover assets have been downloaded and verified locally with
 - [x] Keyboard accessibility: Escape key closes modals and mobile drawer; focus indicators visible on interactive controls.
 - [x] WCAG color contrast standards observed across cream, espresso, and caramel elements.
 - [x] `prefers-reduced-motion` and touch screen overrides implemented.
+ 
